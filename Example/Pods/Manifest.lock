@@ -1,0 +1,16 @@
+PODS:
+  - SpecialFor (0.1.0)
+
+DEPENDENCIES:
+  - SpecialFor (from `../`)
+
+EXTERNAL SOURCES:
+  SpecialFor:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SpecialFor: 8c02581f3cdea4fbe3f40b311cfb3fc8411d3dd4
+
+PODFILE CHECKSUM: 6b9baee6a724cbe4349cd78496a81380c93e670d
+
+COCOAPODS: 1.6.1

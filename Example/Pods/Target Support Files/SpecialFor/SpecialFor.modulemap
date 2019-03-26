@@ -1,0 +1,6 @@
+framework module SpecialFor {
+  umbrella header "SpecialFor-umbrella.h"
+
+  export *
+  module * { export * }
+}
