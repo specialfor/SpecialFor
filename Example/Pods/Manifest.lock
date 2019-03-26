@@ -1,10 +1,13 @@
 PODS:
   - SnapKit (4.2.0)
-  - SpecialFor/CoreUI (0.1.0):
+  - SpecialFor (0.1.0):
+    - SnapKit
+    - SpecialFor/Core (= 0.1.0)
+  - SpecialFor/Core (0.1.0):
     - SnapKit
 
 DEPENDENCIES:
-  - SpecialFor/CoreUI (from `../`)
+  - SpecialFor (from `../`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -16,8 +19,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
-  SpecialFor: f381f9f9e86bd1ec8766eaf15a006bfa50428437
+  SpecialFor: 5000be10ba63dc383faac72232542642bac9fc5f
 
-PODFILE CHECKSUM: 402e96a5d20fd684ac7e5a3bfa1af240e535b9fe
+PODFILE CHECKSUM: 7e30053815e11134b83f894cc16cca7866b65fe6
 
 COCOAPODS: 1.6.1

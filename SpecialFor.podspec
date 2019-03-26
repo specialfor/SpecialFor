@@ -31,7 +31,8 @@ TODO: Add long description of the pod here.
       core.source_files = 'Specialfor/Classes/Core/**/*'
   end
   
-  s.subspec 'CoreUI' do |core_ui|
-      core_ui.source_files = 'Specialfor/Classes/CoreUI/**/*'
+  s.subspec 'UIKit' do |ui_kit|
+      ui_kit.frameworks = 'UIKit'
+      ui_kit.source_files = 'Specialfor/Classes/UIKit/**/*'
   end
 end
