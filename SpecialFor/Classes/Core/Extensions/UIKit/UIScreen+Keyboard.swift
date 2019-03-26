@@ -10,7 +10,8 @@ import UIKit
 
 extension UIScreen {
     
-    var defaultKeyboardHeight: CGFloat {
+    // TODO: need to verify
+    public var defaultKeyboardHeight: CGFloat {
         let height = bounds.height
         if height >= 812 {
             return 333
@@ -23,7 +24,7 @@ extension UIScreen {
         }
     }
     
-    var defaultKeyboardSize: CGSize {
+    public var defaultKeyboardSize: CGSize {
         return CGSize(width: bounds.width, height: defaultKeyboardHeight)
     }
 }

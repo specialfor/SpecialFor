@@ -10,11 +10,11 @@ import UIKit
 
 extension UIDevice {
 
-    var persistentIdentifier: String {
+    public var persistentIdentifier: String {
         return UIDevice.current.identifierForVendor?.uuidString ?? "iOSSimulator"
     }
     
-    public var type: PhoneModel {
+    public var model: PhoneModel {
         var systemInfo = utsname()
         uname(&systemInfo)
         let modelCode = withUnsafePointer(to: &systemInfo.machine) {

@@ -6,6 +6,6 @@
 //  Copyright © 2018 TecSynt Solutions. All rights reserved.
 //
 
-protocol Cloneable {
+public protocol Cloneable {
     func clone() -> Self
 }

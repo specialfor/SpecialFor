@@ -8,14 +8,14 @@
 
 import Foundation
 
-protocol Injectable {
+public protocol Injectable {
     associatedtype Dependencies
 }
 
-protocol InitializeInjectable: Injectable {
+public protocol InitializeInjectable: Injectable {
     init(dependencies: Dependencies)
 }
 
-protocol SetInjectable: Injectable {
+public protocol SetInjectable: Injectable {
     func inject(dependencies: Dependencies)
 }

@@ -11,14 +11,14 @@
 
 extension Array where Element: Equatable {
     
-    mutating func remove(_ element: Element) {
+    public mutating func remove(_ element: Element) {
         guard let index = index(of: element) else {
             return
         }
         remove(at: index)
     }
     
-    mutating func remove(at indexes: [Index]) {
+    public mutating func remove(at indexes: [Index]) {
         indexes.sorted(by: >).forEach { remove(at: $0) }
     }
 }
@@ -27,7 +27,7 @@ extension Array {
     
     // MARK: - Count
 
-    func count(where predicate: (Element) -> Bool) -> Int {
+    public func count(where predicate: (Element) -> Bool) -> Int {
         var count = 0
         for element in self where predicate(element) {
             count += 1
@@ -38,7 +38,7 @@ extension Array {
     
     // MARK: - Move
     
-    mutating func move(at index: Int, to newIndex: Int) {
+    public mutating func move(at index: Int, to newIndex: Int) {
         let element = remove(at: index)
         insert(element, at: newIndex)
     }
@@ -46,7 +46,7 @@ extension Array {
     
     // MARK: - Complete
     
-    mutating func complete(to length: Int, with element: Element) {
+    public mutating func complete(to length: Int, with element: Element) {
         guard self.count <= length else {
             return
         }
@@ -56,7 +56,7 @@ extension Array {
         }
     }
     
-    func completed(to length: Int, with element: Element) -> [Element] {
+    public func completed(to length: Int, with element: Element) -> [Element] {
         var temp = self
         temp.complete(to: length, with: element)
         return temp
@@ -65,7 +65,7 @@ extension Array {
     
     // MARK: - Filter
     
-    func filter(with text: String, predicate: (Element) -> [String]) -> [Element] {
+    public func filter(with text: String, predicate: (Element) -> [String]) -> [Element] {
         var filtered = self
         
         if !text.isEmpty {

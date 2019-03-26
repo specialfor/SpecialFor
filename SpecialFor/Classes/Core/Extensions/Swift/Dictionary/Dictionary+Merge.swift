@@ -8,15 +8,15 @@
 
 extension Dictionary {
     
-    func mergingUniquingFirst(with other: [Key: Value]) -> [Key: Value] {
+    public func mergingUniquingFirst(with other: [Key: Value]) -> [Key: Value] {
         return (try? merging(other, uniquingKeysWith: uniquingUsingFirst)) ?? self
     }
     
-    mutating func mergeUniquingFirst(with other: [Key: Value]) {
+    public mutating func mergeUniquingFirst(with other: [Key: Value]) {
         try? merge(other, uniquingKeysWith: uniquingUsingFirst)
     }
     
-    mutating func mergeUniquingOther(with other: [Key: Value]) {
+    public mutating func mergeUniquingOther(with other: [Key: Value]) {
         try? merge(other, uniquingKeysWith: uniquingUsingOther)
     }
     

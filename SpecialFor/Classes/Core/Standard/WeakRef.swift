@@ -7,20 +7,20 @@
 //
 import Foundation
 
-class WeakRef<T> where T: AnyObject {
+public class WeakRef<T> where T: AnyObject {
     
     private(set) weak var value: T?
     
-    init(value: T?) {
+    public init(value: T?) {
         self.value = value
     }
 }
 
-class AnyWeakSubscriber<Handler> {
-    let object: WeakRef<AnyObject>
-    let handler: Handler
+public class AnyWeakSubscriber<Handler> {
+    public let object: WeakRef<AnyObject>
+    public let handler: Handler
     
-    init(object: AnyObject, handler: Handler) {
+    public init(object: AnyObject, handler: Handler) {
         self.object = WeakRef(value: object)
         self.handler = handler
     }
