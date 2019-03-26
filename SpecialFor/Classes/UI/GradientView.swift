@@ -20,7 +20,7 @@ class GradientView: UIView {
     init(colors: [UIColor]) {
         self.colors = colors
         super.init(frame: CGRect.zero)
-        self.backgroundColor = UIColor.nynja.clear
+        self.backgroundColor = UIColor.clear
     }
     
     required init?(coder aDecoder: NSCoder) {

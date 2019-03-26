@@ -35,7 +35,7 @@ class MaterialTextView: MaterialTextContainer {
     private lazy var textView: UITextView = {
         let textView = UITextView()
         textView.font = font
-        textView.backgroundColor = UIColor.nynja.clear
+        textView.backgroundColor = .clear
         textView.tintColor = cursorColor
         textView.textColor = textColor
 

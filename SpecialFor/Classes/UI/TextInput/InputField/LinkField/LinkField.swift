@@ -24,8 +24,8 @@ final class LinkField: MaterialTextField {
     private(set) lazy var actionButton: UIButton = {
         let button = UIButton()
         
-        let side = 44.0.adjustedByWidth
-        let leftInset = 8.0.adjustedByWidth
+        let side = 44.0
+        let leftInset = 8.0
         
         floatingContainer.snp.updateConstraints { make in
             make.right.equalTo(-(side + leftInset))
@@ -48,7 +48,8 @@ final class LinkField: MaterialTextField {
     override func baseSetup() {
         super.baseSetup()
         actionButton.accessibilityIdentifier = "action_button"
-        actionButton.setImage(UIImage.nynja.LinkField.icRefresh.image, for: .normal)
+        // TODO: image
+//        actionButton.setImage(UIImage.nynja.LinkField.icRefresh.image, for: .normal)
     }
     
     

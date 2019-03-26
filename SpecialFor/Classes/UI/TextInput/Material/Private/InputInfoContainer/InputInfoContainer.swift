@@ -85,7 +85,7 @@ class InputInfoContainer: BaseView, InputInfoProvider {
         
         self.addSubview(label)
         label.snp.makeConstraints { make in
-            make.top.equalTo(inputContainer.snp.bottom).offset(8.0.adjustedByWidth)
+            make.top.equalTo(inputContainer.snp.bottom).offset(8.0)
             make.height.equalTo(label.font.lineHeight)
             make.left.right.bottom.equalToSuperview()
         }
@@ -99,7 +99,7 @@ class InputInfoContainer: BaseView, InputInfoProvider {
         self.addSubview(separator)
         separator.snp.makeConstraints { make in
             make.height.equalTo(separatorHeight)
-            make.top.equalTo(inputContainer.snp.bottom).offset(2.0.adjustedByWidth)
+            make.top.equalTo(inputContainer.snp.bottom).offset(2.0)
             make.left.right.equalToSuperview()
         }
         
@@ -165,7 +165,7 @@ class InputInfoContainer: BaseView, InputInfoProvider {
     
 }
 
-extension InputInfoContainer: TestableViewProtocol {
+extension InputInfoContainer {
     
     private enum Keys: String {
         case inputContainer        = "material_input_container"
@@ -178,5 +178,4 @@ extension InputInfoContainer: TestableViewProtocol {
         infoLabel.accessibilityIdentifier       = Keys.infoLabel.rawValue
         separator.accessibilityIdentifier       = Keys.separator.rawValue
     }
-    
 }

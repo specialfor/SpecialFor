@@ -51,10 +51,10 @@ extension UIView {
     private func layerForGradient (firstInset: CGFloat, secondInset:CGFloat, vertical:Bool) -> CALayer {
         let layer = CAGradientLayer()
         layer.frame = CGRect(x:0, y:0, width:frame.width, height: frame.height)
-        layer.colors = [UIColor.nynja.clear.cgColor,
-                        UIColor.nynja.black.cgColor,
-                        UIColor.nynja.black.cgColor,
-                        UIColor.nynja.clear.cgColor]
+        layer.colors = [UIColor.clear.cgColor,
+                        UIColor.black.cgColor,
+                        UIColor.black.cgColor,
+                        UIColor.clear.cgColor]
         
         let fullMetric = vertical ? layer.frame.height : layer.frame.width
         let firstCoeff = firstInset / fullMetric

@@ -34,7 +34,7 @@ class AlertImageViewController: UIViewController {
         let view = UIView()
         
         view.roundCorners(radius: Constraints.popupView.cornerdRadius)
-        view.backgroundColor = UIColor.nynja.clear
+        view.backgroundColor = UIColor.clear
         
         self.view.addSubview(view)
         view.snp.makeConstraints { make in
@@ -112,14 +112,14 @@ class AlertImageViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        dispatchAsyncMainAfter(duration ?? _duration) {
+        async(after: duration ?? _duration) {
             self.presentingViewController?.dismiss(animated: true, completion: self.completion)
         }
     }
     
     // MARK: - Base setup
     private func baseSetup() {
-        view.backgroundColor = UIColor.nynja.black.withAlphaComponent(0.4)
+        view.backgroundColor = UIColor.black.withAlphaComponent(0.4)
         
         blurView.isHidden = false
         messageLabel.isHidden = false
@@ -134,5 +134,4 @@ class AlertImageViewController: UIViewController {
             messageLabelTopInset.update(offset: 0)
         }
     }
-    
 }

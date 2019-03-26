@@ -10,12 +10,12 @@ class PinView: BaseView {
     
     // MARK: Views
     lazy var titleLabel: UILabel = {
-        let height = CGFloat(44.0.adjustedByWidth)
+        let height = CGFloat(44.0)
         
-        let label = UILabel(height: height,
-                            color: UIColor.nynja.white,
-                            fontName: FontFamily.NotoSans.bold.name,
-                            textAlignment: .center)
+        let label = UILabel()
+        label.font = UIFont.preferredFont(forTextStyle: .body)
+        label.textColor = .white
+        label.textAlignment = .center
         
         self.addSubview(label)
         label.snp.makeConstraints({ (make) in
@@ -33,7 +33,7 @@ class PinView: BaseView {
         super.baseSetup()
         
         setupTestingKeys()
-        self.backgroundColor = UIColor.nynja.mainRed
+        self.backgroundColor = .red
     }
     
     // MARK: UIView
@@ -47,7 +47,7 @@ class PinView: BaseView {
 
 // MARK: - Testable
 
-extension PinView: TestableViewProtocol {
+extension PinView {
     
     private enum Keys: String {
         case titleLabel         = "title_label"
@@ -56,5 +56,4 @@ extension PinView: TestableViewProtocol {
     func setupTestingKeys() {
         titleLabel.accessibilityIdentifier          = Keys.titleLabel.rawValue
     }
-    
 }

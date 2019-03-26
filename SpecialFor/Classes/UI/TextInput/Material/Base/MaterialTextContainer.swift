@@ -147,7 +147,7 @@ class MaterialTextContainer: BaseView, MaterialTextInput {
 }
 
 
-extension MaterialTextContainer: TestableViewProtocol {
+extension MaterialTextContainer {
     
     private enum Keys: String {
         case infoContainer        = "material_info_container"

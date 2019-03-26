@@ -10,7 +10,7 @@ import UIKit
 
 extension UIImageView {
     
-    func roundImageView(borderWidth: CGFloat = 0, borderColor: UIColor = UIColor.nynja.black) {
+    func roundImageView(borderWidth: CGFloat = 0, borderColor: UIColor = UIColor.black) {
         layer.borderWidth = borderWidth
         layer.masksToBounds = false
         layer.borderColor = borderColor.cgColor
@@ -18,7 +18,7 @@ extension UIImageView {
         clipsToBounds = true
     }
     
-    func roundCornersImage(borderWidth: CGFloat = 0, cornerRadius: CGFloat = 2, borderColor: UIColor = UIColor.nynja.black) {
+    func roundCornersImage(borderWidth: CGFloat = 0, cornerRadius: CGFloat = 2, borderColor: UIColor = UIColor.black) {
         layer.borderWidth = borderWidth
         layer.masksToBounds = false
         layer.borderColor = borderColor.cgColor

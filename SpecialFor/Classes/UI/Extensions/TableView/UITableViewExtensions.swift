@@ -8,17 +8,6 @@
 
 extension UITableView {
     
-    static var `default`: UITableView {
-        let tblView = UITableView()
-        
-        tblView.backgroundColor = UIColor.nynja.clear
-        tblView.separatorStyle = .none
-        tblView.tableFooterView = UIView()
-        tblView.showsHorizontalScrollIndicator = false
-        
-        return tblView
-    }
-    
     func performUpdates(animated: Bool = true, _ closure: () -> Void) {
         if !animated {
             CATransaction.begin()
@@ -36,13 +25,6 @@ extension UITableView {
         if #available(iOS 11.0, *) {
             contentInsetAdjustmentBehavior = .never
         }
-    }
-    
-    func reloadData(completion: @escaping ()->()) {
-        UIView.animate(withDuration: 0, animations: {
-            self.reloadData()
-        })
-        { _ in completion() }
     }
     
     func reloadVisibleCells(_ animation: UITableView.RowAnimation = .none) {

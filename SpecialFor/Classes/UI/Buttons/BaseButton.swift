@@ -26,5 +26,4 @@ class BaseButton: UIButton {
     // MARK: - Base Setup
     
     func baseSetup() { }
-    
 }

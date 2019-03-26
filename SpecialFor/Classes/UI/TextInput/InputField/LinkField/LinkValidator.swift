@@ -11,6 +11,9 @@ enum LengthWarning {
     case maxLength
 }
 
+private let letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+private let usernameCharacters = "\(letters)\(letters.lowercased())0123456789_"
+
 final class LinkValidator: NSObject, UITextViewDelegate {
     typealias ValidationClosure = ((ValidationKind) -> Void)
     
@@ -56,7 +59,7 @@ final class LinkValidator: NSObject, UITextViewDelegate {
             validationClosure(.invalidLength(.minLength, length: minLength))
         } else if let maxLength = self.maxLength, link.count > maxLength {
             validationClosure(.invalidLength(.maxLength, length: maxLength))
-        } else if !link.containsOnly(characters: Constants.Validation.usernameCharacters) {
+        } else if !link.containsOnly(characters: usernameCharacters) {
             validationClosure(.invalidSymbols)
         } else {
             validationClosure(.valid)

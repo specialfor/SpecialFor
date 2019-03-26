@@ -13,7 +13,7 @@ final class SeparatorView: UIView {
     
     static let height: CGFloat = 1
     
-    var color: UIColor = UIColor.nynja.backgroundGray {
+    var color: UIColor = .darkGray {
         didSet {
             backgroundColor = color
         }

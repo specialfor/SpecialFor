@@ -14,7 +14,7 @@ class EmptyStateTableViewDS: TableViewDataSourceProxy {
         view.addSubview(emptyStateView)
         emptyStateView.snp.makeConstraints { make in
             make.center.equalToSuperview()
-            make.left.right.greaterThanOrEqualToSuperview().inset(16.0.adjustedByWidth)
+            make.left.right.greaterThanOrEqualToSuperview().inset(16.0)
         }
         
         return view

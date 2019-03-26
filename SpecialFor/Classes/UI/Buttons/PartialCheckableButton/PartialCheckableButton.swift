@@ -35,9 +35,9 @@ class PartialCheckableButton: BaseView {
     }()
     
     private lazy var titleLabel: UILabel = {
-        let label = UILabel(height: Constraints.TitleLabel.height,
-                            color: UIColor.nynja.manatee,
-                            fontName: FontFamily.NotoSans.medium.name)
+        let label = UILabel()
+        label.textColor = .black
+        label.font = UIFont.preferredFont(forTextStyle: .body)
         
         label.setContentCompressionResistancePriority(.required, for: .horizontal)
         
@@ -106,8 +106,8 @@ extension PartialCheckableButton {
     enum Constraints {
         
         enum TitleLabel {
-            static let height = CGFloat(20).adjustedByWidth
-            static let rightInset = 32.0.adjustedByWidth
+            static let height = CGFloat(20)
+            static let rightInset = 32.0
         }
         
     }
@@ -117,7 +117,7 @@ extension PartialCheckableButton {
 
 // MARK: - Testable
 
-extension PartialCheckableButton: TestableViewProtocol {
+extension PartialCheckableButton {
     
     private enum Keys: String {
         case button         = "button"
@@ -128,5 +128,4 @@ extension PartialCheckableButton: TestableViewProtocol {
         button.accessibilityIdentifier       = Keys.button.rawValue
         titleLabel.accessibilityIdentifier   = Keys.titleLabel.rawValue
     }
-    
 }

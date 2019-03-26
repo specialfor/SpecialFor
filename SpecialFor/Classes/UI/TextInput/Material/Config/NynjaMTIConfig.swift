@@ -6,22 +6,21 @@
 //  Copyright © 2018 TecSynt Solutions. All rights reserved.
 //
 
-fileprivate let defaultFont = UIFont.makeFont(with: FontFamily.NotoSans.regular.name, height: CGFloat(22).adjustedByWidth)!
-fileprivate let defaultColor = UIColor.nynja.mainRed
-fileprivate let darkGrayColor = UIColor.nynja.manatee
+fileprivate let defaultFont = UIFont.preferredFont(forTextStyle: .title1)
+fileprivate let defaultColor = UIColor.red
+fileprivate let darkGrayColor = UIColor.darkGray
 
 struct NynjaMTIConfig: MTIConfigProtocol {
     
     let font: UIFont = defaultFont
-    let textColor: UIColor = UIColor.nynja.white
+    let textColor: UIColor = .white
     
     let cursorColor: UIColor = defaultColor
     let keyboardType: UIKeyboardType = .default
     let isSecureTextEntry = false
     
     let placeholderFont: UIFont = defaultFont
-    let placeholderCollapsedFontSize: CGFloat = UIFont.makeFont(with: FontFamily.NotoSans.regular.name,
-                                                         height: CGFloat(17).adjustedByWidth)!.pointSize
+    let placeholderCollapsedFontSize: CGFloat = UIFont.preferredFont(forTextStyle: .body).pointSize
     let placeholderColor: UIColor = darkGrayColor
     
     let activeSeparatorHeight: CGFloat = 2
@@ -29,8 +28,7 @@ struct NynjaMTIConfig: MTIConfigProtocol {
     var activeSeparatorColor: UIColor = defaultColor
     var inactiveSeparatorColor: UIColor = darkGrayColor
     
-    let infoFont: UIFont? = UIFont.makeFont(with: FontFamily.NotoSans.medium.name, height: CGFloat(17).adjustedByWidth)
+    let infoFont: UIFont? = UIFont.preferredFont(forTextStyle: .body)
     let warningColor: UIColor = defaultColor
-    let successColor: UIColor = UIColor.nynja.callGreen
-    
+    let successColor: UIColor = .green
 }

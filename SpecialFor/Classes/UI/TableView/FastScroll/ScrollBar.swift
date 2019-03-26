@@ -8,9 +8,9 @@
 
 import SnapKit
 
-fileprivate let _scrollBarWidth: CGFloat = CGFloat(22.0.adjustedByWidth)
-fileprivate let _sliderSize = CGSize(width: _scrollBarWidth, height: CGFloat(54.0.adjustedByWidth))
-fileprivate let _handleWidth = CGFloat(6.0.adjustedByWidth)
+fileprivate let _scrollBarWidth: CGFloat = CGFloat(22.0)
+fileprivate let _sliderSize = CGSize(width: _scrollBarWidth, height: CGFloat(54.0))
+fileprivate let _handleWidth = CGFloat(6.0)
 
 class ScrollBar: BaseView {
     typealias ShouldShowAction = () -> Bool
@@ -21,7 +21,7 @@ class ScrollBar: BaseView {
     var isOnUpdate: Bool = false
     
     /// Default: main theme red color
-    var handleColor: UIColor = UIColor.nynja.mainRed {
+    var handleColor: UIColor = .red {
         didSet {
             handleView.backgroundColor = handleColor
         }
@@ -36,8 +36,8 @@ class ScrollBar: BaseView {
         }
     }
     
-    private let handleRightInset = CGFloat(4.0.adjustedByWidth)
-    private let pinTopInset = CGFloat(16.0.adjustedByWidth)
+    private let handleRightInset = CGFloat(4.0)
+    private let pinTopInset = CGFloat(16.0)
     
     // MARK: - Constraints
     var topInsetConstraint: Constraint!
@@ -58,7 +58,7 @@ class ScrollBar: BaseView {
         let frame = CGRect(origin: origin, size: sliderSize)
         
         let view = UIView(frame: frame)
-        view.backgroundColor = UIColor.nynja.clear
+        view.backgroundColor = .clear
         
         self.addSubview(view)
         return view
@@ -83,7 +83,7 @@ class ScrollBar: BaseView {
         pin.titleLabel.text = "A"
         
         let rightInset = 2 * handleRightInset + _handleWidth
-        let width = 64.0.adjustedByWidth
+        let width = 64.0
         
         self.addSubview(pin)
         pin.snp.makeConstraints { (make) in
@@ -109,7 +109,7 @@ class ScrollBar: BaseView {
         super.baseSetup()
         
         self.clipsToBounds = false
-        self.backgroundColor = UIColor.nynja.clear
+        self.backgroundColor = .clear
         
         infoView.alpha = 0.0
         
@@ -326,7 +326,7 @@ extension ScrollBar {
 
 // MARK: - Testable
 
-extension ScrollBar: TestableViewProtocol {
+extension ScrollBar {
     
     private enum Keys: String {
         case sliderView         = "slider_view"
@@ -339,5 +339,4 @@ extension ScrollBar: TestableViewProtocol {
         handleView.accessibilityIdentifier          = Keys.handleView.rawValue
         infoView.accessibilityIdentifier            = Keys.infoView.rawValue
     }
-    
 }

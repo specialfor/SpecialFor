@@ -10,7 +10,7 @@ import UIKit
 
 extension UIView {
     
-    func adjustShadow(with radius: CGFloat, color: UIColor = UIColor.nynja.black) {
+    func adjustShadow(with radius: CGFloat, color: UIColor = UIColor.black) {
         layer.shadowColor = color.cgColor
         layer.shadowOffset = CGSize(width: 0, height: 2.0)
         layer.shadowOpacity = 0.5

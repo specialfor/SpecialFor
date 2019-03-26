@@ -51,7 +51,7 @@ class ImagePlaceholderField: UIView {
     lazy var placeholderImageView: UIImageView = {
         let imgView = UIImageView()
     
-        let width = 20.0.adjustedByWidth
+        let width = 20.0
         
         self.addSubview(imgView)
         imgView.snp.makeConstraints({ (make) in
@@ -63,15 +63,16 @@ class ImagePlaceholderField: UIView {
     }()
     
     lazy var placeholderLabel: UILabel = {
-        let height = CGFloat(19.0.adjustedByWidth)
         
-        let label = UILabel(size: CGSize(width: 100, height: height), color: UIColor.nynja.manatee, fontName: FontFamily.NotoSans.regular.name)
+        let label = UILabel()
+        label.textColor = .black
+        label.font = UIFont.preferredFont(forTextStyle: .body)
         
-        let rightInset = 16.0.adjustedByWidth
+        let rightInset = 16.0
         
         self.addSubview(label)
         label.snp.makeConstraints({ (make) in
-            make.left.equalTo(placeholderImageView.snp.right).offset(4.0.adjustedByWidth)
+            make.left.equalTo(placeholderImageView.snp.right).offset(4.0)
             make.right.equalTo(-rightInset)
             make.centerY.equalTo(placeholderImageView)
         })
@@ -82,9 +83,9 @@ class ImagePlaceholderField: UIView {
     lazy var textField: TextField = {
         let textField = TextField()
         
-        textField.backgroundColor = UIColor.nynja.clear
-        textField.tintColor = UIColor.nynja.mainRed
-        textField.textColor = UIColor.nynja.white
+        textField.backgroundColor = UIColor.clear
+        textField.tintColor = UIColor.red
+        textField.textColor = UIColor.white
         
         self.addSubview(textField)
         textField.snp.makeConstraints({ (make) in
@@ -133,12 +134,13 @@ class ImagePlaceholderField: UIView {
         placeholderImageView.isUserInteractionEnabled = false
         placeholderLabel.isUserInteractionEnabled = false
         
-        placeholerImage = UIImage.nynja.icParticipantsSearch.image
+        // TODO: image
+//        placeholerImage = UIImage.nynja.icParticipantsSearch.image
         
         layer.borderWidth = 2.0
-        layer.borderColor = UIColor.nynja.mainRed.cgColor
+        layer.borderColor = UIColor.red.cgColor
         
-        backgroundColor = UIColor.nynja.darkLight
+        backgroundColor = UIColor.lightGray
     }
     
     

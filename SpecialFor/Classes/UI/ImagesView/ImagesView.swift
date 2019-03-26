@@ -35,7 +35,7 @@ class ImagesView: BaseView {
         }
     }
     
-    var spacing: Double = _spacing.adjustedByWidth {
+    var spacing: Double = _spacing {
         didSet {
             if oldValue != spacing {
                 updateSpacings()
@@ -52,7 +52,7 @@ class ImagesView: BaseView {
         }
     }
     
-    var borderColor: UIColor = UIColor.nynja.manatee {
+    var borderColor: UIColor = .gray {
         didSet {
             if oldValue != borderColor {
                 adjustBorders()
@@ -60,7 +60,7 @@ class ImagesView: BaseView {
         }
     }
     
-    var borderWidth: CGFloat = _borderWidth.adjustedByWidth {
+    var borderWidth: CGFloat = _borderWidth {
         didSet {
             if oldValue != borderWidth {
                 adjustBorders()
@@ -184,7 +184,7 @@ class ImagesView: BaseView {
             imageView.layer.borderColor = borderColor.cgColor
             imageView.layer.borderWidth = borderWidth
         } else {
-            imageView.layer.borderColor = UIColor.nynja.clear.cgColor
+            imageView.layer.borderColor = UIColor.clear.cgColor
             imageView.layer.borderWidth = 0.0
         }
     }
@@ -203,14 +203,15 @@ class ImagesView: BaseView {
 extension UIImageView {
     
     func setImage(with type: ImagesView.ItemType) {
-        let placeholder = UIImage.nynja.Contacts.avaPlaceholder.image
+        // TODO: image
+//        let placeholder = UIImage.nynja.Contacts.avaPlaceholder.image
         
-        switch type {
-        case .image(let image):
-            self.image = image ?? placeholder
-        case .url(let url):
-            self.setImage(url: url, placeHolder: placeholder)
-        }
+//        switch type {
+//        case .image(let image):
+//            self.image = image ?? placeholder
+//        case .url(let url):
+//            self.setImage(url: url, placeHolder: placeholder)
+//        }
     }
     
 }

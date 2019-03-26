@@ -34,11 +34,11 @@ class EmptyStateView: BaseView {
     }()
     
     private lazy var descriptionLabel: UILabel = {
-        let label = UILabel(height: Constraints.DescriptionLabel.height,
-                            color: UIColor.nynja.manatee,
-                            fontName: FontFamily.NotoSans.medium.name,
-                            textAlignment: .center)
+        let label = UILabel()
         
+        label.textColor = .black
+        label.font = UIFont.preferredFont(forTextStyle: .body)
+        label.textAlignment = .center
         label.numberOfLines = 2
         
         self.addSubview(label)
@@ -50,8 +50,8 @@ class EmptyStateView: BaseView {
         return label
     }()
     
-    private lazy var actionButton: NynjaButton = {
-        let button = NynjaButton()
+    private lazy var actionButton: UIButton = {
+        let button = UIButton()
         
         button.addTarget(self, action: #selector(actionTapped), for: .touchUpInside)
         
@@ -119,13 +119,13 @@ extension EmptyStateView {
     enum Constraints {
         
         enum DescriptionLabel {
-            static let height = CGFloat(22).adjustedByWidth
-            static let topInset = 16.0.adjustedByWidth
+            static let height = CGFloat(22)
+            static let topInset = 16.0
         }
         
         enum ActionButton {
-            static let height = 44.0.adjustedByWidth
-            static let topInset = 16.0.adjustedByWidth
+            static let height = 44.0
+            static let topInset = 16.0
         }
     }
 }

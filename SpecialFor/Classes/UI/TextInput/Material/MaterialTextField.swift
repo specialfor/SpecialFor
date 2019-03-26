@@ -63,7 +63,7 @@ class MaterialTextField: MaterialTextContainer {
         let textField = TextField()
         
         textField.font = font
-        textField.backgroundColor = UIColor.nynja.clear
+        textField.backgroundColor = .clear
         textField.tintColor = cursorColor
         textField.textColor = textColor
         
