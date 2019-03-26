@@ -40,4 +40,9 @@ TODO: Add long description of the pod here.
       av_foundation.frameworks = 'AVFoundation'
       av_foundation.source_files = 'Specialfor/Classes/Extensions/AVFoundation/*'
   end
+  
+  s.subspec 'Photos' do |photos|
+      photos.frameworks = 'Photos'
+      photos.source_files = 'Specialfor/Classes/Extensions/Photos/*'
+  end
 end

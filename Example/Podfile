@@ -1,5 +1,5 @@
 use_frameworks!
 target 'Example' do
-  pod 'SpecialFor/AVFoundation', :path => '../'
+  pod 'SpecialFor/Photos', :path => '../'
   
 end
