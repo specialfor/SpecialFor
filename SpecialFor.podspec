@@ -23,9 +23,8 @@ TODO: Add long description of the pod here.
   # s.frameworks = 'UIKit', 'MapKit'
   
   s.source_files = 'Specialfor/Classes/**/*'
-  s.dependency 'SnapKit'
   
-  s.default_subspec = 'Core'
+  #s.default_subspec = 'Core'
 
   s.subspec 'Core' do |core|
       core.source_files = 'Specialfor/Classes/Core/**/*'
@@ -34,6 +33,7 @@ TODO: Add long description of the pod here.
   s.subspec 'UIKit' do |ui_kit|
       ui_kit.frameworks = 'UIKit'
       ui_kit.source_files = 'Specialfor/Classes/UIKit/**/*'
+      ui_kit.dependency 'SnapKit'
   end
   
   s.subspec 'AVFoundation' do |av_foundation|

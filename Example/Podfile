@@ -1,5 +1,5 @@
 use_frameworks!
 target 'Example' do
-  pod 'SpecialFor/Photos', :path => '../'
+  pod 'SpecialFor', :path => '../'
   
 end
