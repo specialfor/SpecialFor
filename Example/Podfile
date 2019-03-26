@@ -1,0 +1,6 @@
+use_frameworks!
+target 'SpecialFor_Tests' do
+  pod 'SpecialFor', :path => '../'
+  
+  
+end
