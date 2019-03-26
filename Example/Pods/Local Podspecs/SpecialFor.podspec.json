@@ -15,14 +15,16 @@
     "git": "https://github.com/Volodymyr Hryhoriev/SpecialFor.git",
     "tag": "0.1.0"
   },
+  "social_media_url": "https://twitter.com/specialfor_ios",
   "platforms": {
     "ios": "10.0"
   },
   "swift_version": "4.2",
-  "source_files": "SpecialFor/Classes/**/*",
-  "dependencies": {
-    "SnapKit": [
-
-    ]
-  }
+  "default_subspecs": "Core",
+  "subspecs": [
+    {
+      "name": "Core",
+      "source_files": "Specialfor/Classes/Core/**/*"
+    }
+  ]
 }
