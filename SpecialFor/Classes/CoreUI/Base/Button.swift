@@ -1,5 +1,5 @@
 //
-//  BaseButton.swift
+//  Button.swift
 //  Nynja
 //
 //  Created by Volodymyr Hryhoriev on 6/23/18.
@@ -8,16 +8,17 @@
 
 import UIKit
 
-class BaseButton: UIButton {
+public class Button: UIButton {
     
+
     // MARK: - Init
     
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
         baseSetup()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         baseSetup()
     }
@@ -25,5 +26,5 @@ class BaseButton: UIButton {
     
     // MARK: - Base Setup
     
-    func baseSetup() { }
+    public func baseSetup() { }
 }

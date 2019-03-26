@@ -6,7 +6,7 @@
 //  Copyright © 2017 TecSynt Solutions. All rights reserved.
 //
 
-class PinView: BaseView {
+class PinView: View {
     
     // MARK: Views
     lazy var titleLabel: UILabel = {

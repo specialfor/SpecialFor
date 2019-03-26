@@ -1,5 +1,5 @@
 //
-//  UIButtonExtensions.swift
+//  UIButton+CenterVertically.swift
 //  Nynja
 //
 //  Created by Anton Poltoratskyi on 29.05.2018.
@@ -10,7 +10,7 @@ import UIKit
 
 extension UIButton {
     
-    func centerVertically(padding: CGFloat) {
+    public func centerVertically(padding: CGFloat) {
         guard
             let imageViewSize = imageView?.bounds.size,
             let titleLabelSize = titleLabel?.bounds.size else {

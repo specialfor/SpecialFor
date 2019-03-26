@@ -12,7 +12,7 @@ fileprivate let _scrollBarWidth: CGFloat = CGFloat(22.0)
 fileprivate let _sliderSize = CGSize(width: _scrollBarWidth, height: CGFloat(54.0))
 fileprivate let _handleWidth = CGFloat(6.0)
 
-class ScrollBar: BaseView {
+class ScrollBar: View {
     typealias ShouldShowAction = () -> Bool
     
     private var sliderSize: CGSize = _sliderSize

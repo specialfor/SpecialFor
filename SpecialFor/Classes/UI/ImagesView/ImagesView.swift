@@ -11,7 +11,7 @@ import SnapKit
 fileprivate let _spacing: Double = 4.0
 fileprivate let _borderWidth: CGFloat = 2.0
 
-class ImagesView: BaseView {
+class ImagesView: View {
     enum ItemType {
         case url(URL?)
         case image(UIImage?)

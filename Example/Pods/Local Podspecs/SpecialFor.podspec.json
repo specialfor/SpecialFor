@@ -20,11 +20,21 @@
     "ios": "10.0"
   },
   "swift_version": "4.2",
+  "source_files": "Specialfor/Classes/**/*",
+  "dependencies": {
+    "SnapKit": [
+
+    ]
+  },
   "default_subspecs": "Core",
   "subspecs": [
     {
       "name": "Core",
       "source_files": "Specialfor/Classes/Core/**/*"
+    },
+    {
+      "name": "CoreUI",
+      "source_files": "Specialfor/Classes/CoreUI/**/*"
     }
   ]
 }

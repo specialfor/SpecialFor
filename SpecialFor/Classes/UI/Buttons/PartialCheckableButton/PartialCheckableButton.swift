@@ -9,7 +9,7 @@
 
 import UIKit
 
-class PartialCheckableButton: BaseView {
+class PartialCheckableButton: View {
     
     override var activatedViews: [UIView] {
         return [titleLabel, button]

@@ -6,6 +6,8 @@
 //  Copyright © 2018 TecSynt Solutions. All rights reserved.
 //
 
+import SnapKit
+
 final class LinkField: MaterialTextField {
     
     var domen: String = "" {

@@ -8,23 +8,23 @@
 
 import UIKit
 
-enum GradientDirection {
+public enum GradientDirection {
     case fromTop
     case fromBottom
 }
 
-fileprivate typealias Points = (start: CGPoint, end: CGPoint)
+private typealias Points = (start: CGPoint, end: CGPoint)
 
 extension UIView {
     
-    func drawLinearGradient(in context: CGContext?, colors: [CGColor], direction: GradientDirection) {
+    public func drawLinearGradient(in context: CGContext?, colors: [CGColor], direction: GradientDirection) {
         let points = self.points(direction)
         let locations: [CGFloat] = [0.0, 1.0]
         
         context?.drawLinearGradient(with: colors, locations: locations, from: points.start, to: points.end)
     }
     
-    fileprivate func points(_ direction: GradientDirection) -> Points {
+    private func points(_ direction: GradientDirection) -> Points {
         var startPoint: CGPoint
         var endPoint: CGPoint
         
@@ -40,7 +40,7 @@ extension UIView {
         return (startPoint, endPoint)
     }
     
-    func setGradientMask (firstInset: CGFloat, secondInset:CGFloat, vertical:Bool) {
+    public func setGradientMask (firstInset: CGFloat, secondInset:CGFloat, vertical:Bool) {
         let layer = layerForGradient(firstInset: firstInset, secondInset: secondInset, vertical: vertical)
         
         let view = UIView(frame: CGRect(x:0, y:0, width:frame.width, height: frame.height))

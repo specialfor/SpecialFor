@@ -21,11 +21,17 @@ TODO: Add long description of the pod here.
   # }
 
   # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'SnapKit'
+  
+  s.source_files = 'Specialfor/Classes/**/*'
+  s.dependency 'SnapKit'
   
   s.default_subspec = 'Core'
-  
+
   s.subspec 'Core' do |core|
       core.source_files = 'Specialfor/Classes/Core/**/*'
+  end
+  
+  s.subspec 'CoreUI' do |core_ui|
+      core_ui.source_files = 'Specialfor/Classes/CoreUI/**/*'
   end
 end

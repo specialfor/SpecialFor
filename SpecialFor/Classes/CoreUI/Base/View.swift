@@ -1,5 +1,5 @@
 //
-//  BaseView.swift
+//  View.swift
 //  Nynja
 //
 //  Created by Volodymyr Hryhoriev on 12/29/17.
@@ -8,33 +8,30 @@
 
 import UIKit
 
-class BaseView: UIView {
+public class View: UIView {
     
-    var activatedViews: [UIView] {
+    public var activatedViews: [UIView] {
         return []
     }
     
+    
     // MARK: - Init
-    override init(frame: CGRect) {
+    
+    public override init(frame: CGRect) {
         super.init(frame: frame)
         baseSetup()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         baseSetup()
     }
     
+    
     // MARK: - Base Setup
+    
+    /// Don't forget to call `super.baseSetup` in subclasess
     func baseSetup() {
         activatedViews.activate()
-        // NOTE: implement in subclasse if needed
     }
-    
-}
-
-extension Array where Element == UIView {
-    
-    func activate() {}
-    
 }

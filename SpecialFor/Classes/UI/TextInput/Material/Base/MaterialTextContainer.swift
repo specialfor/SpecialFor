@@ -11,7 +11,7 @@ import SnapKit
 
 fileprivate let defaultConfig = NynjaMTIConfig()
 
-class MaterialTextContainer: BaseView, MaterialTextInput {
+class MaterialTextContainer: View, MaterialTextInput {
     
     var validators: [MTIValidator] = []
     

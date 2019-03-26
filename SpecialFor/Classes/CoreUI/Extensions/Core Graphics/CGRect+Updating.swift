@@ -1,5 +1,5 @@
 //
-//  CGRectExtensions.swift
+//  CGRect+Updating.swift
 //  Nynja
 //
 //  Created by Anton Poltoratskyi on 24.07.2018.

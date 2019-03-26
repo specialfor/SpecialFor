@@ -8,7 +8,7 @@
 
 import SnapKit
 
-class EmptyStateView: BaseView {
+class EmptyStateView: View {
     typealias ActionHandler = () -> Void
     
     var actionHandler: ActionHandler?

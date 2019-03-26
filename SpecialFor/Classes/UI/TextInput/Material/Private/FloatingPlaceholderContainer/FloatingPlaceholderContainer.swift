@@ -11,7 +11,7 @@ import SnapKit
 
 fileprivate let collapsedFontSize: CGFloat = 14.0
 
-class FloatingPlaceholderContainer: BaseView, FloatingPlaceholderProvider {
+class FloatingPlaceholderContainer: View, FloatingPlaceholderProvider {
     private typealias TransformOptions = (transform: CGAffineTransform, horizontalInset: Int)
     
     /// Default: 12.0

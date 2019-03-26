@@ -8,32 +8,36 @@
 
 import UIKit
 
-class GradientView: UIView {
+public final class GradientView: UIView {
     
-    var colors: [UIColor] = [] {
+    // TODO: @IBDesignable
+    public var colors: [UIColor] = [] {
         didSet {
             setNeedsDisplay()
         }
     }
     
+    
     // MARK: Init
-    init(colors: [UIColor]) {
+    
+    public init(colors: [UIColor]) {
         self.colors = colors
         super.init(frame: CGRect.zero)
         self.backgroundColor = UIColor.clear
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
+    
     // MARK: Draw
-    override func draw(_ rect: CGRect) {
+    
+    public override func draw(_ rect: CGRect) {
         if !colors.isEmpty {
             let context = UIGraphicsGetCurrentContext()
             let cgColors = colors.map { $0.cgColor }
             drawLinearGradient(in: context, colors: cgColors, direction: .fromTop)
         }
     }
-    
 }

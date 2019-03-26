@@ -10,13 +10,18 @@ import CoreGraphics
 
 extension CGContext {
     
-    func drawLinearGradient(with colors: [CGColor], locations: [CGFloat], from: CGPoint, to: CGPoint) {
+    public func drawLinearGradient(with colors: [CGColor], locations: [CGFloat], from: CGPoint, to: CGPoint) {
         
         let colorSpace = CGColorSpaceCreateDeviceRGB()
         drawLinearGradient(with: colors, locations: locations, from: from, to: to, colorSpace: colorSpace)
     }
     
-    func drawLinearGradient(with colors: [CGColor], locations: [CGFloat], from: CGPoint, to: CGPoint, colorSpace: CGColorSpace, options: CGGradientDrawingOptions = []) {
+    public func drawLinearGradient(with colors: [CGColor],
+                                   locations: [CGFloat],
+                                   from: CGPoint,
+                                   to: CGPoint,
+                                   colorSpace: CGColorSpace,
+                                   options: CGGradientDrawingOptions = []) {
         
         guard let gradient = CGGradient(colorsSpace: colorSpace, colors: colors as CFArray, locations: locations) else {
             
@@ -26,5 +31,4 @@ extension CGContext {
         
         self.drawLinearGradient(gradient, start: from, end: to, options: options)
     }
-    
 }

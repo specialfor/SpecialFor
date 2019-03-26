@@ -6,28 +6,33 @@
 //  Copyright © 2017 TecSynt Solutions. All rights reserved.
 //
 
-class GradientButton: UIButton {
+public class GradientButton: UIButton {
     
-    var startColor: UIColor
-    var endColor: UIColor
+    // TODO: make @IBDesignable
+    public var startColor: UIColor
+    public var endColor: UIColor
+    
     
     // MARK: Init
-    init(frame: CGRect = CGRect.zero, startColor: UIColor, endColor: UIColor) {
+    
+    public init(frame: CGRect = CGRect.zero, startColor: UIColor, endColor: UIColor) {
         self.startColor = startColor
         self.endColor = endColor
         super.init(frame: frame)
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
+    
     // MARK: Draw
-    override func draw(_ rect: CGRect) {
+    
+    // TODO: look into layer implementation
+    public override func draw(_ rect: CGRect) {
         let context = UIGraphicsGetCurrentContext()
         let colors = [startColor.cgColor, endColor.cgColor]
         
         drawLinearGradient(in: context, colors: colors, direction: .fromTop)
     }
-    
 }
