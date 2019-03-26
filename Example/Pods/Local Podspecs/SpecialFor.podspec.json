@@ -34,7 +34,13 @@
     },
     {
       "name": "UIKit",
+      "frameworks": "UIKit",
       "source_files": "Specialfor/Classes/UIKit/**/*"
+    },
+    {
+      "name": "AVFoundation",
+      "frameworks": "AVFoundation",
+      "source_files": "Specialfor/Classes/Extensions/AVFoundation/*"
     }
   ]
 }

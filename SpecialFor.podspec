@@ -35,4 +35,9 @@ TODO: Add long description of the pod here.
       ui_kit.frameworks = 'UIKit'
       ui_kit.source_files = 'Specialfor/Classes/UIKit/**/*'
   end
+  
+  s.subspec 'AVFoundation' do |av_foundation|
+      av_foundation.frameworks = 'AVFoundation'
+      av_foundation.source_files = 'Specialfor/Classes/Extensions/AVFoundation/*'
+  end
 end

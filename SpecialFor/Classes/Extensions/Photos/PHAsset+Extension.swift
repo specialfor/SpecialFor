@@ -1,5 +1,5 @@
 //
-//  PHAssetExtensions.swift
+//  PHAsset+Extension.swift
 //  Nynja
 //
 //  Created by Volodymyr Hryhoriev on 1/9/19.
@@ -10,11 +10,11 @@ import Photos
 
 extension PHAsset {
     
-    var fileSize: Int64 {
+    public var fileSize: Int64 {
         return valueFromResource(forKey: "fileSize", defaultValue: 0)
     }
     
-    var resolution: CGSize {
+    public var resolution: CGSize {
         return CGSize(width: pixelWidth, height: pixelHeight)
     }
     

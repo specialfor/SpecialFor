@@ -1,5 +1,5 @@
 //
-//  PHFetchOptionsExtensions.swift
+//  PHFetchOptions+Extension.swift
 //  Nynja
 //
 //  Created by Volodymyr Hryhoriev on 6/19/18.
@@ -10,7 +10,7 @@ import Photos
 
 extension PHFetchOptions {
     
-    convenience init(sortedByCreationDateOrder isAscending: Bool) {
+    public convenience init(sortedByCreationDateOrder isAscending: Bool) {
         self.init()
         self.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: isAscending)]
     }
