@@ -51,6 +51,10 @@
         {
           "name": "SeparatorView",
           "source_files": "**/{SeparatorView,View}.swift"
+        },
+        {
+          "name": "Gradient",
+          "source_files": "**/Gradient/**/*"
         }
       ]
     },
