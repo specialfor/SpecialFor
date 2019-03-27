@@ -39,12 +39,12 @@
     {
       "name": "AVFoundation",
       "frameworks": "AVFoundation",
-      "source_files": "Specialfor/Classes/Extensions/AVFoundation/*"
+      "source_files": "Specialfor/Classes/AVFoundation/*"
     },
     {
       "name": "Photos",
       "frameworks": "Photos",
-      "source_files": "Specialfor/Classes/Extensions/Photos/*"
+      "source_files": "Specialfor/Classes/Photos/*"
     }
   ]
 }
