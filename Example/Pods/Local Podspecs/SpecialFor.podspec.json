@@ -38,7 +38,16 @@
       "subspecs": [
         {
           "name": "PartialCheckableButton",
-          "source_files": "**/{PartialCheckableButton,Closure,View}.swift"
+          "dependencies": {
+            "SpecialFor/UIKit/View": [
+
+            ]
+          },
+          "source_files": "**/{PartialCheckableButton,Closure}.swift"
+        },
+        {
+          "name": "View",
+          "source_files": "**/View.swift"
         },
         {
           "name": "ImageAlertViewController",
@@ -65,7 +74,12 @@
         },
         {
           "name": "SeparatorView",
-          "source_files": "**/{SeparatorView,View}.swift"
+          "dependencies": {
+            "SpecialFor/UIKit/View": [
+
+            ]
+          },
+          "source_files": "**/SeparatorView.swift"
         }
       ]
     },

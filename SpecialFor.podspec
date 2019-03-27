@@ -36,7 +36,12 @@ TODO: Add long description of the pod here.
       ui_kit.dependency 'SnapKit'
       
       ui_kit.subspec 'PartialCheckableButton' do |pcb|
-          pcb.source_files = '**/{PartialCheckableButton,Closure,View}.swift'
+          pcb.dependency 'SpecialFor/UIKit/View'
+          pcb.source_files = '**/{PartialCheckableButton,Closure}.swift'
+      end
+      
+      ui_kit.subspec 'View' do |view|
+          view.source_files = '**/View.swift'
       end
       
       ui_kit.subspec 'ImageAlertViewController' do |iavc|
@@ -57,7 +62,8 @@ TODO: Add long description of the pod here.
       end
       
       ui_kit.subspec 'SeparatorView' do |s_view|
-          s_view.source_files = '**/{SeparatorView,View}.swift'
+          s_view.dependency 'SpecialFor/UIKit/View'
+          s_view.source_files = '**/SeparatorView.swift'
       end
   end
   
