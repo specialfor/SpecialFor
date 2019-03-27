@@ -1,10 +1,10 @@
 PODS:
   - SnapKit (4.2.0)
-  - SpecialFor/UIKit/ImageAlertViewController (0.1.0):
+  - SpecialFor/UIKit/AlignableLabel (0.1.0):
     - SnapKit
 
 DEPENDENCIES:
-  - SpecialFor/UIKit/ImageAlertViewController (from `../`)
+  - SpecialFor/UIKit/AlignableLabel (from `../`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -16,8 +16,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
-  SpecialFor: d0d793fe501bfb9d56140adfdec9140f3a928a2a
+  SpecialFor: 3bfcc43419d4c3871e8078c40a105500e0c78112
 
-PODFILE CHECKSUM: cc9d9ee36a8b6c5065ac3a1c4a79ab640f561c32
+PODFILE CHECKSUM: 4b599959f680bb40e7bc3f33ceb67a7b9df6c699
 
 COCOAPODS: 1.6.1

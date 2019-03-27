@@ -42,6 +42,10 @@ TODO: Add long description of the pod here.
       ui_kit.subspec 'ImageAlertViewController' do |iavc|
           iavc.source_files = '**/{ImageAlertViewController,Closure,UIView+Corners,GCD}.swift'
       end
+      
+      ui_kit.subspec 'AlignableLabel' do |a_label|
+          a_label.source_files = '**/AlignableLabel.swift'
+      end
   end
   
   s.subspec 'AVFoundation' do |av_foundation|

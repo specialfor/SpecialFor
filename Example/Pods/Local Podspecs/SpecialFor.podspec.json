@@ -43,6 +43,10 @@
         {
           "name": "ImageAlertViewController",
           "source_files": "**/{ImageAlertViewController,Closure,UIView+Corners,GCD}.swift"
+        },
+        {
+          "name": "AlignableLabel",
+          "source_files": "**/AlignableLabel.swift"
         }
       ]
     },

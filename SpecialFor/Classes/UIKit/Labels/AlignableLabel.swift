@@ -6,23 +6,17 @@
 //  Copyright © 2017 TecSynt Solutions. All rights reserved.
 //
 
-enum VerticalAlignment {
-    case top
-    case center
-    case bottom
-}
-
-class AlignableLabel: UILabel {
+public final class AlignableLabel: UILabel {
     
     /// Determines vertical alignement for label
     /// Default: center
-    var verticalAlignement: VerticalAlignment = .center {
+    public var verticalAlignement: VerticalAlignment = .center {
         didSet {
             setNeedsDisplay()
         }
     }
     
-    override func drawText(in rect: CGRect) {
+    public override func drawText(in rect: CGRect) {
         var newRect = rect
 
         let sizeThatFits = self.sizeThatFits(rect.size)
@@ -35,6 +29,13 @@ class AlignableLabel: UILabel {
         
         super.drawText(in: newRect)
     }
-    
 }
 
+extension AlignableLabel {
+    
+    public enum VerticalAlignment {
+        case top
+        case center
+        case bottom
+    }
+}

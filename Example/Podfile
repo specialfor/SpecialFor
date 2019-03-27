@@ -1,6 +1,6 @@
 use_frameworks!
 target 'Example' do
 #  pod 'SpecialFor', :path => '../'
-  pod 'SpecialFor/UIKit/ImageAlertViewController', :path => '../'
+  pod 'SpecialFor/UIKit/AlignableLabel', :path => '../'
 
 end
