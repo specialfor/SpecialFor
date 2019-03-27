@@ -34,7 +34,18 @@
         "SnapKit": [
 
         ]
-      }
+      },
+      "subspecs": [
+        {
+          "name": "PartialCheckableButton",
+          "frameworks": "UIKit",
+          "source_files": [
+            "Specialfor/Classes/UIKit/Buttons/PartialCheckableButton/*.swift",
+            "Specialfor/Classes/UIKit/Base/View/",
+            "Specialfor/Classes/Core/Standard/Closure.swift"
+          ]
+        }
+      ]
     },
     {
       "name": "AVFoundation",

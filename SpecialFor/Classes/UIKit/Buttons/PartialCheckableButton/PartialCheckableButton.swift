@@ -8,16 +8,18 @@
 //
 
 import UIKit
+import SnapKit
 
-class PartialCheckableButton: View {
+public final class PartialCheckableButton: View {
     
-    override var activatedViews: [UIView] {
+    public override var activatedViews: [UIView] {
         return [titleLabel, button]
     }
     
-    var viewModel: ViewModel? {
+    public var viewModel: ViewModel? {
         didSet { setup(with: viewModel) }
     }
+    
     
     // MARK: - Views
     
@@ -50,9 +52,10 @@ class PartialCheckableButton: View {
         return label
     }()
     
+    
     // MARK: - Base Setup
 
-    override func baseSetup() {
+    public override func baseSetup() {
         super.baseSetup()
         
         button.addTarget(self, action: #selector(tapped), for: .touchUpInside)
@@ -71,30 +74,39 @@ class PartialCheckableButton: View {
     @objc private func tapped() {
         viewModel?.info.action()
     }
-    
 }
 
 
 // MARK: - ViewModel
 
 extension PartialCheckableButton {
-    typealias ActionHandler = () -> Void
     
-    struct ViewModel {
-        let state: State
-        let info: Info
+    public struct ViewModel {
+        public let state: State
+        public let info: Info
+
+        public init(state: State, info: Info) {
+            self.state = state
+            self.info = info
+        }
     }
     
-    enum State {
+    public enum State {
         case empty
         case partial
         case filled
     }
     
-    struct Info {
-        let title: String?
-        let image: UIImage?
-        let action: ActionHandler
+    public struct Info {
+        public let title: String?
+        public let image: UIImage?
+        public let action: Closure
+
+        public init(title: String?, image: UIImage?, action: @escaping Closure) {
+            self.title = title
+            self.image = image
+            self.action = action
+        }
     }
 }
 
@@ -109,9 +121,7 @@ extension PartialCheckableButton {
             static let height = CGFloat(20)
             static let rightInset = 32.0
         }
-        
     }
-    
 }
 
 

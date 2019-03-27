@@ -34,6 +34,11 @@ TODO: Add long description of the pod here.
       ui_kit.frameworks = 'UIKit'
       ui_kit.source_files = 'Specialfor/Classes/UIKit/**/*'
       ui_kit.dependency 'SnapKit'
+      
+      ui_kit.subspec 'PartialCheckableButton' do |pcb|
+          pcb.frameworks = 'UIKit'
+          pcb.source_files = 'Specialfor/Classes/UIKit/Buttons/PartialCheckableButton/*.swift', 'Specialfor/Classes/UIKit/Base/View/', 'Specialfor/Classes/Core/Standard/Closure.swift'
+      end
   end
   
   s.subspec 'AVFoundation' do |av_foundation|

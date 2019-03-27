@@ -1,18 +1,10 @@
 PODS:
   - SnapKit (4.2.0)
-  - SpecialFor (0.1.0):
-    - SpecialFor/AVFoundation (= 0.1.0)
-    - SpecialFor/Core (= 0.1.0)
-    - SpecialFor/Photos (= 0.1.0)
-    - SpecialFor/UIKit (= 0.1.0)
-  - SpecialFor/AVFoundation (0.1.0)
-  - SpecialFor/Core (0.1.0)
-  - SpecialFor/Photos (0.1.0)
-  - SpecialFor/UIKit (0.1.0):
+  - SpecialFor/UIKit/PartialCheckableButton (0.1.0):
     - SnapKit
 
 DEPENDENCIES:
-  - SpecialFor (from `../`)
+  - SpecialFor/UIKit/PartialCheckableButton (from `../`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -24,8 +16,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
-  SpecialFor: 598eb8fb2378b4e1b5249aabb0d87ecda2ec740e
+  SpecialFor: 46062d5765ce6dbac4c9cd356f3356a39569906a
 
-PODFILE CHECKSUM: 7e30053815e11134b83f894cc16cca7866b65fe6
+PODFILE CHECKSUM: f4e1c4d1e5821890d8a58d386a6cad9809416aaa
 
 COCOAPODS: 1.6.1
