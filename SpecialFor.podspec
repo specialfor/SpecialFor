@@ -46,6 +46,10 @@ TODO: Add long description of the pod here.
       ui_kit.subspec 'AlignableLabel' do |a_label|
           a_label.source_files = '**/AlignableLabel.swift'
       end
+      
+      ui_kit.subspec 'SeparatorView' do |s_view|
+          s_view.source_files = '**/{SeparatorView,View}.swift'
+      end
   end
   
   s.subspec 'AVFoundation' do |av_foundation|

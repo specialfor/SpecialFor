@@ -47,6 +47,10 @@
         {
           "name": "AlignableLabel",
           "source_files": "**/AlignableLabel.swift"
+        },
+        {
+          "name": "SeparatorView",
+          "source_files": "**/{SeparatorView,View}.swift"
         }
       ]
     },
