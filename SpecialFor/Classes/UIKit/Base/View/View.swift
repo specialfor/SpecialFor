@@ -35,3 +35,8 @@ public class View: UIView {
         activatedViews.activate()
     }
 }
+
+
+extension Array where Element: UIView {
+    public func activate() {}
+}

@@ -1,5 +1,6 @@
 use_frameworks!
 target 'Example' do
-  pod 'SpecialFor/UIKit/PartialCheckableButton', :path => '../'
-  
+#  pod 'SpecialFor', :path => '../'
+  pod 'SpecialFor/UIKit/ImageAlertViewController', :path => '../'
+
 end

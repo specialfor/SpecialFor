@@ -1,10 +1,10 @@
 PODS:
   - SnapKit (4.2.0)
-  - SpecialFor/UIKit/PartialCheckableButton (0.1.0):
+  - SpecialFor/UIKit/ImageAlertViewController (0.1.0):
     - SnapKit
 
 DEPENDENCIES:
-  - SpecialFor/UIKit/PartialCheckableButton (from `../`)
+  - SpecialFor/UIKit/ImageAlertViewController (from `../`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -16,8 +16,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
-  SpecialFor: 46062d5765ce6dbac4c9cd356f3356a39569906a
+  SpecialFor: d0d793fe501bfb9d56140adfdec9140f3a928a2a
 
-PODFILE CHECKSUM: f4e1c4d1e5821890d8a58d386a6cad9809416aaa
+PODFILE CHECKSUM: cc9d9ee36a8b6c5065ac3a1c4a79ab640f561c32
 
 COCOAPODS: 1.6.1

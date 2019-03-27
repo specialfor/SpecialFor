@@ -1,5 +1,5 @@
 //
-//  AlertImageViewController.swift
+//  ImageAlertViewController.swift
 //  Nynja
 //
 //  Created by Volodymyr Hryhoriev on 2/21/18.
@@ -8,28 +8,31 @@
 
 import SnapKit
 
-class AlertImageViewController: UIViewController {
-    
-    typealias DismissCompletion = () -> Void
-    
-    private let _duration = 2.0
+private let _duration = 2.0
+
+public final class ImageAlertViewController: UIViewController {
     
     // MARK: - Constraints
+    
     private var imageViewSide: Constraint!
     
     private var messageLabelTopInset: Constraint!
     
+    
     // MARK: - Properties
+    
     private var image: UIImage?
     
     private var text: String?
     
     /// Default: 2.0
-    var duration: Double?
+    public var duration: Double?
     
-    var completion: DismissCompletion?
+    public var completion: Closure?
     
-    // MARK: - Views
+    
+    // MARK: - Subviews
+    
     private lazy var popupView: UIView = {
         let view = UIView()
         
@@ -92,8 +95,10 @@ class AlertImageViewController: UIViewController {
         return label
     }()
     
+    
     // MARK: - Init
-    convenience init(image: UIImage?, message: String?) {
+    
+    public convenience init(image: UIImage?, message: String?) {
         self.init()
         
         self.image = image
@@ -103,13 +108,15 @@ class AlertImageViewController: UIViewController {
         self.modalPresentationStyle = .overCurrentContext
     }
     
-    // MARK: - View lifecycle
-    override func viewDidLoad() {
+    
+    // MARK: - UIViewController
+    
+    public override func viewDidLoad() {
         super.viewDidLoad()
         baseSetup()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    public override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         async(after: duration ?? _duration) {
@@ -117,7 +124,9 @@ class AlertImageViewController: UIViewController {
         }
     }
     
+    
     // MARK: - Base setup
+    
     private func baseSetup() {
         view.backgroundColor = UIColor.black.withAlphaComponent(0.4)
         
@@ -133,5 +142,29 @@ class AlertImageViewController: UIViewController {
         if text == nil {
             messageLabelTopInset.update(offset: 0)
         }
+    }
+}
+
+
+extension ImageAlertViewController {
+    
+    enum Constraints {
+        
+        enum popupView {
+            static let width = 270
+            static let cornerdRadius: CGFloat = 12
+        }
+        
+        enum imageView {
+            static let width = 62.0
+            static let topInset = 16.0
+        }
+        
+        enum messageLabel {
+            static let topInset = 16.0
+            static let bottomInset = 24.0
+            static let horizontalInset = 16.0
+        }
+        
     }
 }

@@ -38,12 +38,11 @@
       "subspecs": [
         {
           "name": "PartialCheckableButton",
-          "frameworks": "UIKit",
-          "source_files": [
-            "Specialfor/Classes/UIKit/Buttons/PartialCheckableButton/*.swift",
-            "Specialfor/Classes/UIKit/Base/View/",
-            "Specialfor/Classes/Core/Standard/Closure.swift"
-          ]
+          "source_files": "**/{PartialCheckableButton,Closure,View}.swift"
+        },
+        {
+          "name": "ImageAlertViewController",
+          "source_files": "**/{ImageAlertViewController,Closure,UIView+Corners,GCD}.swift"
         }
       ]
     },

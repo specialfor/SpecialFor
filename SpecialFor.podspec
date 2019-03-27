@@ -36,8 +36,11 @@ TODO: Add long description of the pod here.
       ui_kit.dependency 'SnapKit'
       
       ui_kit.subspec 'PartialCheckableButton' do |pcb|
-          pcb.frameworks = 'UIKit'
-          pcb.source_files = 'Specialfor/Classes/UIKit/Buttons/PartialCheckableButton/*.swift', 'Specialfor/Classes/UIKit/Base/View/', 'Specialfor/Classes/Core/Standard/Closure.swift'
+          pcb.source_files = '**/{PartialCheckableButton,Closure,View}.swift'
+      end
+      
+      ui_kit.subspec 'ImageAlertViewController' do |iavc|
+          iavc.source_files = '**/{ImageAlertViewController,Closure,UIView+Corners,GCD}.swift'
       end
   end
   
