@@ -1,35 +1,13 @@
 PODS:
   - SnapKit (4.2.0)
-  - SpecialFor/UIKit (0.1.0):
-    - SnapKit
-    - SpecialFor/UIKit/Accessories (= 0.1.0)
-    - SpecialFor/UIKit/AlignableLabel (= 0.1.0)
-    - SpecialFor/UIKit/Gradient (= 0.1.0)
-    - SpecialFor/UIKit/ImageAlertViewController (= 0.1.0)
-    - SpecialFor/UIKit/PartialCheckableButton (= 0.1.0)
-    - SpecialFor/UIKit/SeparatorView (= 0.1.0)
-    - SpecialFor/UIKit/View (= 0.1.0)
-  - SpecialFor/UIKit/Accessories (0.1.0):
-    - SnapKit
-    - SpecialFor/UIKit/Gradient
-    - SpecialFor/UIKit/SeparatorView
-  - SpecialFor/UIKit/AlignableLabel (0.1.0):
-    - SnapKit
-  - SpecialFor/UIKit/Gradient (0.1.0):
-    - SnapKit
-  - SpecialFor/UIKit/ImageAlertViewController (0.1.0):
-    - SnapKit
-  - SpecialFor/UIKit/PartialCheckableButton (0.1.0):
-    - SnapKit
-    - SpecialFor/UIKit/View
-  - SpecialFor/UIKit/SeparatorView (0.1.0):
+  - SpecialFor/UIKit/EmptyStateTableViewDS (0.1.0):
     - SnapKit
     - SpecialFor/UIKit/View
   - SpecialFor/UIKit/View (0.1.0):
     - SnapKit
 
 DEPENDENCIES:
-  - SpecialFor/UIKit (from `../`)
+  - SpecialFor/UIKit/EmptyStateTableViewDS (from `../`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -41,8 +19,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
-  SpecialFor: 79325cb3ab7cf71e2227fd0c28f67e645381b936
+  SpecialFor: a612ae891fcc77fea5943190d3a6660976ef4556
 
-PODFILE CHECKSUM: ed5cd61a20ebb70e4842def7fdcccef864cc64e5
+PODFILE CHECKSUM: 5dae0fc6dd84646ae6c484586ec7ead75bf83a2b
 
 COCOAPODS: 1.6.1

@@ -80,6 +80,18 @@
             ]
           },
           "source_files": "**/SeparatorView.swift"
+        },
+        {
+          "name": "EmptyStateTableViewDS",
+          "dependencies": {
+            "SpecialFor/UIKit/View": [
+
+            ]
+          },
+          "source_files": [
+            "**/EmptyState/**/*",
+            "**/{TableViewDataSourceProxy,Closure,UIView+Toggle}.swift"
+          ]
         }
       ]
     },

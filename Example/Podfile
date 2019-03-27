@@ -1,6 +1,6 @@
 use_frameworks!
 target 'Example' do
-  pod 'SpecialFor/UIKit', :path => '../'
-#  pod 'SpecialFor/UIKit/Accessories', :path => '../'
+#  pod 'SpecialFor', :path => '../'
+  pod 'SpecialFor/UIKit/EmptyStateTableViewDS', :path => '../'
 
 end

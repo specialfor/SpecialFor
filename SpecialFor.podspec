@@ -19,8 +19,6 @@ TODO: Add long description of the pod here.
   # s.resource_bundles = {
   #   'SpecialFor' => ['SpecialFor/Assets/*.png']
   # }
-
-  # s.frameworks = 'UIKit', 'MapKit'
   
   s.source_files = 'Specialfor/Classes/**/*'
   
@@ -64,6 +62,11 @@ TODO: Add long description of the pod here.
       ui_kit.subspec 'SeparatorView' do |s_view|
           s_view.dependency 'SpecialFor/UIKit/View'
           s_view.source_files = '**/SeparatorView.swift'
+      end
+      
+      ui_kit.subspec 'EmptyStateTableViewDS' do |estvds|
+          estvds.dependency 'SpecialFor/UIKit/View'
+          estvds.source_files = '**/EmptyState/**/*', '**/{TableViewDataSourceProxy,Closure,UIView+Toggle}.swift'
       end
   end
   

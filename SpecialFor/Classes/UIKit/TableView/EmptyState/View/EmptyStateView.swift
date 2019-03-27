@@ -8,10 +8,8 @@
 
 import SnapKit
 
-class EmptyStateView: View {
-    typealias ActionHandler = () -> Void
-    
-    var actionHandler: ActionHandler?
+final class EmptyStateView: View {
+    var actionHandler: Closure?
     
     private var heightConstraint: Constraint?
     private var topInsetConstraint: Constraint?
@@ -69,7 +67,7 @@ class EmptyStateView: View {
     }()
     
     
-    // MARK: - Setup
+    // MARK: - View
     
     override func baseSetup() {
         super.baseSetup()

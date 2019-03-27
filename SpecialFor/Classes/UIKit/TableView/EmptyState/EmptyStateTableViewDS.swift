@@ -6,7 +6,7 @@
 //  Copyright © 2018 TecSynt Solutions. All rights reserved.
 //
 
-class EmptyStateTableViewDS: TableViewDataSourceProxy {
+public class EmptyStateTableViewDS: TableViewDataSourceProxy {
     
     private lazy var backgroundView: UIView = {
         let view = UIView()
@@ -22,9 +22,9 @@ class EmptyStateTableViewDS: TableViewDataSourceProxy {
     
     private let emptyStateView: EmptyStateView = EmptyStateView()
     
-    var emptyStateViewModel: EmptyStateViewModel?
+    public var emptyStateViewModel: EmptyStateViewModel?
     
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    public override func numberOfSections(in tableView: UITableView) -> Int {
         let sections = super.numberOfSections(in: tableView)
         
         let shouldShow = sections == 0
@@ -33,7 +33,7 @@ class EmptyStateTableViewDS: TableViewDataSourceProxy {
         return sections
     }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    public override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let rows = super.tableView(tableView, numberOfRowsInSection: section)
         let sections = numberOfSections(in: tableView)
         
@@ -55,5 +55,14 @@ class EmptyStateTableViewDS: TableViewDataSourceProxy {
         } else {
             tableView.backgroundView = nil
         }
+    }
+}
+
+
+extension EmptyStateTableViewDS {
+    
+    public enum CollectionState<Input> {
+        case empty(EmptyStateViewModel?)
+        case filled(data: Input)
     }
 }
