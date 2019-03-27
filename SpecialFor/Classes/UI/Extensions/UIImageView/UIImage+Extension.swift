@@ -1,5 +1,5 @@
 //
-//  UIImageExtensions.swift
+//  UIImage+Extension.swift
 //  Nynja
 //
 //  Created by Anton Makarov on 28.08.2017.
@@ -10,28 +10,17 @@ import Foundation
 import AVFoundation
 import UIKit
 
-/* - (UIImage *)imageByTintColor:(UIColor *)color
-{
-    UIGraphicsBeginImageContextWithOptions(self.size, NO, self.scale);
-    CGRect rect = CGRectMake(0, 0, self.size.width, self.size.height);
-    [color set];
-    UIRectFill(rect);
-    [self drawAtPoint:CGPointMake(0, 0) blendMode:kCGBlendModeDestinationIn alpha:1];
-    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    return newImage;
-} */
-
 extension UIImage {
     
-    var scaledSize: CGSize {
+    public var scaledSize: CGSize {
         return CGSize(width: size.width * scale, height: size.height * scale)
     }
     
-    convenience init?(fileUrl: URL) {
+    public convenience init?(fileUrl: URL) {
         guard let data = try? Data(contentsOf: fileUrl, options: .uncached) else {
             return nil
         }
+        
         self.init(data: data, scale: UIScreen.main.scale)
     }
     
@@ -77,8 +66,7 @@ extension UIImage {
         return rect.size.width
     }
     
-    func fixedOrientation() -> UIImage
-    {
+    func fixedOrientation() -> UIImage {
         if imageOrientation == .up {
             return self
         }
@@ -101,6 +89,7 @@ extension UIImage {
         case .up, .upMirrored:
             break
         }
+        
         switch imageOrientation {
         case .upMirrored, .downMirrored:
             transform = transform.translatedBy(x: size.width, y: 0)

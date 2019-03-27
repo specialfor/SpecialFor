@@ -10,7 +10,7 @@ import UIKit
 
 extension UICollectionViewFlowLayout {
     
-    struct ItemLayout {
+    public struct ItemLayout {
         var bounds: CGRect
         var horizontalVisibleCount: Int
         var verticalVisibleCount: Int
@@ -18,7 +18,7 @@ extension UICollectionViewFlowLayout {
         var verticalSpacing: CGFloat = 0
     }
     
-    func setupItemSize(for layout: ItemLayout) {
+    public func setupItemSize(for layout: ItemLayout) {
         let horizontalVisibleCount = CGFloat(layout.horizontalVisibleCount)
         let verticalVisibleCount = CGFloat(layout.verticalVisibleCount)
         

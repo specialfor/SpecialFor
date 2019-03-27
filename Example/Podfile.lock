@@ -1,13 +1,5 @@
 PODS:
   - SnapKit (4.2.0)
-  - SpecialFor (0.1.0):
-    - SpecialFor/AVFoundation (= 0.1.0)
-    - SpecialFor/Core (= 0.1.0)
-    - SpecialFor/Photos (= 0.1.0)
-    - SpecialFor/UIKit (= 0.1.0)
-  - SpecialFor/AVFoundation (0.1.0)
-  - SpecialFor/Core (0.1.0)
-  - SpecialFor/Photos (0.1.0)
   - SpecialFor/UIKit (0.1.0):
     - SnapKit
     - SpecialFor/UIKit/Accessories (= 0.1.0)
@@ -37,7 +29,7 @@ PODS:
     - SnapKit
 
 DEPENDENCIES:
-  - SpecialFor (from `../`)
+  - SpecialFor/UIKit (from `../`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -51,6 +43,6 @@ SPEC CHECKSUMS:
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
   SpecialFor: 79325cb3ab7cf71e2227fd0c28f67e645381b936
 
-PODFILE CHECKSUM: e99a9bb4a3d5224206b800135d87a82e6cc29dee
+PODFILE CHECKSUM: ed5cd61a20ebb70e4842def7fdcccef864cc64e5
 
 COCOAPODS: 1.6.1
