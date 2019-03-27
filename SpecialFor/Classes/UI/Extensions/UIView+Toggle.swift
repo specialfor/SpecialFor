@@ -1,5 +1,5 @@
 //
-//  UIViewExtenstions.swift
+//  UIView+Toggle.swift
 //  Nynja
 //
 //  Created by Anton Makarov on 28.08.2017.
@@ -20,17 +20,5 @@ extension UIView {
         self.isHidden = !shouldShow
         
         closure?()
-    }
-
-    func recursiveListOfSubviews() -> [UIView] {
-        var list: [UIView] = []
-
-        list.append(contentsOf: subviews)
-
-        for subview in subviews {
-            list.append(contentsOf: subview.recursiveListOfSubviews())
-        }
-
-        return list
     }
 }
