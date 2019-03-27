@@ -1,6 +1,6 @@
 use_frameworks!
 target 'Example' do
 #  pod 'SpecialFor', :path => '../'
-  pod 'SpecialFor/UIKit/Gradient', :path => '../'
+  pod 'SpecialFor/UIKit/Accessories', :path => '../'
 
 end

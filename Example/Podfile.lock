@@ -1,10 +1,16 @@
 PODS:
   - SnapKit (4.2.0)
+  - SpecialFor/UIKit/Accessories (0.1.0):
+    - SnapKit
+    - SpecialFor/UIKit/Gradient
+    - SpecialFor/UIKit/SeparatorView
   - SpecialFor/UIKit/Gradient (0.1.0):
+    - SnapKit
+  - SpecialFor/UIKit/SeparatorView (0.1.0):
     - SnapKit
 
 DEPENDENCIES:
-  - SpecialFor/UIKit/Gradient (from `../`)
+  - SpecialFor/UIKit/Accessories (from `../`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -16,8 +22,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
-  SpecialFor: 484cffaced7d1f3e0b91e111441954fc55eb9399
+  SpecialFor: 050c6f7965cddcbcde0546b35be88eaae9950ac4
 
-PODFILE CHECKSUM: 459b29d9d7862384f14eb10dfbe93608726e77ec
+PODFILE CHECKSUM: 626190a3b9bda12a53c674792aef6c9e3250a416
 
 COCOAPODS: 1.6.1

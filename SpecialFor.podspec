@@ -47,12 +47,17 @@ TODO: Add long description of the pod here.
           a_label.source_files = '**/AlignableLabel.swift'
       end
       
-      ui_kit.subspec 'SeparatorView' do |s_view|
-          s_view.source_files = '**/{SeparatorView,View}.swift'
+      ui_kit.subspec 'Accessories' do |accessories|
+          accessories.dependency 'SpecialFor/UIKit/Gradient'
+          accessories.dependency 'SpecialFor/UIKit/SeparatorView'
       end
       
       ui_kit.subspec 'Gradient' do |gradient|
           gradient.source_files = '**/Gradient/**/*'
+      end
+      
+      ui_kit.subspec 'SeparatorView' do |s_view|
+          s_view.source_files = '**/{SeparatorView,View}.swift'
       end
   end
   

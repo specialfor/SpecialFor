@@ -49,12 +49,23 @@
           "source_files": "**/AlignableLabel.swift"
         },
         {
-          "name": "SeparatorView",
-          "source_files": "**/{SeparatorView,View}.swift"
+          "name": "Accessories",
+          "dependencies": {
+            "SpecialFor/UIKit/Gradient": [
+
+            ],
+            "SpecialFor/UIKit/SeparatorView": [
+
+            ]
+          }
         },
         {
           "name": "Gradient",
           "source_files": "**/Gradient/**/*"
+        },
+        {
+          "name": "SeparatorView",
+          "source_files": "**/{SeparatorView,View}.swift"
         }
       ]
     },
