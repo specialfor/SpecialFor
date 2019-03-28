@@ -1,16 +1,12 @@
 Pod::Spec.new do |s|
   s.name             = 'SpecialFor'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of SpecialFor.'
+  s.summary          = 'Useful codebase which I used among projects'
 
-  s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
-
-  s.homepage         = 'https://github.com/Volodymyr Hryhoriev/SpecialFor'
+  s.homepage         = 'https://github.com/specialfor/SpecialFor'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Volodymyr Hryhoriev' => 'volodja.grigoriev@gmail.com' }
-  s.source           = { :git => 'https://github.com/Volodymyr Hryhoriev/SpecialFor.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/specialfor/SpecialFor.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/specialfor_ios'
 
   s.ios.deployment_target = '10.0'
