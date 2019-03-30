@@ -1,13 +1,13 @@
 PODS:
   - SnapKit (4.2.0)
-  - SpecialFor/UIKit/EmptyStateTableViewDS (0.1.0):
+  - SpecialFor/UIKit/FastScroll (0.1.0):
     - SnapKit
     - SpecialFor/UIKit/View
   - SpecialFor/UIKit/View (0.1.0):
     - SnapKit
 
 DEPENDENCIES:
-  - SpecialFor/UIKit/EmptyStateTableViewDS (from `../`)
+  - SpecialFor/UIKit/FastScroll (from `../`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -19,8 +19,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
-  SpecialFor: a612ae891fcc77fea5943190d3a6660976ef4556
+  SpecialFor: e821c57942c04857f0c24de1dd6a8bc2d5edf5f6
 
-PODFILE CHECKSUM: 5dae0fc6dd84646ae6c484586ec7ead75bf83a2b
+PODFILE CHECKSUM: 53a81f64a0f736b20888956f75cc7700d2378b34
 
 COCOAPODS: 1.6.1

@@ -64,6 +64,11 @@ Pod::Spec.new do |s|
           estvds.dependency 'SpecialFor/UIKit/View'
           estvds.source_files = '**/EmptyState/**/*', '**/{TableViewDataSourceProxy,Closure,UIView+Toggle}.swift'
       end
+      
+      ui_kit.subspec 'FastScroll' do |fast_scroll|
+          fast_scroll.dependency 'SpecialFor/UIKit/View'
+          fast_scroll.source_files = '**/FastScroll/**/*', '**/{Closure,UIView+Corners}.swift'
+      end
   end
   
   s.subspec 'AVFoundation' do |av_foundation|

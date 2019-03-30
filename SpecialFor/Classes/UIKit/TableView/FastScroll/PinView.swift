@@ -6,9 +6,10 @@
 //  Copyright © 2017 TecSynt Solutions. All rights reserved.
 //
 
-class PinView: View {
+final class PinView: View {
     
-    // MARK: Views
+    // MARK: - Subviews
+    
     lazy var titleLabel: UILabel = {
         let height = CGFloat(44.0)
         
@@ -28,7 +29,9 @@ class PinView: View {
         return label
     }()
     
-    // MARK: Setup
+    
+    // MARK: - Setup
+    
     override func baseSetup() {
         super.baseSetup()
         
@@ -36,7 +39,9 @@ class PinView: View {
         self.backgroundColor = .red
     }
     
-    // MARK: UIView
+    
+    // MARK: - UIView
+    
     override func layoutSubviews() {
         super.layoutSubviews()
         self.roundCorners([.topLeft, .topRight, .bottomLeft], radius: self.bounds.width / 2)

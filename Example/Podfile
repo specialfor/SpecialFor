@@ -1,6 +1,6 @@
 use_frameworks!
 target 'Example' do
 #  pod 'SpecialFor', :path => '../'
-  pod 'SpecialFor/UIKit/EmptyStateTableViewDS', :path => '../'
+  pod 'SpecialFor/UIKit/FastScroll', :path => '../'
 
 end

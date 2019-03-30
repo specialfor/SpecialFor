@@ -1,9 +1,8 @@
 {
   "name": "SpecialFor",
   "version": "0.1.0",
-  "summary": "A short description of SpecialFor.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/Volodymyr Hryhoriev/SpecialFor",
+  "summary": "Useful codebase which I used among projects",
+  "homepage": "https://github.com/specialfor/SpecialFor",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,7 +11,7 @@
     "Volodymyr Hryhoriev": "volodja.grigoriev@gmail.com"
   },
   "source": {
-    "git": "https://github.com/Volodymyr Hryhoriev/SpecialFor.git",
+    "git": "https://github.com/specialfor/SpecialFor.git",
     "tag": "0.1.0"
   },
   "social_media_url": "https://twitter.com/specialfor_ios",
@@ -91,6 +90,18 @@
           "source_files": [
             "**/EmptyState/**/*",
             "**/{TableViewDataSourceProxy,Closure,UIView+Toggle}.swift"
+          ]
+        },
+        {
+          "name": "FastScroll",
+          "dependencies": {
+            "SpecialFor/UIKit/View": [
+
+            ]
+          },
+          "source_files": [
+            "**/FastScroll/**/*",
+            "**/{Closure,UIView+Corners}.swift"
           ]
         }
       ]

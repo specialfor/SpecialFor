@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol FastScrollable: class {
+public protocol FastScrollable: class {
     var scrollBar: ScrollBar? { get }
     var scrollOffset: CGFloat { get set }
     
@@ -18,7 +18,7 @@ protocol FastScrollable: class {
 
 extension FastScrollable {
     
-    func handleFastScroll(in tableView: UITableView) {
+    public func handleFastScroll(in tableView: UITableView) {
         let offset = tableView.contentOffset.y
         
         let isBottom = scrollOffset - offset < 0

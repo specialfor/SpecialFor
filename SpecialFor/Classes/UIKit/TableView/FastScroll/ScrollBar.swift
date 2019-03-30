@@ -8,29 +8,29 @@
 
 import SnapKit
 
-fileprivate let _scrollBarWidth: CGFloat = CGFloat(22.0)
-fileprivate let _sliderSize = CGSize(width: _scrollBarWidth, height: CGFloat(54.0))
-fileprivate let _handleWidth = CGFloat(6.0)
+private let _scrollBarWidth: CGFloat = CGFloat(22.0)
+private let _sliderSize = CGSize(width: _scrollBarWidth, height: CGFloat(54.0))
+private let _handleWidth = CGFloat(6.0)
 
-class ScrollBar: View {
-    typealias ShouldShowAction = () -> Bool
+public final class ScrollBar: View {
+    public typealias ShouldShowAction = ClosureProducer<Bool>
     
     private var sliderSize: CGSize = _sliderSize
     
     //Set true if you want to keep scroll bar position on reloadData
-    var isOnUpdate: Bool = false
+    public var isOnUpdate: Bool = false
     
     /// Default: main theme red color
-    var handleColor: UIColor = .red {
+    public var handleColor: UIColor = .red {
         didSet {
             handleView.backgroundColor = handleColor
         }
     }
     
-    var shouldShowAction: ShouldShowAction?
+    public var shouldShowAction: ShouldShowAction?
     
     // Default: .zero
-    var verticalInset: VerticalInset = .zero {
+    public var verticalInset: VerticalInset = .zero {
         didSet {
             didInsetsChanged()
         }
@@ -39,12 +39,16 @@ class ScrollBar: View {
     private let handleRightInset = CGFloat(4.0)
     private let pinTopInset = CGFloat(16.0)
     
-    // MARK: - Constraints
-    var topInsetConstraint: Constraint!
-    var bottomInsetContraint: Constraint!
     
-    // MARK: - Views
-    @objc var scrollView: UIScrollView? {
+    // MARK: - Constraints
+    
+    private var topInsetConstraint: Constraint!
+    private var bottomInsetContraint: Constraint!
+    
+    
+    // MARK: - Subviews
+    
+    @objc public var scrollView: UIScrollView? {
         willSet {
             unscribeKVO()
         }
@@ -53,7 +57,7 @@ class ScrollBar: View {
         }
     }
     
-    lazy var sliderView: UIView = {
+    private lazy var sliderView: UIView = {
         let origin = CGPoint(x: _scrollBarWidth - sliderSize.width, y: 0)
         let frame = CGRect(origin: origin, size: sliderSize)
         
@@ -64,7 +68,7 @@ class ScrollBar: View {
         return view
     }()
     
-    lazy var handleView: UIView = {
+    private lazy var handleView: UIView = {
         let frame = CGRect(x: _sliderSize.width - _handleWidth - handleRightInset, y: 0, width: _handleWidth, height: sliderSize.height)
         
         let view = UIView(frame: frame)
@@ -77,7 +81,7 @@ class ScrollBar: View {
         return view
     }()
     
-    lazy var infoView: PinView = {
+    private(set) lazy var infoView: PinView = {
         let pin = PinView()
         
         pin.titleLabel.text = "A"
@@ -97,15 +101,19 @@ class ScrollBar: View {
         return pin
     }()
     
-    // MARK: Init
-    convenience init(scrollView: UIScrollView) {
+    
+    // MARK: - Init
+    
+    public convenience init(scrollView: UIScrollView) {
         self.init(frame: CGRect.zero)
         self.scrollView = scrollView
         adjustScrollBar()
     }
     
-    // MARK: Setup
-    override func baseSetup() {
+    
+    // MARK: - Setup
+    
+    public override func baseSetup() {
         super.baseSetup()
         
         self.clipsToBounds = false
@@ -150,7 +158,9 @@ class ScrollBar: View {
         subscribeKVO()
     }
     
+    
     // MARK: - KVO
+    
     private var offsetObservation: NSKeyValueObservation?
     private var sizeObservation: NSKeyValueObservation?
     private var insetsObservation: NSKeyValueObservation?
@@ -203,7 +213,9 @@ class ScrollBar: View {
         }
     }
     
-    // MARK: UIPanGestureRecognizer
+    
+    // MARK: - UIPanGestureRecognizer
+    
     private var deltaY: CGFloat = 0
     private var isDragging: Bool = false
     
@@ -232,13 +244,17 @@ class ScrollBar: View {
         }
     }
 
-    // MARK: TapGestureRecognizer
+    
+    // MARK: - TapGestureRecognizer
+    
     @objc private func barTapped(_ recognizer: UITapGestureRecognizer) {
         let location = recognizer.location(in: self)
         updateLocation(location)
     }
     
-    // MARK: Utils
+    
+    // MARK: - Utils
+    
     private func updateLocation(_ location: CGPoint) {
         guard let scrollView = self.scrollView else { return }
         
@@ -264,7 +280,9 @@ class ScrollBar: View {
     }
 }
 
-// MARK: Calculation
+
+// MARK: - Calculation
+
 fileprivate extension ScrollBar {
     
     private var halfSliderHeight: CGFloat {
@@ -306,7 +324,6 @@ fileprivate extension ScrollBar {
     private func normalize(_ centerY: CGFloat) -> CGFloat {
         return min(max(halfSliderHeight, centerY), self.bounds.height - halfSliderHeight)
     }
-    
 }
 
 
@@ -314,13 +331,12 @@ fileprivate extension ScrollBar {
 
 extension ScrollBar {
     
-    struct VerticalInset {
-        let top: CGFloat
-        let bottom: CGFloat
+    public struct VerticalInset {
+        public let top: CGFloat
+        public let bottom: CGFloat
         
-        static let zero = VerticalInset(top: 0, bottom: 0)
+        public static let zero = VerticalInset(top: 0, bottom: 0)
     }
-    
 }
 
 
