@@ -1,6 +1,6 @@
 PODS:
   - SnapKit (4.2.0)
-  - SpecialFor/UIKit/MaterialTextInput (0.1.0):
+  - SpecialFor/UIKit/ImagePlaceholderTextField (0.1.0):
     - SnapKit (= 4.2.0)
     - SpecialFor/UIKit/TextField
     - SpecialFor/UIKit/View
@@ -10,7 +10,7 @@ PODS:
     - SnapKit (= 4.2.0)
 
 DEPENDENCIES:
-  - SpecialFor/UIKit/MaterialTextInput (from `../`)
+  - SpecialFor/UIKit/ImagePlaceholderTextField (from `../`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -22,8 +22,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
-  SpecialFor: 727bac183830a65d987946d140e8b3a746ec0d37
+  SpecialFor: 44c193bb22058f5cc1c4afcac889ffa8ca0fcb22
 
-PODFILE CHECKSUM: 8f1bc598eb1ffa45b08b564de86d47040127f45f
+PODFILE CHECKSUM: 588bc2c2499fd73b3b56a674bc6f5fb8ab71cb00
 
 COCOAPODS: 1.6.1

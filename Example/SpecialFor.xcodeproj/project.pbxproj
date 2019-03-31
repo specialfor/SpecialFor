@@ -23,7 +23,7 @@
 		4B04964B22512844009F8653 /* LinkValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkValidator.swift; sourceTree = "<group>"; };
 		4B04964C22512844009F8653 /* LinkField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkField.swift; sourceTree = "<group>"; };
 		4B04964E22512844009F8653 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
-		4B04964F22512844009F8653 /* ImagePlaceholderField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePlaceholderField.swift; sourceTree = "<group>"; };
+		4B04964F22512844009F8653 /* ImagePlaceholderTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePlaceholderTextField.swift; sourceTree = "<group>"; };
 		4B04965722512844009F8653 /* UIImageView+Rounded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Rounded.swift"; sourceTree = "<group>"; };
 		4B04965822512844009F8653 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		4B04965D22512844009F8653 /* GCD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCD.swift; sourceTree = "<group>"; };
@@ -183,7 +183,6 @@
 			isa = PBXGroup;
 			children = (
 				4B04964A22512844009F8653 /* LinkField */,
-				4B04964D22512844009F8653 /* InputField */,
 			);
 			path = TextInput;
 			sourceTree = "<group>";
@@ -195,13 +194,6 @@
 				4B04964C22512844009F8653 /* LinkField.swift */,
 			);
 			path = LinkField;
-			sourceTree = "<group>";
-		};
-		4B04964D22512844009F8653 /* InputField */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = InputField;
 			sourceTree = "<group>";
 		};
 		4B04965122512844009F8653 /* Extensions */ = {
@@ -721,7 +713,7 @@
 			isa = PBXGroup;
 			children = (
 				4B04964E22512844009F8653 /* TextField.swift */,
-				4B04964F22512844009F8653 /* ImagePlaceholderField.swift */,
+				4B04964F22512844009F8653 /* ImagePlaceholderTextField.swift */,
 			);
 			path = TextField;
 			sourceTree = "<group>";

@@ -1,5 +1,5 @@
 //
-//  ImagePlaceholderField.swift
+//  ImagePlaceholderTextField.swift
 //  Nynja
 //
 //  Created by Volodymyr Hryhoriev on 11/7/17.
@@ -7,13 +7,14 @@
 //
 
 import UIKit
+import SnapKit
 
 private enum Side {
     case left
     case right
 }
 
-public final class ImagePlaceholderField: UIView {
+public final class ImagePlaceholderTextField: View {
     
     public var returnHandler: Closure?
     
@@ -104,7 +105,7 @@ public final class ImagePlaceholderField: UIView {
     
     // MARK: - sAccessibility
     
-    override public var accessibilityIdentifier: String? {
+    public override var accessibilityIdentifier: String? {
         didSet {
             if let identifier = accessibilityIdentifier {
                 placeholderLabel.accessibilityIdentifier = "\(identifier)_placeholder_view"
@@ -117,22 +118,9 @@ public final class ImagePlaceholderField: UIView {
     }
     
     
-    // MARK: Init
+    // MARK: - Setup
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        baseSetup()
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        baseSetup()
-    }
-    
-    
-    // MARK: Setup
-    
-    func baseSetup() {
+    override func baseSetup() {
         textField.isHidden = false
         textField.delegate = self
         textField.addTarget(self, action: #selector(actionTextDidChange(sender:)), for: .editingChanged)
@@ -195,7 +183,7 @@ public final class ImagePlaceholderField: UIView {
 
 // MARK: UITextFieldDelegate
 
-extension ImagePlaceholderField: UITextFieldDelegate {
+extension ImagePlaceholderTextField: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         returnHandler?()
@@ -219,7 +207,7 @@ extension ImagePlaceholderField: UITextFieldDelegate {
 
 // MARK: - Show/Hide placeholder
 
-private extension ImagePlaceholderField {
+private extension ImagePlaceholderTextField {
     
     func togglePlaceholder(shouldHide: Bool) {
         placeholderImageView.isHidden = shouldHide

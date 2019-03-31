@@ -1,5 +1,5 @@
 use_frameworks!
 target 'Example' do
 #  pod 'SpecialFor', :path => '../'
-  pod 'SpecialFor/UIKit/MaterialTextInput', :path => '../'
+  pod 'SpecialFor/UIKit/ImagePlaceholderTextField', :path => '../'
 end

@@ -122,6 +122,18 @@
             "**/Material/**/*",
             "**/Closure.swift"
           ]
+        },
+        {
+          "name": "ImagePlaceholderTextField",
+          "dependencies": {
+            "SpecialFor/UIKit/TextField": [
+
+            ],
+            "SpecialFor/UIKit/View": [
+
+            ]
+          },
+          "source_files": "**/{ImagePlaceholderTextField,Closure}.swift"
         }
       ]
     },

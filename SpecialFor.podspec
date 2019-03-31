@@ -79,6 +79,12 @@ Pod::Spec.new do |s|
           mti.dependency 'SpecialFor/UIKit/View'
           mti.source_files = '**/Material/**/*', '**/Closure.swift'
       end
+      
+      ui_kit.subspec 'ImagePlaceholderTextField' do |ip_text_field|
+          ip_text_field.dependency 'SpecialFor/UIKit/TextField'
+          ip_text_field.dependency 'SpecialFor/UIKit/View'
+          ip_text_field.source_files = '**/{ImagePlaceholderTextField,Closure}.swift'
+      end
   end
   
   s.subspec 'AVFoundation' do |av_foundation|
