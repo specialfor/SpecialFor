@@ -118,7 +118,10 @@
 
             ]
           },
-          "source_files": "**/Material/**/*"
+          "source_files": [
+            "**/Material/**/*",
+            "**/Closure.swift"
+          ]
         }
       ]
     },

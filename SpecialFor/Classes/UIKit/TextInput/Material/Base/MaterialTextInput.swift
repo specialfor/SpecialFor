@@ -13,8 +13,8 @@ public enum MaterialTextInputState {
     case inactive
 }
 
-public typealias MTIValidationHandler = (Bool) -> Void
-public typealias MTITextChangedHandler = (MaterialTextInput) -> Void
+public typealias MTIValidationHandler = ClosureWith<Bool>
+public typealias MTITextChangedHandler = ClosureWith<MaterialTextInput>
 public typealias MTIShouldChangeTextHandler = (MaterialTextInput, NSRange, String) -> Bool
 
 public protocol MaterialTextInput: FloatingPlaceholderProvider, InputInfoProvider {

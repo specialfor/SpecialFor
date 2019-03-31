@@ -77,7 +77,7 @@ Pod::Spec.new do |s|
       ui_kit.subspec 'MaterialTextInput' do |mti|
           mti.dependency 'SpecialFor/UIKit/TextField'
           mti.dependency 'SpecialFor/UIKit/View'
-          mti.source_files = '**/Material/**/*'
+          mti.source_files = '**/Material/**/*', '**/Closure.swift'
       end
   end
   
