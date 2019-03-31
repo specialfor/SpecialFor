@@ -6,14 +6,14 @@
 //  Copyright © 2018 TecSynt Solutions. All rights reserved.
 //
 
-final class ClosureValidator: MTIValidator {
+public final class ClosureValidator: MTIValidator {
     private let closure: (String) -> InputInfo?
     
-    init(closure: @escaping (String) -> InputInfo?) {
+    public init(closure: @escaping (String) -> InputInfo?) {
         self.closure = closure
     }
     
-    func validate(text: String) -> InputInfo? {
+    public func validate(text: String) -> InputInfo? {
         return closure(text)
     }
 }

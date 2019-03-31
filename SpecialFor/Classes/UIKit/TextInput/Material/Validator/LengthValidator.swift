@@ -6,17 +6,16 @@
 //  Copyright © 2018 TecSynt Solutions. All rights reserved.
 //
 
-
-class LengthValidator: MTIValidator {
+public final class LengthValidator: MTIValidator {
     private let length: Length
     private let shouldTrim: Bool
     
-    init(length: Length, shouldTrim: Bool = true) {
+    public init(length: Length, shouldTrim: Bool = true) {
         self.length = length
         self.shouldTrim = shouldTrim
     }
     
-    func validate(text: String) -> InputInfo? {
+    public func validate(text: String) -> InputInfo? {
         let text = shouldTrim ? text.trimmingCharacters(in: .whitespacesAndNewlines) : text
         
         if let max = length.max, text.count > max.value {
@@ -34,14 +33,15 @@ class LengthValidator: MTIValidator {
 }
 
 extension LengthValidator {
-    enum Length {
-        typealias MessageProvider = (Int) -> String
+    
+    public enum Length {
+        public typealias MessageProvider = (Int) -> String
         
         case min(Int, MessageProvider)
         case max(Int, MessageProvider)
         indirect case both(max: Length, min: Length)
         
-        var min: Length? {
+        public var min: Length? {
             switch self {
             case .min:
                 return self
@@ -52,7 +52,7 @@ extension LengthValidator {
             }
         }
         
-        var max: Length? {
+        public var max: Length? {
             switch self {
             case .max:
                 return self
@@ -63,7 +63,7 @@ extension LengthValidator {
             }
         }
         
-        var message: String {
+        public var message: String {
             switch self {
             case let .min(value, provider):
                 return provider(value)
@@ -74,7 +74,7 @@ extension LengthValidator {
             }
         }
         
-        var value: Int {
+        public var value: Int {
             switch self {
             case let .min(value, _):
                 return value
