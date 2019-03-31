@@ -11,23 +11,23 @@ import SnapKit
 
 fileprivate let defaultConfig = NynjaMTIConfig()
 
-class MaterialTextContainer: View, MaterialTextInput {
+public class MaterialTextContainer: View, MaterialTextInput {
     
-    var validators: [MTIValidator] = []
+    public var validators: [MTIValidator] = []
     
-    var validationHandler: MTIValidationHandler?
-    var textChanged: MTITextChangedHandler?
-    var shouldTextChanged: MTIShouldChangeTextHandler?
+    public var validationHandler: MTIValidationHandler?
+    public var textChanged: MTITextChangedHandler?
+    public var shouldTextChanged: MTIShouldChangeTextHandler?
     
-    var state: MaterialTextInputState = .inactive {
+    public var state: MaterialTextInputState = .inactive {
         didSet { didStateChanged() }
     }
     
-    var config: MTIConfigProtocol = defaultConfig {
+    public var config: MTIConfigProtocol = defaultConfig {
         didSet { updateInput(with: config) }
     }
     
-    var text: String = "" {
+    public var text: String = "" {
         didSet {
             if !text.isEmpty {
                 updateFloatingState(.collapsed, animated: false)
@@ -37,33 +37,33 @@ class MaterialTextContainer: View, MaterialTextInput {
         }
     }
     
-    var font: UIFont? = defaultConfig.font
-    var textColor: UIColor = defaultConfig.textColor
-    var cursorColor: UIColor = defaultConfig.cursorColor
-    var keyboardType: UIKeyboardType = defaultConfig.keyboardType
-    var isSecureTextEntry: Bool = defaultConfig.isSecureTextEntry
+    public var font: UIFont? = defaultConfig.font
+    public var textColor: UIColor = defaultConfig.textColor
+    public var cursorColor: UIColor = defaultConfig.cursorColor
+    public var keyboardType: UIKeyboardType = defaultConfig.keyboardType
+    public var isSecureTextEntry: Bool = defaultConfig.isSecureTextEntry
     
-    var activeSeparatorHeight: CGFloat = defaultConfig.activeSeparatorHeight {
+    public var activeSeparatorHeight: CGFloat = defaultConfig.activeSeparatorHeight {
         didSet { adjustSeparatorHeight(activeSeparatorHeight, state: .active) }
     }
     
-    var inactiveSeparatorHeight: CGFloat = defaultConfig.inactiveSeparatorHeight {
+    public var inactiveSeparatorHeight: CGFloat = defaultConfig.inactiveSeparatorHeight {
         didSet { adjustSeparatorHeight(inactiveSeparatorHeight, state: .inactive) }
     }
     
-    var activeSeparatorColor: UIColor = defaultConfig.activeSeparatorColor {
+    public var activeSeparatorColor: UIColor = defaultConfig.activeSeparatorColor {
         didSet { adjustSeparatorColor(activeSeparatorColor, state: .active) }
     }
     
-    var inactiveSeparatorColor: UIColor = defaultConfig.inactiveSeparatorColor {
+    public var inactiveSeparatorColor: UIColor = defaultConfig.inactiveSeparatorColor {
         didSet { adjustSeparatorColor(inactiveSeparatorColor, state: .inactive) }
     }
     
-    var infoProvider: InputInfoProvider {
+    public var infoProvider: InputInfoProvider {
         return infoContainer
     }
     
-    var floatingPlaceholderProvider: FloatingPlaceholderProvider {
+    public var floatingPlaceholderProvider: FloatingPlaceholderProvider {
         return floatingContainer
     }
     
@@ -94,12 +94,12 @@ class MaterialTextContainer: View, MaterialTextInput {
     
     // MARK: - Init
     
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
         baseSetup()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         baseSetup()
     }
@@ -107,7 +107,7 @@ class MaterialTextContainer: View, MaterialTextInput {
     
     // MARK: - Setup
     
-    override func baseSetup() {
+    public override func baseSetup() {
         super.baseSetup()
         
         updateInput(with: config)

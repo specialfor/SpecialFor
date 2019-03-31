@@ -11,7 +11,7 @@ import SnapKit
 
 fileprivate let _separatorHeight: CGFloat = 1.0
 
-class InputInfoContainer: View, InputInfoProvider {
+final class InputInfoContainer: View, InputInfoProvider {
     
     
     // MARK: - Info

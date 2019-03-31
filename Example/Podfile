@@ -1,6 +1,5 @@
 use_frameworks!
 target 'Example' do
 #  pod 'SpecialFor', :path => '../'
-  pod 'SpecialFor/UIKit/FastScroll', :path => '../'
-
+  pod 'SpecialFor/UIKit/MaterialTextInput', :path => '../'
 end

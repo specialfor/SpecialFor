@@ -27,7 +27,7 @@ Pod::Spec.new do |s|
   s.subspec 'UIKit' do |ui_kit|
       ui_kit.frameworks = 'UIKit'
       ui_kit.source_files = 'Specialfor/Classes/UIKit/**/*'
-      ui_kit.dependency 'SnapKit'
+      ui_kit.dependency 'SnapKit', '= 4.2.0'
       
       ui_kit.subspec 'PartialCheckableButton' do |pcb|
           pcb.dependency 'SpecialFor/UIKit/View'
@@ -68,6 +68,16 @@ Pod::Spec.new do |s|
       ui_kit.subspec 'FastScroll' do |fast_scroll|
           fast_scroll.dependency 'SpecialFor/UIKit/View'
           fast_scroll.source_files = '**/FastScroll/**/*', '**/{Closure,UIView+Corners}.swift'
+      end
+      
+      ui_kit.subspec 'TextField' do |text_field|
+          text_field.source_files = '**/TextField.swift'
+      end
+      
+      ui_kit.subspec 'MaterialTextInput' do |mti|
+          mti.dependency 'SpecialFor/UIKit/TextField'
+          mti.dependency 'SpecialFor/UIKit/View'
+          mti.source_files = '**/Material/**/*'
       end
   end
   

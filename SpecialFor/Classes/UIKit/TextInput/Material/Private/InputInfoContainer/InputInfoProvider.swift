@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol InputInfoProvider: class {
+public protocol InputInfoProvider: class {
     
     // MARK: - Info
     

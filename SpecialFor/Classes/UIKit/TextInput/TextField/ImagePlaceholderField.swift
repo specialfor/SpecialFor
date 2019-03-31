@@ -8,28 +8,28 @@
 
 import UIKit
 
-fileprivate enum Side {
+private enum Side {
     case left
     case right
 }
 
-class ImagePlaceholderField: UIView {
+public final class ImagePlaceholderField: UIView {
     
-    var returnHandler: (() -> Void)?
+    public var returnHandler: Closure?
     
-    var leftInset: Double = 16.0 {
+    public var leftInset: Double = 16.0 {
         didSet {
             updateFieldInset(leftInset, side: .left)
         }
     }
     
-    var rightInset: Double = 0 {
+    public var rightInset: Double = 0 {
         didSet {
             updateFieldInset(rightInset, side: .right)
         }
     }
     
-    var placeholerImage: UIImage? {
+    public var placeholerImage: UIImage? {
         get {
             return placeholderImageView.image
         }
@@ -38,7 +38,7 @@ class ImagePlaceholderField: UIView {
         }
     }
     
-    var placeholder: String? {
+    public var placeholder: String? {
         get {
             return placeholderLabel.text
         }
@@ -47,8 +47,10 @@ class ImagePlaceholderField: UIView {
         }
     }
     
-    // MARK: Views
-    lazy var placeholderImageView: UIImageView = {
+    
+    // MARK: - Subviews
+    
+    private lazy var placeholderImageView: UIImageView = {
         let imgView = UIImageView()
     
         let width = 20.0
@@ -62,7 +64,7 @@ class ImagePlaceholderField: UIView {
         return imgView
     }()
     
-    lazy var placeholderLabel: UILabel = {
+    private lazy var placeholderLabel: UILabel = {
         
         let label = UILabel()
         label.textColor = .black
@@ -80,7 +82,7 @@ class ImagePlaceholderField: UIView {
         return label
     }()
     
-    lazy var textField: TextField = {
+    private lazy var textField: TextField = {
         let textField = TextField()
         
         textField.backgroundColor = UIColor.clear
@@ -100,8 +102,9 @@ class ImagePlaceholderField: UIView {
     }()
     
     
-    // MARK: Accessibility
-    override var accessibilityIdentifier: String? {
+    // MARK: - sAccessibility
+    
+    override public var accessibilityIdentifier: String? {
         didSet {
             if let identifier = accessibilityIdentifier {
                 placeholderLabel.accessibilityIdentifier = "\(identifier)_placeholder_view"
@@ -115,6 +118,7 @@ class ImagePlaceholderField: UIView {
     
     
     // MARK: Init
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         baseSetup()
@@ -125,7 +129,9 @@ class ImagePlaceholderField: UIView {
         baseSetup()
     }
     
+    
     // MARK: Setup
+    
     func baseSetup() {
         textField.isHidden = false
         textField.delegate = self
@@ -147,12 +153,12 @@ class ImagePlaceholderField: UIView {
     // MARK: - First responder
     
     @discardableResult
-    override func resignFirstResponder() -> Bool {
+    override public func resignFirstResponder() -> Bool {
         return textField.resignFirstResponder()
     }
     
     
-    // MARK: Actions
+    // MARK: - Actions
     
     func startEditing() {
         textField.becomeFirstResponder()
@@ -166,7 +172,9 @@ class ImagePlaceholderField: UIView {
         updatePlaceholder(for: textField.text)
     }
     
-    // MARK: Constraints
+    
+    // MARK: - Constraints
+    
     private func updateFieldInset(_ inset: Double, side: Side) {
         textField.snp.updateConstraints { (make) in
             switch side {
@@ -186,6 +194,7 @@ class ImagePlaceholderField: UIView {
 
 
 // MARK: UITextFieldDelegate
+
 extension ImagePlaceholderField: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -201,14 +210,16 @@ extension ImagePlaceholderField: UITextFieldDelegate {
         updatePlaceholder(for: textField.text)
     }
     
-    fileprivate func updatePlaceholder(for text: String?) {
+    private func updatePlaceholder(for text: String?) {
         let text = textField.text ?? ""
         togglePlaceholder(shouldHide: !text.isEmpty)
     }
 }
 
-// MARK: Show/Hide placeholder
-fileprivate extension ImagePlaceholderField {
+
+// MARK: - Show/Hide placeholder
+
+private extension ImagePlaceholderField {
     
     func togglePlaceholder(shouldHide: Bool) {
         placeholderImageView.isHidden = shouldHide

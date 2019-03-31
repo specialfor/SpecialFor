@@ -8,16 +8,16 @@
 
 import UIKit
 
-enum MaterialTextInputState {
+public enum MaterialTextInputState {
     case active
     case inactive
 }
 
-typealias MTIValidationHandler = (Bool) -> Void
-typealias MTITextChangedHandler = (MaterialTextInput) -> Void
-typealias MTIShouldChangeTextHandler = (MaterialTextInput, NSRange, String) -> Bool
+public typealias MTIValidationHandler = (Bool) -> Void
+public typealias MTITextChangedHandler = (MaterialTextInput) -> Void
+public typealias MTIShouldChangeTextHandler = (MaterialTextInput, NSRange, String) -> Bool
 
-protocol MaterialTextInput: FloatingPlaceholderProvider, InputInfoProvider {
+public protocol MaterialTextInput: FloatingPlaceholderProvider, InputInfoProvider {
     
     var infoProvider: InputInfoProvider { get }
     var floatingPlaceholderProvider: FloatingPlaceholderProvider { get }
@@ -51,7 +51,7 @@ protocol MaterialTextInput: FloatingPlaceholderProvider, InputInfoProvider {
     
 }
 
-extension MaterialTextInput {
+public extension MaterialTextInput {
     
     // MARK: - InputInfoProvider
     

@@ -6,13 +6,18 @@
 //  Copyright © 2018 TecSynt Solutions. All rights reserved.
 //
 
-struct InputInfo {
+public struct InputInfo {
     
-    enum Kind {
+    public enum Kind {
         case warning
         case success
     }
     
-    let text: String
-    let kind: Kind
+    public let text: String
+    public let kind: Kind
+
+    public init(text: String, kind: Kind) {
+        self.text = text
+        self.kind = kind
+    }
 }

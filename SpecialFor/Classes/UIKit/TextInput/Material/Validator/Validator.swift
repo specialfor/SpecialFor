@@ -6,6 +6,6 @@
 //  Copyright © 2018 TecSynt Solutions. All rights reserved.
 //
 
-protocol MTIValidator {
+public protocol MTIValidator {
     func validate(text: String) -> InputInfo?
 }

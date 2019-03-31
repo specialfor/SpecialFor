@@ -8,12 +8,12 @@
 
 import UIKit
 
-enum FloatingState {
+public enum FloatingState {
     case collapsed
     case `default`
 }
 
-protocol FloatingPlaceholderProvider: class {
+public protocol FloatingPlaceholderProvider: class {
     
     var placeholderCollapsedFontSize: CGFloat { get set }
     var placeholderFont: UIFont { get set }

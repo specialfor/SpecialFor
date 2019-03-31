@@ -1,13 +1,16 @@
 PODS:
   - SnapKit (4.2.0)
-  - SpecialFor/UIKit/FastScroll (0.1.0):
-    - SnapKit
+  - SpecialFor/UIKit/MaterialTextInput (0.1.0):
+    - SnapKit (= 4.2.0)
+    - SpecialFor/UIKit/TextField
     - SpecialFor/UIKit/View
+  - SpecialFor/UIKit/TextField (0.1.0):
+    - SnapKit (= 4.2.0)
   - SpecialFor/UIKit/View (0.1.0):
-    - SnapKit
+    - SnapKit (= 4.2.0)
 
 DEPENDENCIES:
-  - SpecialFor/UIKit/FastScroll (from `../`)
+  - SpecialFor/UIKit/MaterialTextInput (from `../`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -19,8 +22,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
-  SpecialFor: e821c57942c04857f0c24de1dd6a8bc2d5edf5f6
+  SpecialFor: af7ef32e9f778702e51041d1f3570f21de04ea48
 
-PODFILE CHECKSUM: 53a81f64a0f736b20888956f75cc7700d2378b34
+PODFILE CHECKSUM: 8f1bc598eb1ffa45b08b564de86d47040127f45f
 
 COCOAPODS: 1.6.1

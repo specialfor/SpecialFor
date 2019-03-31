@@ -6,7 +6,7 @@
 //  Copyright © 2018 TecSynt Solutions. All rights reserved.
 //
 
-protocol MTIConfigProtocol {
+public protocol MTIConfigProtocol {
   
     var font: UIFont { get }
     var textColor: UIColor { get }
@@ -25,5 +25,4 @@ protocol MTIConfigProtocol {
     var infoFont: UIFont? { get }
     var warningColor: UIColor { get }
     var successColor: UIColor { get }
-    
 }

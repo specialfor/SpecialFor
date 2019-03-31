@@ -56,26 +56,6 @@ open class TextField: UITextField {
     }
     
     
-    // MARK: - Init
-    
-    public override init(frame: CGRect) {
-        super.init(frame: frame)
-        baseSetup()
-    }
-    
-    public required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        baseSetup()
-    }
-    
-    
-    // MARK: - Base setup
-    
-    func baseSetup() {
-        shouldCacheInputs = false
-    }
-    
-    
     // MARK: - Handle clipboard actions (prohibited options)
     
     override open func canPerformAction(_ action: Selector, withSender sender: Any?) -> Bool {
@@ -119,5 +99,4 @@ open class TextField: UITextField {
         selectedTextRange = textRange(from: beginningOfDocument, to: beginningOfDocument)
         didResetHandler?()
     }
-    
 }

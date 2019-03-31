@@ -31,7 +31,7 @@
       "source_files": "Specialfor/Classes/UIKit/**/*",
       "dependencies": {
         "SnapKit": [
-
+          "= 4.2.0"
         ]
       },
       "subspecs": [
@@ -103,6 +103,22 @@
             "**/FastScroll/**/*",
             "**/{Closure,UIView+Corners}.swift"
           ]
+        },
+        {
+          "name": "TextField",
+          "source_files": "**/TextField.swift"
+        },
+        {
+          "name": "MaterialTextInput",
+          "dependencies": {
+            "SpecialFor/UIKit/TextField": [
+
+            ],
+            "SpecialFor/UIKit/View": [
+
+            ]
+          },
+          "source_files": "**/Material/**/*"
         }
       ]
     },

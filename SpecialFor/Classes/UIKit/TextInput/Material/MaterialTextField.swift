@@ -9,51 +9,51 @@
 import UIKit
 import SnapKit
 
-class MaterialTextField: MaterialTextContainer {
+public final class MaterialTextField: MaterialTextContainer {
     
     // MARK: - MaterialTextInput
     
-    override var text: String {
+    public override var text: String {
         didSet { textField.text = text }
     }
     
-    override var font: UIFont? {
+    public override var font: UIFont? {
         didSet { textField.font = font }
     }
     
-    override var textColor: UIColor {
+    public override var textColor: UIColor {
         didSet { textField.textColor = textColor }
     }
     
-    override var cursorColor: UIColor {
+    public override var cursorColor: UIColor {
         didSet { textField.tintColor = cursorColor }
     }
 
-    override var keyboardType: UIKeyboardType {
+    public override var keyboardType: UIKeyboardType {
         didSet { textField.keyboardType = keyboardType }
     }
 
-    override var isSecureTextEntry: Bool {
+    public override var isSecureTextEntry: Bool {
         didSet { textField.isSecureTextEntry = isSecureTextEntry }
     }
 
-    var rightView: UIView? {
+    public var rightView: UIView? {
         didSet { textField.rightView = rightView }
     }
 
-    var rightViewMode: UITextField.ViewMode = .never {
+    public var rightViewMode: UITextField.ViewMode = .never {
         didSet { textField.rightViewMode = rightViewMode }
     }
 
-    var prohibitedOptions: ProhibitedOptions = .none {
+    public var prohibitedOptions: ProhibitedOptions = .none {
         didSet { textField.prohibitedOptions = prohibitedOptions }
     }
 
-    var autocapitalizationType: UITextAutocapitalizationType = UITextAutocapitalizationType.sentences {
+    public var autocapitalizationType: UITextAutocapitalizationType = UITextAutocapitalizationType.sentences {
         didSet { textField.autocapitalizationType = autocapitalizationType }
     }
 
-    func setTextFieldFirstResponder() {
+    public func setTextFieldFirstResponder() {
         textField.becomeFirstResponder()
     }
 
@@ -78,7 +78,7 @@ class MaterialTextField: MaterialTextContainer {
     
     // MARK: - Setup
     
-    override func baseSetup() {
+    public override func baseSetup() {
         super.baseSetup()
         
         textField.delegate = self
@@ -86,14 +86,14 @@ class MaterialTextField: MaterialTextContainer {
         textField.accessibilityIdentifier = "material_text_field"
     }
     
-    override func becomeFirstResponder() -> Bool {
+    public override func becomeFirstResponder() -> Bool {
         return self.textField.becomeFirstResponder()
     }
     
     
     // MARK: - Actions
     
-    @objc func editingChanged() {
+    @objc private func editingChanged() {
         text = textField.text ?? ""
         textChanged?(self)
         validate(text: text)
