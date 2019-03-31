@@ -21,7 +21,7 @@
 		189607079722D301F579B1B9 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		4B04964422512844009F8653 /* ImagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesView.swift; sourceTree = "<group>"; };
 		4B04964B22512844009F8653 /* LinkValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkValidator.swift; sourceTree = "<group>"; };
-		4B04964C22512844009F8653 /* LinkField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkField.swift; sourceTree = "<group>"; };
+		4B04964C22512844009F8653 /* LinkTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkTextField.swift; sourceTree = "<group>"; };
 		4B04964E22512844009F8653 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		4B04964F22512844009F8653 /* ImagePlaceholderTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePlaceholderTextField.swift; sourceTree = "<group>"; };
 		4B04965722512844009F8653 /* UIImageView+Rounded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Rounded.swift"; sourceTree = "<group>"; };
@@ -165,7 +165,6 @@
 			isa = PBXGroup;
 			children = (
 				4B04964322512844009F8653 /* ImagesView */,
-				4B04964822512844009F8653 /* TextInput */,
 				4B04965122512844009F8653 /* Extensions */,
 			);
 			path = UI;
@@ -179,21 +178,13 @@
 			path = ImagesView;
 			sourceTree = "<group>";
 		};
-		4B04964822512844009F8653 /* TextInput */ = {
-			isa = PBXGroup;
-			children = (
-				4B04964A22512844009F8653 /* LinkField */,
-			);
-			path = TextInput;
-			sourceTree = "<group>";
-		};
-		4B04964A22512844009F8653 /* LinkField */ = {
+		4B04964A22512844009F8653 /* LinkTextField */ = {
 			isa = PBXGroup;
 			children = (
 				4B04964B22512844009F8653 /* LinkValidator.swift */,
-				4B04964C22512844009F8653 /* LinkField.swift */,
+				4B04964C22512844009F8653 /* LinkTextField.swift */,
 			);
-			path = LinkField;
+			path = LinkTextField;
 			sourceTree = "<group>";
 		};
 		4B04965122512844009F8653 /* Extensions */ = {
@@ -509,8 +500,8 @@
 		4B04969722512844009F8653 /* TextInput */ = {
 			isa = PBXGroup;
 			children = (
-				4B0496D0225128D5009F8653 /* TextField */,
 				4B04969822512844009F8653 /* Material */,
+				4B0496D0225128D5009F8653 /* TextField */,
 			);
 			path = TextInput;
 			sourceTree = "<group>";
@@ -712,6 +703,7 @@
 		4B0496D0225128D5009F8653 /* TextField */ = {
 			isa = PBXGroup;
 			children = (
+				4B04964A22512844009F8653 /* LinkTextField */,
 				4B04964E22512844009F8653 /* TextField.swift */,
 				4B04964F22512844009F8653 /* ImagePlaceholderTextField.swift */,
 			);

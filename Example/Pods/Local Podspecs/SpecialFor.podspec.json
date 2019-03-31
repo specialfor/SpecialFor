@@ -109,6 +109,18 @@
           "source_files": "**/TextField.swift"
         },
         {
+          "name": "ImagePlaceholderTextField",
+          "dependencies": {
+            "SpecialFor/UIKit/TextField": [
+
+            ],
+            "SpecialFor/UIKit/View": [
+
+            ]
+          },
+          "source_files": "**/{ImagePlaceholderTextField,Closure}.swift"
+        },
+        {
           "name": "MaterialTextInput",
           "dependencies": {
             "SpecialFor/UIKit/TextField": [
@@ -124,16 +136,16 @@
           ]
         },
         {
-          "name": "ImagePlaceholderTextField",
+          "name": "LinkTextField",
           "dependencies": {
-            "SpecialFor/UIKit/TextField": [
-
-            ],
-            "SpecialFor/UIKit/View": [
+            "SpecialFor/UIKit/MaterialTextInput": [
 
             ]
           },
-          "source_files": "**/{ImagePlaceholderTextField,Closure}.swift"
+          "source_files": [
+            "**/LinkTextField/**/*",
+            "**/{Closure,String+Contains}.swift"
+          ]
         }
       ]
     },

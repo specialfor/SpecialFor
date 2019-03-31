@@ -6,7 +6,7 @@
 //  Copyright © 2018 TecSynt Solutions. All rights reserved.
 //
 
-enum LengthWarning {
+public enum LengthWarning {
     case minLength
     case maxLength
 }
@@ -14,22 +14,22 @@ enum LengthWarning {
 private let letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 private let usernameCharacters = "\(letters)\(letters.lowercased())0123456789_"
 
-final class LinkValidator: NSObject, UITextViewDelegate {
-    typealias ValidationClosure = ((ValidationKind) -> Void)
+public final class LinkValidator: NSObject, UITextViewDelegate {
+    public typealias ValidationClosure = ClosureWith<ValidationKind>
     
-    enum ValidationKind {
+    public enum ValidationKind {
         case invalidLength(LengthWarning, length: Int)
         case invalidSymbols
         case valid
     }
     
-    var validationClosure: ValidationClosure?
+    public var validationClosure: ValidationClosure?
     
-    var domen: String
-    var minLength: Int = 0
-    var maxLength: Int?
+    public var domen: String
+    public var minLength: Int = 0
+    public var maxLength: Int?
     
-    init(domen: String, minLength: Int = 0, maxLength: Int? = nil, validationClosure: ValidationClosure? = nil) {
+    public init(domen: String, minLength: Int = 0, maxLength: Int? = nil, validationClosure: ValidationClosure? = nil) {
         self.domen = domen
         self.minLength = minLength
         self.maxLength = maxLength

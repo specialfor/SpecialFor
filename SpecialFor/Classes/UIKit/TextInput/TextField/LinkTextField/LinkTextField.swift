@@ -1,5 +1,5 @@
 //
-//  LinkField.swift
+//  LinkTextField.swift
 //  Nynja
 //
 //  Created by Volodymyr Hryhoriev on 5/4/18.
@@ -8,20 +8,21 @@
 
 import SnapKit
 
-final class LinkField: MaterialTextField {
+public final class LinkTextField: MaterialTextField {
     
-    var domen: String = "" {
+    public var domen: String = "" {
         willSet { setupDomen(newValue, oldDomen: domen) }
     }
     
-    var link: String {
+    public var link: String {
         get { return String(text[linkRange]) }
         set { setupLink(newValue) }
     }
     
-    var linkValidator: LinkValidator?
+    public var linkValidator: LinkValidator?
     
-    // MARK: - Views
+    
+    // MARK: - Subviews
     
     private(set) lazy var actionButton: UIButton = {
         let button = UIButton()
@@ -47,11 +48,11 @@ final class LinkField: MaterialTextField {
     
     // MARK: - Setup
     
-    override func baseSetup() {
+    public override func baseSetup() {
         super.baseSetup()
         actionButton.accessibilityIdentifier = "action_button"
         // TODO: image
-//        actionButton.setImage(UIImage.nynja.LinkField.icRefresh.image, for: .normal)
+//        actionButton.setImage(UIImage.nynja.LinkTextField.icRefresh.image, for: .normal)
     }
     
     
@@ -71,6 +72,7 @@ final class LinkField: MaterialTextField {
         return domen.endIndex..<text.endIndex
     }
     
+    
     // MARK: - Actions
     
     override func editingChanged() {
@@ -78,11 +80,11 @@ final class LinkField: MaterialTextField {
         linkValidator?.materialTextInputDidChange(self)
     }
     
+    
     // MARK: - UITextFieldDelegate
     
     override func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         let isValid = linkValidator?.materialTextInput(self, shouldChangeTextIn: range, replacementText: text) ?? true
         return isValid && super.textField(textField, shouldChangeCharactersIn: range, replacementString: text)
     }
-    
 }

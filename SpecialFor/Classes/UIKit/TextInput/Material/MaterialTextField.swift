@@ -9,7 +9,7 @@
 import UIKit
 import SnapKit
 
-public final class MaterialTextField: MaterialTextContainer {
+public class MaterialTextField: MaterialTextContainer {
     
     // MARK: - MaterialTextInput
     
@@ -93,7 +93,7 @@ public final class MaterialTextField: MaterialTextContainer {
     
     // MARK: - Actions
     
-    @objc private func editingChanged() {
+    @objc func editingChanged() {
         text = textField.text ?? ""
         textChanged?(self)
         validate(text: text)
@@ -111,7 +111,7 @@ extension MaterialTextField: UITextFieldDelegate {
         endEditingText()
     }
     
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+    @objc func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         return shouldTextChanged?(self, range, string) ?? true
     }
 }

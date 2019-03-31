@@ -74,16 +74,21 @@ Pod::Spec.new do |s|
           text_field.source_files = '**/TextField.swift'
       end
       
+      ui_kit.subspec 'ImagePlaceholderTextField' do |ip_text_field|
+          ip_text_field.dependency 'SpecialFor/UIKit/TextField'
+          ip_text_field.dependency 'SpecialFor/UIKit/View'
+          ip_text_field.source_files = '**/{ImagePlaceholderTextField,Closure}.swift'
+      end
+      
       ui_kit.subspec 'MaterialTextInput' do |mti|
           mti.dependency 'SpecialFor/UIKit/TextField'
           mti.dependency 'SpecialFor/UIKit/View'
           mti.source_files = '**/Material/**/*', '**/Closure.swift'
       end
       
-      ui_kit.subspec 'ImagePlaceholderTextField' do |ip_text_field|
-          ip_text_field.dependency 'SpecialFor/UIKit/TextField'
-          ip_text_field.dependency 'SpecialFor/UIKit/View'
-          ip_text_field.source_files = '**/{ImagePlaceholderTextField,Closure}.swift'
+      ui_kit.subspec 'LinkTextField' do |link_text_field|
+          link_text_field.dependency 'SpecialFor/UIKit/MaterialTextInput'
+          link_text_field.source_files = '**/LinkTextField/**/*', '**/{Closure,String+Contains}.swift'
       end
   end
   
