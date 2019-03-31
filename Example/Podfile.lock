@@ -1,5 +1,52 @@
 PODS:
   - SnapKit (4.2.0)
+  - SpecialFor (0.1.0):
+    - SpecialFor/AVFoundation (= 0.1.0)
+    - SpecialFor/Core (= 0.1.0)
+    - SpecialFor/Photos (= 0.1.0)
+    - SpecialFor/UIKit (= 0.1.0)
+  - SpecialFor/AVFoundation (0.1.0)
+  - SpecialFor/Core (0.1.0)
+  - SpecialFor/Photos (0.1.0)
+  - SpecialFor/UIKit (0.1.0):
+    - SnapKit (= 4.2.0)
+    - SpecialFor/UIKit/Accessories (= 0.1.0)
+    - SpecialFor/UIKit/AlignableLabel (= 0.1.0)
+    - SpecialFor/UIKit/EmptyStateTableViewDS (= 0.1.0)
+    - SpecialFor/UIKit/FastScroll (= 0.1.0)
+    - SpecialFor/UIKit/Gradient (= 0.1.0)
+    - SpecialFor/UIKit/ImageAlertViewController (= 0.1.0)
+    - SpecialFor/UIKit/ImagePlaceholderTextField (= 0.1.0)
+    - SpecialFor/UIKit/ImagesView (= 0.1.0)
+    - SpecialFor/UIKit/LinkTextField (= 0.1.0)
+    - SpecialFor/UIKit/MaterialTextInput (= 0.1.0)
+    - SpecialFor/UIKit/PartialCheckableButton (= 0.1.0)
+    - SpecialFor/UIKit/SeparatorView (= 0.1.0)
+    - SpecialFor/UIKit/TextField (= 0.1.0)
+    - SpecialFor/UIKit/View (= 0.1.0)
+  - SpecialFor/UIKit/Accessories (0.1.0):
+    - SnapKit (= 4.2.0)
+    - SpecialFor/UIKit/Gradient
+    - SpecialFor/UIKit/SeparatorView
+  - SpecialFor/UIKit/AlignableLabel (0.1.0):
+    - SnapKit (= 4.2.0)
+  - SpecialFor/UIKit/EmptyStateTableViewDS (0.1.0):
+    - SnapKit (= 4.2.0)
+    - SpecialFor/UIKit/View
+  - SpecialFor/UIKit/FastScroll (0.1.0):
+    - SnapKit (= 4.2.0)
+    - SpecialFor/UIKit/View
+  - SpecialFor/UIKit/Gradient (0.1.0):
+    - SnapKit (= 4.2.0)
+  - SpecialFor/UIKit/ImageAlertViewController (0.1.0):
+    - SnapKit (= 4.2.0)
+  - SpecialFor/UIKit/ImagePlaceholderTextField (0.1.0):
+    - SnapKit (= 4.2.0)
+    - SpecialFor/UIKit/TextField
+    - SpecialFor/UIKit/View
+  - SpecialFor/UIKit/ImagesView (0.1.0):
+    - SnapKit (= 4.2.0)
+    - SpecialFor/UIKit/View
   - SpecialFor/UIKit/LinkTextField (0.1.0):
     - SnapKit (= 4.2.0)
     - SpecialFor/UIKit/MaterialTextInput
@@ -7,13 +54,19 @@ PODS:
     - SnapKit (= 4.2.0)
     - SpecialFor/UIKit/TextField
     - SpecialFor/UIKit/View
+  - SpecialFor/UIKit/PartialCheckableButton (0.1.0):
+    - SnapKit (= 4.2.0)
+    - SpecialFor/UIKit/View
+  - SpecialFor/UIKit/SeparatorView (0.1.0):
+    - SnapKit (= 4.2.0)
+    - SpecialFor/UIKit/View
   - SpecialFor/UIKit/TextField (0.1.0):
     - SnapKit (= 4.2.0)
   - SpecialFor/UIKit/View (0.1.0):
     - SnapKit (= 4.2.0)
 
 DEPENDENCIES:
-  - SpecialFor/UIKit/LinkTextField (from `../`)
+  - SpecialFor (from `../`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -25,8 +78,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
-  SpecialFor: 33ff2dae884b4f98ea4e76aa6534f47fbcb2cdb4
+  SpecialFor: c5c5b859b2c04c32de144c4014dcdcb42fd4bda7
 
-PODFILE CHECKSUM: 51853416e78486a69856a43bd0ab8d633630ad40
+PODFILE CHECKSUM: 766f7b70e5b1ac7c97824918187d1e9cb80c89b7
 
 COCOAPODS: 1.6.1

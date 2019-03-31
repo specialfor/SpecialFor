@@ -146,6 +146,18 @@
             "**/LinkTextField/**/*",
             "**/{Closure,String+Contains}.swift"
           ]
+        },
+        {
+          "name": "ImagesView",
+          "dependencies": {
+            "SpecialFor/UIKit/View": [
+
+            ]
+          },
+          "source_files": [
+            "**/ImagesView/**/*",
+            "**/UIImageView+Corners.swift"
+          ]
         }
       ]
     },

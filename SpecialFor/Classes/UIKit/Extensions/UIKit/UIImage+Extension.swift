@@ -6,8 +6,6 @@
 //  Copyright © 2017 TecSynt Solutions. All rights reserved.
 //
 
-import Foundation
-import AVFoundation
 import UIKit
 
 extension UIImage {
@@ -24,7 +22,7 @@ extension UIImage {
         self.init(data: data, scale: UIScreen.main.scale)
     }
     
-    static func imageWithColor(color: UIColor) -> UIImage {
+    public static func imageWithColor(color: UIColor) -> UIImage {
         let rect = CGRect(x: 0, y: 0, width: 1, height: 1)
         UIGraphicsBeginImageContextWithOptions(CGSize(width: 1, height: 1), false, 0)
         color.setFill()
@@ -34,7 +32,7 @@ extension UIImage {
         return image
     }
 
-    func imageByTintColor(color: UIColor) -> UIImage? {
+    public func imageByTintColor(color: UIColor) -> UIImage? {
         UIGraphicsBeginImageContextWithOptions(self.size, false, self.scale)
         let rect = CGRect(x: 0, y: 0, width: self.size.width, height: self.size.height)
         color.set()
@@ -46,27 +44,7 @@ extension UIImage {
         return image
     }
     
-    func heightForWidth(width: CGFloat, imageSize: CGSize? = nil) -> CGFloat {
-        let boundingRect = CGRect(x: 0,
-                                  y: 0,
-                                  width: width,
-                                  height: CGFloat(MAXFLOAT))
-        let rect  = AVMakeRect(aspectRatio: imageSize ?? size,
-                               insideRect: boundingRect)
-        return rect.size.height
-    }
-    
-    func widthForHeight(height: CGFloat, imageSize: CGSize? = nil) -> CGFloat {
-        let boundingRect = CGRect(x: 0,
-                                  y: 0,
-                                  width: CGFloat(MAXFLOAT),
-                                  height: height)
-        let rect  = AVMakeRect(aspectRatio: imageSize ?? size,
-                               insideRect: boundingRect)
-        return rect.size.width
-    }
-    
-    func fixedOrientation() -> UIImage {
+    public var fixedOrientation: UIImage {
         if imageOrientation == .up {
             return self
         }
@@ -116,7 +94,7 @@ extension UIImage {
         return UIImage(cgImage: ctx.makeImage()!)
     }
     
-    func resizeImage(targetSize: CGSize, scale: CGFloat? = nil) -> UIImage {
+    public func resizeImage(targetSize: CGSize, scale: CGFloat? = nil) -> UIImage {
         let size = self.size
         let scale = scale ?? self.scale
         
@@ -142,61 +120,34 @@ extension UIImage {
         return newImage ?? self
     }
 
-    func rotatedImage() -> UIImage {
+    var rotated: UIImage {
         guard let imageRef = cgImage else {
             return self
         }
-
+        
         switch imageOrientation {
-        case .up: return self
-        case .down: return UIImage(cgImage: imageRef, scale: 1, orientation: .down)
+        case .up:
+            return self
+        case .down:
+            return UIImage(cgImage: imageRef, scale: 1, orientation: .down)
         case .right:
             UIGraphicsBeginImageContext(size)
             let rect = CGRect(x: 0, y: 0, width: size.width, height: size.height)
             draw(in: rect)
             let img = UIGraphicsGetImageFromCurrentImageContext()
             UIGraphicsEndImageContext()
-
             return img ?? self
-        default: return self
+        default:
+            return self
         }
     }
 
-    func scale(_ scale: CGFloat) -> UIImage {
+    public func scaled(_ scale: CGFloat) -> UIImage {
         let targetSize = CGSize(width: size.width * scale, height: size.height * scale)
-
         return resizeImage(targetSize: targetSize)
     }
 
-    func compressTo(_ expectedSizeInKb: Int) -> Data? {
-        let sizeInBytes = expectedSizeInKb * 1024
-
-        var needCompress: Bool = true
-        var imgData: Data?
-
-        var compressingValue:CGFloat = 1.0
-
-        while (needCompress && compressingValue > 0.0) {
-            if let data = jpegData(compressionQuality: compressingValue) {
-                if data.count < sizeInBytes {
-                    needCompress = false
-                    imgData = data
-                } else {
-                    compressingValue -= 0.1
-                }
-            }
-        }
-
-        if let data = imgData {
-            if (data.count < sizeInBytes) {
-                return data
-            }
-        }
-        
-        return nil
-    }
-
-    func croppedImage(rect: CGRect) -> UIImage? {
+    public func croppedImage(rect: CGRect) -> UIImage? {
         guard let cgImage = cgImage,
             let imageRef = cgImage.cropping(to: rect) else {
                 return nil

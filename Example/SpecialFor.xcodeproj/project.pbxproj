@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B0496D222513423009F8653 /* ImageAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0496D122513423009F8653 /* ImageAlertViewController.swift */; };
 		4BDCCB19224A6771006798F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDCCB18224A6771006798F6 /* AppDelegate.swift */; };
 		4BDCCB1B224A6771006798F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDCCB1A224A6771006798F6 /* ViewController.swift */; };
 		4BDCCB1E224A6771006798F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BDCCB1C224A6771006798F6 /* Main.storyboard */; };
@@ -24,7 +25,7 @@
 		4B04964C22512844009F8653 /* LinkTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkTextField.swift; sourceTree = "<group>"; };
 		4B04964E22512844009F8653 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		4B04964F22512844009F8653 /* ImagePlaceholderTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePlaceholderTextField.swift; sourceTree = "<group>"; };
-		4B04965722512844009F8653 /* UIImageView+Rounded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Rounded.swift"; sourceTree = "<group>"; };
+		4B04965722512844009F8653 /* UIImageView+Corners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Corners.swift"; sourceTree = "<group>"; };
 		4B04965822512844009F8653 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		4B04965D22512844009F8653 /* GCD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCD.swift; sourceTree = "<group>"; };
 		4B04965F22512844009F8653 /* Closure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Closure.swift; sourceTree = "<group>"; };
@@ -87,7 +88,6 @@
 		4B0496BD22512844009F8653 /* CGRect+Updating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGRect+Updating.swift"; sourceTree = "<group>"; };
 		4B0496BE22512844009F8653 /* CGSize+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGSize+Extension.swift"; sourceTree = "<group>"; };
 		4B0496C022512844009F8653 /* Array+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+UIView.swift"; sourceTree = "<group>"; };
-		4B0496C322512844009F8653 /* ImageAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAlertViewController.swift; sourceTree = "<group>"; };
 		4B0496C622512844009F8653 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		4B0496C722512844009F8653 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		4B0496C822512844009F8653 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
@@ -95,6 +95,7 @@
 		4B0496CC22512844009F8653 /* PHFetchOptions+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PHFetchOptions+Extension.swift"; sourceTree = "<group>"; };
 		4B0496CD22512844009F8653 /* PHAsset+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PHAsset+Extension.swift"; sourceTree = "<group>"; };
 		4B0496CF22512844009F8653 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		4B0496D122513423009F8653 /* ImageAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageAlertViewController.swift; sourceTree = "<group>"; };
 		4BDCCB16224A6770006798F6 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BDCCB18224A6771006798F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4BDCCB1A224A6771006798F6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -151,7 +152,6 @@
 		4B04964022512844009F8653 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				4B04964122512844009F8653 /* UI */,
 				4B04965B22512844009F8653 /* Core */,
 				4B04967E22512844009F8653 /* UIKit */,
 				4B0496C822512844009F8653 /* .gitkeep */,
@@ -159,15 +159,6 @@
 				4B0496CB22512844009F8653 /* Photos */,
 			);
 			path = Classes;
-			sourceTree = "<group>";
-		};
-		4B04964122512844009F8653 /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				4B04964322512844009F8653 /* ImagesView */,
-				4B04965122512844009F8653 /* Extensions */,
-			);
-			path = UI;
 			sourceTree = "<group>";
 		};
 		4B04964322512844009F8653 /* ImagesView */ = {
@@ -185,71 +176,6 @@
 				4B04964C22512844009F8653 /* LinkTextField.swift */,
 			);
 			path = LinkTextField;
-			sourceTree = "<group>";
-		};
-		4B04965122512844009F8653 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				4B04965222512844009F8653 /* UI */,
-				4B04965322512844009F8653 /* TableView */,
-				4B04965422512844009F8653 /* CollectionView */,
-				4B04965622512844009F8653 /* UIImageView */,
-				4B04965922512844009F8653 /* Theme */,
-				4B04965A22512844009F8653 /* String */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		4B04965222512844009F8653 /* UI */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = UI;
-			sourceTree = "<group>";
-		};
-		4B04965322512844009F8653 /* TableView */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = TableView;
-			sourceTree = "<group>";
-		};
-		4B04965422512844009F8653 /* CollectionView */ = {
-			isa = PBXGroup;
-			children = (
-				4B04965522512844009F8653 /* Layout */,
-			);
-			path = CollectionView;
-			sourceTree = "<group>";
-		};
-		4B04965522512844009F8653 /* Layout */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Layout;
-			sourceTree = "<group>";
-		};
-		4B04965622512844009F8653 /* UIImageView */ = {
-			isa = PBXGroup;
-			children = (
-				4B04965722512844009F8653 /* UIImageView+Rounded.swift */,
-				4B04965822512844009F8653 /* UIImage+Extension.swift */,
-			);
-			path = UIImageView;
-			sourceTree = "<group>";
-		};
-		4B04965922512844009F8653 /* Theme */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Theme;
-			sourceTree = "<group>";
-		};
-		4B04965A22512844009F8653 /* String */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = String;
 			sourceTree = "<group>";
 		};
 		4B04965B22512844009F8653 /* Core */ = {
@@ -387,14 +313,15 @@
 		4B04967E22512844009F8653 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				4B04967F22512844009F8653 /* TableView */,
 				4B04968B22512844009F8653 /* Accessories */,
-				4B04969422512844009F8653 /* Buttons */,
-				4B04969722512844009F8653 /* TextInput */,
-				4B0496B022512844009F8653 /* Labels */,
-				4B0496B222512844009F8653 /* Extensions */,
-				4B0496C122512844009F8653 /* Popups */,
 				4B0496C422512844009F8653 /* Base */,
+				4B04969422512844009F8653 /* Buttons */,
+				4B0496B222512844009F8653 /* Extensions */,
+				4B04964322512844009F8653 /* ImagesView */,
+				4B0496B022512844009F8653 /* Labels */,
+				4B0496C122512844009F8653 /* Popups */,
+				4B04967F22512844009F8653 /* TableView */,
+				4B04969722512844009F8653 /* TextInput */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -607,6 +534,8 @@
 		4B0496B322512844009F8653 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				4B04965822512844009F8653 /* UIImage+Extension.swift */,
+				4B04965722512844009F8653 /* UIImageView+Corners.swift */,
 				4B0496B422512844009F8653 /* UITableViewExtensions.swift */,
 				4B0496B522512844009F8653 /* UITextInput+Cursor.swift */,
 				4B0496B622512844009F8653 /* UICollectionViewFlowLayout+ItemSize.swift */,
@@ -645,17 +574,9 @@
 		4B0496C122512844009F8653 /* Popups */ = {
 			isa = PBXGroup;
 			children = (
-				4B0496C222512844009F8653 /* ImageAlertViewController */,
+				4B0496D122513423009F8653 /* ImageAlertViewController.swift */,
 			);
 			path = Popups;
-			sourceTree = "<group>";
-		};
-		4B0496C222512844009F8653 /* ImageAlertViewController */ = {
-			isa = PBXGroup;
-			children = (
-				4B0496C322512844009F8653 /* ImageAlertViewController.swift */,
-			);
-			path = ImageAlertViewController;
 			sourceTree = "<group>";
 		};
 		4B0496C422512844009F8653 /* Base */ = {
@@ -935,6 +856,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B0496D222513423009F8653 /* ImageAlertViewController.swift in Sources */,
 				4BDCCB1B224A6771006798F6 /* ViewController.swift in Sources */,
 				4BDCCB19224A6771006798F6 /* AppDelegate.swift in Sources */,
 			);

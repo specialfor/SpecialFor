@@ -90,6 +90,11 @@ Pod::Spec.new do |s|
           link_text_field.dependency 'SpecialFor/UIKit/MaterialTextInput'
           link_text_field.source_files = '**/LinkTextField/**/*', '**/{Closure,String+Contains}.swift'
       end
+      
+      ui_kit.subspec 'ImagesView' do |images_view|
+          images_view.dependency 'SpecialFor/UIKit/View'
+          images_view.source_files = '**/ImagesView/**/*', '**/UIImageView+Corners.swift'
+      end
   end
   
   s.subspec 'AVFoundation' do |av_foundation|

@@ -8,16 +8,16 @@
 
 import SnapKit
 
-fileprivate let _spacing: Double = 4.0
-fileprivate let _borderWidth: CGFloat = 2.0
+private let _spacing: Double = 4.0
+private let _borderWidth: CGFloat = 2.0
 
-class ImagesView: View {
-    enum ItemType {
+public final class ImagesView: View {
+    public enum ItemType {
         case url(URL?)
         case image(UIImage?)
     }
     
-    var items: [ItemType] = [] {
+    public var items: [ItemType] = [] {
         willSet {
             prevCountOfItems = items.count
         }
@@ -26,8 +26,10 @@ class ImagesView: View {
         }
     }
     
+    
     // MARK: - Geometry
-    var size: CGSize = .zero {
+    
+    public var size: CGSize = .zero {
         didSet {
             if oldValue != size {
                 updateSizes()
@@ -35,7 +37,7 @@ class ImagesView: View {
         }
     }
     
-    var spacing: Double = _spacing {
+    public var spacing: Double = _spacing {
         didSet {
             if oldValue != spacing {
                 updateSpacings()
@@ -43,8 +45,10 @@ class ImagesView: View {
         }
     }
     
+    
     // MARK: - Appearance
-    var shouldShowBorder: Bool = true {
+    
+    public var shouldShowBorder: Bool = true {
         didSet {
             if oldValue != shouldShowBorder {
                 adjustBorders()
@@ -52,7 +56,7 @@ class ImagesView: View {
         }
     }
     
-    var borderColor: UIColor = .gray {
+    public var borderColor: UIColor = .gray {
         didSet {
             if oldValue != borderColor {
                 adjustBorders()
@@ -60,7 +64,7 @@ class ImagesView: View {
         }
     }
     
-    var borderWidth: CGFloat = _borderWidth {
+    public var borderWidth: CGFloat = _borderWidth {
         didSet {
             if oldValue != borderWidth {
                 adjustBorders()
@@ -68,17 +72,22 @@ class ImagesView: View {
         }
     }
     
+    
     // MARK: - Private properties
+    
     private var imageViews: [UIImageView] = [] {
         willSet {
             updateState(from: imageViews, to: newValue)
         }
     }
+    
     private var leftConstraints: [Constraint] = []
     private var rightConstraint: Constraint?
     private var prevCountOfItems: Int = 0
     
+    
     // MARK: - Reload
+    
     private func updateState(from: [UIImageView], to: [UIImageView]) {
         let count = from.count
         let newCount = to.count
@@ -154,7 +163,9 @@ class ImagesView: View {
         }
     }
     
+    
     // MARK: - Update constraints
+    
     private func updateSpacings() {
         leftConstraints.forEach { $0.update(offset: spacing) }
     }
@@ -165,7 +176,9 @@ class ImagesView: View {
         }
     }
     
+    
     // MARK: - Adjust appearance
+    
     private func alpha(for index: Int) -> CGFloat {
         let factor = 100.0 / CGFloat(items.count + 1)
         return (100.0 - factor * CGFloat(index)) / 100.0
@@ -191,13 +204,12 @@ class ImagesView: View {
     
     private func adjustCornerRadius(for imageView: UIImageView) {
         imageView.clipsToBounds = true
-        imageView.roundCorners(radius: size.height / 2)
+        imageView.roundCorners()
     }
     
     private func adjustCornerRadiuses() {
         imageViews.forEach { adjustCornerRadius(for: $0) }
     }
-    
 }
 
 extension UIImageView {
@@ -213,5 +225,4 @@ extension UIImageView {
 //            self.setImage(url: url, placeHolder: placeholder)
 //        }
     }
-    
 }
