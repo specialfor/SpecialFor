@@ -23,7 +23,35 @@
   "subspecs": [
     {
       "name": "Core",
-      "source_files": "Specialfor/Classes/Core/**/*"
+      "source_files": "Specialfor/Classes/Core/**/*",
+      "subspecs": [
+        {
+          "name": "Closure",
+          "source_files": "**/Closure.swift"
+        },
+        {
+          "name": "GCD",
+          "dependencies": {
+            "SpecialFor/Core/Closure": [
+
+            ]
+          },
+          "source_files": "**/GCD.swift"
+        },
+        {
+          "name": "Result",
+          "dependencies": {
+            "SpecialFor/Core/Closure": [
+
+            ]
+          },
+          "source_files": "**/Result/*"
+        }
+      ]
+    },
+    {
+      "name": "AppEnvironment",
+      "source_files": "Specialfor/Classes/AppEnvironment/**/*"
     },
     {
       "name": "UIKit",
@@ -118,7 +146,8 @@
 
             ]
           },
-          "source_files": "**/{ImagePlaceholderTextField,Closure}.swift"
+          "source_files": "**/{ImagePlaceholderTextField,Closure}.swift",
+          "resources": "**/ImagePlaceholderTextField.xcassets"
         },
         {
           "name": "MaterialTextInput",
@@ -145,19 +174,24 @@
           "source_files": [
             "**/LinkTextField/**/*",
             "**/{Closure,String+Contains}.swift"
-          ]
+          ],
+          "resources": "**/LinkTextField.xcassets"
         },
         {
           "name": "ImagesView",
           "dependencies": {
             "SpecialFor/UIKit/View": [
 
+            ],
+            "Kingfisher": [
+
             ]
           },
           "source_files": [
             "**/ImagesView/**/*",
             "**/UIImageView+Corners.swift"
-          ]
+          ],
+          "resources": "**/ImagesView.xcassets"
         }
       ]
     },

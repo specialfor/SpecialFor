@@ -1,12 +1,23 @@
 PODS:
+  - Kingfisher (5.3.1)
   - SnapKit (4.2.0)
   - SpecialFor (0.1.0):
+    - SpecialFor/AppEnvironment (= 0.1.0)
     - SpecialFor/AVFoundation (= 0.1.0)
     - SpecialFor/Core (= 0.1.0)
     - SpecialFor/Photos (= 0.1.0)
     - SpecialFor/UIKit (= 0.1.0)
+  - SpecialFor/AppEnvironment (0.1.0)
   - SpecialFor/AVFoundation (0.1.0)
-  - SpecialFor/Core (0.1.0)
+  - SpecialFor/Core (0.1.0):
+    - SpecialFor/Core/Closure (= 0.1.0)
+    - SpecialFor/Core/GCD (= 0.1.0)
+    - SpecialFor/Core/Result (= 0.1.0)
+  - SpecialFor/Core/Closure (0.1.0)
+  - SpecialFor/Core/GCD (0.1.0):
+    - SpecialFor/Core/Closure
+  - SpecialFor/Core/Result (0.1.0):
+    - SpecialFor/Core/Closure
   - SpecialFor/Photos (0.1.0)
   - SpecialFor/UIKit (0.1.0):
     - SnapKit (= 4.2.0)
@@ -45,6 +56,7 @@ PODS:
     - SpecialFor/UIKit/TextField
     - SpecialFor/UIKit/View
   - SpecialFor/UIKit/ImagesView (0.1.0):
+    - Kingfisher
     - SnapKit (= 4.2.0)
     - SpecialFor/UIKit/View
   - SpecialFor/UIKit/LinkTextField (0.1.0):
@@ -70,6 +82,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Kingfisher
     - SnapKit
 
 EXTERNAL SOURCES:
@@ -77,8 +90,9 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
+  Kingfisher: d9e7e0b209b59b8f9873aa2f37654e81a7beea51
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
-  SpecialFor: c5c5b859b2c04c32de144c4014dcdcb42fd4bda7
+  SpecialFor: 09c9572a019b52110e376faf7189851b6e1637f4
 
 PODFILE CHECKSUM: 766f7b70e5b1ac7c97824918187d1e9cb80c89b7
 

@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'SpecialFor'
-  s.version          = '0.1.0'
+  s.version          = '0.2.0'
   s.summary          = 'Useful codebase which I used among projects'
 
   s.homepage         = 'https://github.com/specialfor/SpecialFor'
@@ -12,21 +12,36 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '10.0'
   s.swift_version = '4.2'
   
-  # s.resource_bundles = {
-  #   'SpecialFor' => ['SpecialFor/Assets/*.png']
-  # }
-  
   s.source_files = 'Specialfor/Classes/**/*'
   
   #s.default_subspec = 'Core'
 
   s.subspec 'Core' do |core|
       core.source_files = 'Specialfor/Classes/Core/**/*'
+      
+      core.subspec 'Closure' do |closure|
+          closure.source_files = '**/Closure.swift'
+      end
+      
+      core.subspec 'GCD' do |gcd|
+          gcd.dependency 'SpecialFor/Core/Closure'
+          gcd.source_files = '**/GCD.swift'
+      end
+      
+      core.subspec 'Result' do |result|
+          result.dependency 'SpecialFor/Core/Closure'
+          result.source_files = '**/Result/*'
+      end
+  end
+  
+  s.subspec 'AppEnvironment' do |app_env|
+      app_env.source_files = 'Specialfor/Classes/AppEnvironment/**/*'
   end
   
   s.subspec 'UIKit' do |ui_kit|
       ui_kit.frameworks = 'UIKit'
       ui_kit.source_files = 'Specialfor/Classes/UIKit/**/*'
+      
       ui_kit.dependency 'SnapKit', '= 4.2.0'
       
       ui_kit.subspec 'PartialCheckableButton' do |pcb|
@@ -77,7 +92,9 @@ Pod::Spec.new do |s|
       ui_kit.subspec 'ImagePlaceholderTextField' do |ip_text_field|
           ip_text_field.dependency 'SpecialFor/UIKit/TextField'
           ip_text_field.dependency 'SpecialFor/UIKit/View'
+          
           ip_text_field.source_files = '**/{ImagePlaceholderTextField,Closure}.swift'
+          ip_text_field.resources = '**/ImagePlaceholderTextField.xcassets'
       end
       
       ui_kit.subspec 'MaterialTextInput' do |mti|
@@ -89,11 +106,16 @@ Pod::Spec.new do |s|
       ui_kit.subspec 'LinkTextField' do |link_text_field|
           link_text_field.dependency 'SpecialFor/UIKit/MaterialTextInput'
           link_text_field.source_files = '**/LinkTextField/**/*', '**/{Closure,String+Contains}.swift'
+          link_text_field.resources = '**/LinkTextField.xcassets'
       end
       
       ui_kit.subspec 'ImagesView' do |images_view|
           images_view.dependency 'SpecialFor/UIKit/View'
+          images_view.dependency 'Kingfisher'
+          
           images_view.source_files = '**/ImagesView/**/*', '**/UIImageView+Corners.swift'
+          
+          images_view.resources = '**/ImagesView.xcassets'
       end
   end
   
