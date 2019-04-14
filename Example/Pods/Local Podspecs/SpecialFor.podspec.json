@@ -1,6 +1,6 @@
 {
   "name": "SpecialFor",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "summary": "Useful codebase which I used among projects",
   "homepage": "https://github.com/specialfor/SpecialFor",
   "license": {
@@ -12,7 +12,7 @@
   },
   "source": {
     "git": "https://github.com/specialfor/SpecialFor.git",
-    "tag": "0.1.0"
+    "tag": "0.2.0"
   },
   "social_media_url": "https://twitter.com/specialfor_ios",
   "platforms": {
@@ -192,6 +192,10 @@
             "**/UIImageView+Corners.swift"
           ],
           "resources": "**/ImagesView.xcassets"
+        },
+        {
+          "name": "BannerWindow",
+          "source_files": "**/BannerWindow.swift"
         }
       ]
     },

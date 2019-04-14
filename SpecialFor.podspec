@@ -117,6 +117,10 @@ Pod::Spec.new do |s|
           
           images_view.resources = '**/ImagesView.xcassets'
       end
+      
+      ui_kit.subspec 'BannerWindow' do |bannew_window|
+          bannew_window.source_files = '**/BannerWindow.swift'
+      end
   end
   
   s.subspec 'AVFoundation' do |av_foundation|
