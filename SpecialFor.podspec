@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'SpecialFor'
-  s.version          = '0.2.0'
+  s.version          = '0.3.0'
   s.summary          = 'Useful codebase which I used among projects'
 
   s.homepage         = 'https://github.com/specialfor/SpecialFor'
@@ -60,6 +60,7 @@ Pod::Spec.new do |s|
       end
       
       ui_kit.subspec 'ImageAlertViewController' do |iavc|
+          iavc.dependency 'SpecialFor/UIKit/Setupable'
           iavc.dependency 'SnapKit', snap_kit_version
           iavc.source_files = '**/{ImageAlertViewController,Closure,UIView+Corners,GCD}.swift'
       end
