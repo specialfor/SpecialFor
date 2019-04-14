@@ -40,7 +40,15 @@ Pod::Spec.new do |s|
   end
   
   s.subspec 'AppEnvironment' do |app_env|
-      app_env.source_files = 'Specialfor/Classes/AppEnvironment/**/*'
+      app_env.source_files = '**/AppEnvironment/**/*'
+  end
+  
+  s.subspec 'DataDriven' do |data_driven|
+      data_driven.dependency 'SpecialFor/UIKit/Renderable'
+      data_driven.dependency 'SpecialFor/UIKit/Setupable'
+      data_driven.dependency 'SnapKit', snap_kit_version
+      
+      data_driven.source_files = '**/DataDriven/**/*', '**/UIWindow+SafeArea.swift'
   end
   
   s.subspec 'UIKit' do |ui_kit|

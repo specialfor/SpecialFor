@@ -51,7 +51,25 @@
     },
     {
       "name": "AppEnvironment",
-      "source_files": "Specialfor/Classes/AppEnvironment/**/*"
+      "source_files": "**/AppEnvironment/**/*"
+    },
+    {
+      "name": "DataDriven",
+      "dependencies": {
+        "SpecialFor/UIKit/Renderable": [
+
+        ],
+        "SpecialFor/UIKit/Setupable": [
+
+        ],
+        "SnapKit": [
+          "= 4.2.0"
+        ]
+      },
+      "source_files": [
+        "**/DataDriven/**/*",
+        "**/UIWindow+SafeArea.swift"
+      ]
     },
     {
       "name": "UIKit",
