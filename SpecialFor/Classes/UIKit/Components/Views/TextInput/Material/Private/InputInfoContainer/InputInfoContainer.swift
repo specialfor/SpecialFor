@@ -6,7 +6,6 @@
 //  Copyright © 2018 Volodymyr Hryhoriev. All rights reserved.
 //
 
-import UIKit
 import SnapKit
 
 fileprivate let _separatorHeight: CGFloat = 1.0

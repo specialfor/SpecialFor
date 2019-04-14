@@ -127,7 +127,7 @@ public final class ImageAlertViewController: UIViewController {
     
     // MARK: - Base setup
     
-    private func baseSetup() {
+    public override func baseSetup() {
         view.backgroundColor = UIColor.black.withAlphaComponent(0.4)
         
         blurView.isHidden = false

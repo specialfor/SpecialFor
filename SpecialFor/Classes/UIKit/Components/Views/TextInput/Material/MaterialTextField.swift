@@ -6,10 +6,9 @@
 //  Copyright © 2018 Volodymyr Hryhoriev. All rights reserved.
 //
 
-import UIKit
 import SnapKit
 
-public class MaterialTextField: MaterialTextContainer {
+public class MaterialTextField: MaterialTextContainer, UITextFieldDelegate {
     
     // MARK: - MaterialTextInput
     
@@ -99,19 +98,17 @@ public class MaterialTextField: MaterialTextContainer {
         validate(text: text)
     }
     
-}
-
-extension MaterialTextField: UITextFieldDelegate {
-    
-    func textFieldDidBeginEditing(_ textField: UITextField) {
+    // MARK: - UITextFieldDelegate
+ 
+    private func textFieldDidBeginEditing(_ textField: UITextField) {
         beginEditingText()
     }
     
-    func textFieldDidEndEditing(_ textField: UITextField) {
+    private func textFieldDidEndEditing(_ textField: UITextField) {
         endEditingText()
     }
     
-    @objc func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+    internal func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         return shouldTextChanged?(self, range, string) ?? true
     }
 }

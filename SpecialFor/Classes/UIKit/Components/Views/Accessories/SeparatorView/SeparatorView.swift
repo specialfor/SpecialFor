@@ -6,7 +6,6 @@
 //  Copyright © 2018 TecSynt Solutions. All rights reserved.
 //
 
-import UIKit
 import SnapKit
 
 private let height: CGFloat = 1
@@ -22,7 +21,7 @@ public final class SeparatorView: View {
     
     // MARK: - View
     
-    override func baseSetup() {
+    public override func baseSetup() {
         super.baseSetup()
         
         backgroundColor = color

@@ -7,7 +7,6 @@
 //  Copyright © 2018 TecSynt Solutions. All rights reserved.
 //
 
-import UIKit
 import SnapKit
 
 public final class PartialCheckableButton: View {

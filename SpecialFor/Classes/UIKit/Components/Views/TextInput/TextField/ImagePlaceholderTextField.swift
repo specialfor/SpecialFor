@@ -6,7 +6,6 @@
 //  Copyright © 2017 TecSynt Solutions. All rights reserved.
 //
 
-import UIKit
 import SnapKit
 
 private enum Side {
@@ -120,7 +119,7 @@ public final class ImagePlaceholderTextField: View {
     
     // MARK: - Setup
     
-    override func baseSetup() {
+    public override func baseSetup() {
         textField.isHidden = false
         textField.delegate = self
         textField.addTarget(self, action: #selector(actionTextDidChange(sender:)), for: .editingChanged)
@@ -184,16 +183,16 @@ public final class ImagePlaceholderTextField: View {
 
 extension ImagePlaceholderTextField: UITextFieldDelegate {
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    private func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         returnHandler?()
         return true
     }
     
-    func textFieldDidBeginEditing(_ textField: UITextField) {
+    private func textFieldDidBeginEditing(_ textField: UITextField) {
         updatePlaceholder(for: textField.text)
     }
     
-    func textFieldDidEndEditing(_ textField: UITextField) {
+    private func textFieldDidEndEditing(_ textField: UITextField) {
         updatePlaceholder(for: textField.text)
     }
     

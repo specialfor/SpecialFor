@@ -6,6 +6,8 @@
 //  Copyright © 2018 TecSynt Solutions. All rights reserved.
 //
 
+import SnapKit
+
 public class EmptyStateTableViewDS: TableViewDataSourceProxy {
     
     private lazy var backgroundView: UIView = {

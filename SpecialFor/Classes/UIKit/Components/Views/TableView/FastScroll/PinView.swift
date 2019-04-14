@@ -6,6 +6,8 @@
 //  Copyright © 2017 TecSynt Solutions. All rights reserved.
 //
 
+import SnapKit
+
 final class PinView: View {
     
     // MARK: - Subviews

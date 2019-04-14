@@ -9,12 +9,6 @@
 import UIKit
 
 public class View: UIView {
-    
-    public var activatedViews: [UIView] {
-        return []
-    }
-    
-    
     // MARK: - Init
     
     public override init(frame: CGRect) {
@@ -26,17 +20,4 @@ public class View: UIView {
         super.init(coder: aDecoder)
         baseSetup()
     }
-    
-    
-    // MARK: - Base Setup
-    
-    /// Don't forget to call `super.baseSetup` in subclasess
-    func baseSetup() {
-        activatedViews.activate()
-    }
-}
-
-
-extension Array where Element: UIView {
-    public func activate() {}
 }

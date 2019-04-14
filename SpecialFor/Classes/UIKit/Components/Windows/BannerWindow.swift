@@ -6,7 +6,6 @@
 //  Copyright © 2019 Volodymyr Hryhoriev. All rights reserved.
 //
 
-import UIKit
 import SnapKit
 
 public final class BannerWindow: UIWindow {

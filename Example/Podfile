@@ -1,5 +1,4 @@
 use_frameworks!
 target 'Example' do
-#  pod 'SpecialFor', :path => '../'
-  pod 'SpecialFor/UIKit/BannerWindow', :path => '../'
+  pod 'SpecialFor', :path => '../'
 end

@@ -1,23 +1,116 @@
 PODS:
+  - Kingfisher (5.3.1)
   - SnapKit (4.2.0)
+  - SpecialFor (0.2.0):
+    - SpecialFor/AppEnvironment (= 0.2.0)
+    - SpecialFor/AVFoundation (= 0.2.0)
+    - SpecialFor/Core (= 0.2.0)
+    - SpecialFor/Photos (= 0.2.0)
+    - SpecialFor/UIKit (= 0.2.0)
+  - SpecialFor/AppEnvironment (0.2.0)
+  - SpecialFor/AVFoundation (0.2.0)
+  - SpecialFor/Core (0.2.0):
+    - SpecialFor/Core/Closure (= 0.2.0)
+    - SpecialFor/Core/GCD (= 0.2.0)
+    - SpecialFor/Core/Result (= 0.2.0)
+  - SpecialFor/Core/Closure (0.2.0)
+  - SpecialFor/Core/GCD (0.2.0):
+    - SpecialFor/Core/Closure
+  - SpecialFor/Core/Result (0.2.0):
+    - SpecialFor/Core/Closure
+  - SpecialFor/Photos (0.2.0)
+  - SpecialFor/UIKit (0.2.0):
+    - SpecialFor/UIKit/Accessories (= 0.2.0)
+    - SpecialFor/UIKit/AlignableLabel (= 0.2.0)
+    - SpecialFor/UIKit/Backable (= 0.2.0)
+    - SpecialFor/UIKit/BannerWindow (= 0.2.0)
+    - SpecialFor/UIKit/EmptyStateTableViewDS (= 0.2.0)
+    - SpecialFor/UIKit/FastScroll (= 0.2.0)
+    - SpecialFor/UIKit/GifLoaderView (= 0.2.0)
+    - SpecialFor/UIKit/Gradient (= 0.2.0)
+    - SpecialFor/UIKit/ImageAlertViewController (= 0.2.0)
+    - SpecialFor/UIKit/ImagePlaceholderTextField (= 0.2.0)
+    - SpecialFor/UIKit/ImagesView (= 0.2.0)
+    - SpecialFor/UIKit/LinkTextField (= 0.2.0)
+    - SpecialFor/UIKit/Loadable (= 0.2.0)
+    - SpecialFor/UIKit/MaterialTextInput (= 0.2.0)
+    - SpecialFor/UIKit/PartialCheckableButton (= 0.2.0)
+    - SpecialFor/UIKit/Renderable (= 0.2.0)
+    - SpecialFor/UIKit/SeparatorView (= 0.2.0)
+    - SpecialFor/UIKit/Setupable (= 0.2.0)
+    - SpecialFor/UIKit/TextField (= 0.2.0)
+    - SpecialFor/UIKit/View (= 0.2.0)
+  - SpecialFor/UIKit/Accessories (0.2.0):
+    - SpecialFor/UIKit/Gradient
+    - SpecialFor/UIKit/SeparatorView
+  - SpecialFor/UIKit/AlignableLabel (0.2.0)
+  - SpecialFor/UIKit/Backable (0.2.0)
   - SpecialFor/UIKit/BannerWindow (0.2.0):
     - SnapKit (= 4.2.0)
+  - SpecialFor/UIKit/EmptyStateTableViewDS (0.2.0):
+    - SnapKit (= 4.2.0)
+    - SpecialFor/UIKit/View
+  - SpecialFor/UIKit/FastScroll (0.2.0):
+    - SnapKit (= 4.2.0)
+    - SpecialFor/UIKit/View
+  - SpecialFor/UIKit/GifLoaderView (0.2.0):
+    - SnapKit (= 4.2.0)
+    - SpecialFor/UIKit/Renderable
+    - SpecialFor/UIKit/View
+    - SwiftGifOrigin (= 1.7.0)
+  - SpecialFor/UIKit/Gradient (0.2.0)
+  - SpecialFor/UIKit/ImageAlertViewController (0.2.0):
+    - SnapKit (= 4.2.0)
+  - SpecialFor/UIKit/ImagePlaceholderTextField (0.2.0):
+    - SnapKit (= 4.2.0)
+    - SpecialFor/UIKit/TextField
+    - SpecialFor/UIKit/View
+  - SpecialFor/UIKit/ImagesView (0.2.0):
+    - Kingfisher (= 5.3.1)
+    - SnapKit (= 4.2.0)
+    - SpecialFor/UIKit/View
+  - SpecialFor/UIKit/LinkTextField (0.2.0):
+    - SpecialFor/UIKit/MaterialTextInput
+  - SpecialFor/UIKit/Loadable (0.2.0):
+    - SnapKit (= 4.2.0)
+    - SpecialFor/UIKit/Renderable
+  - SpecialFor/UIKit/MaterialTextInput (0.2.0):
+    - SnapKit (= 4.2.0)
+    - SpecialFor/UIKit/TextField
+    - SpecialFor/UIKit/View
+  - SpecialFor/UIKit/PartialCheckableButton (0.2.0):
+    - SnapKit (= 4.2.0)
+    - SpecialFor/UIKit/View
+  - SpecialFor/UIKit/Renderable (0.2.0)
+  - SpecialFor/UIKit/SeparatorView (0.2.0):
+    - SnapKit (= 4.2.0)
+    - SpecialFor/UIKit/View
+  - SpecialFor/UIKit/Setupable (0.2.0)
+  - SpecialFor/UIKit/TextField (0.2.0):
+    - SpecialFor/Core/Closure
+  - SpecialFor/UIKit/View (0.2.0):
+    - SpecialFor/UIKit/Setupable
+  - SwiftGifOrigin (1.7.0)
 
 DEPENDENCIES:
-  - SpecialFor/UIKit/BannerWindow (from `../`)
+  - SpecialFor (from `../`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Kingfisher
     - SnapKit
+    - SwiftGifOrigin
 
 EXTERNAL SOURCES:
   SpecialFor:
     :path: "../"
 
 SPEC CHECKSUMS:
+  Kingfisher: d9e7e0b209b59b8f9873aa2f37654e81a7beea51
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
-  SpecialFor: d29382fd1480e9129be64e2b731ec74551f79f52
+  SpecialFor: 15a69f81f117b5a07936f5bdf001f1b506ee5a8e
+  SwiftGifOrigin: fbd6cf37afcfcf97a5c3db996ddc0492e5c5c145
 
-PODFILE CHECKSUM: 365fec3ccec5a7b8ae414e0f944add92ea4974a8
+PODFILE CHECKSUM: 766f7b70e5b1ac7c97824918187d1e9cb80c89b7
 
 COCOAPODS: 1.6.1

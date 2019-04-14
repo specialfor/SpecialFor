@@ -40,7 +40,7 @@ open class TextField: UITextField {
     }
     
     /// Holds action which will be executed after text resets
-    public var didResetHandler: (() -> Void)?
+    public var didResetHandler: Closure?
     
     /// Set as `text` if `shouldResetAfterBackground` is true
     /// and app enters bakcground

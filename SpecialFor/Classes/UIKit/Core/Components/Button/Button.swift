@@ -10,7 +10,6 @@ import UIKit
 
 public class Button: UIButton {
     
-
     // MARK: - Init
     
     public override init(frame: CGRect) {
@@ -22,9 +21,4 @@ public class Button: UIButton {
         super.init(coder: aDecoder)
         baseSetup()
     }
-    
-    
-    // MARK: - Base Setup
-    
-    public func baseSetup() { }
 }
