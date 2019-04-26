@@ -54,6 +54,10 @@
       "source_files": "**/AppEnvironment/**/*"
     },
     {
+      "name": "Coordinator",
+      "source_files": "**/Coordinator.swift"
+    },
+    {
       "name": "DataDriven",
       "dependencies": {
         "SpecialFor/UIKit/Renderable": [

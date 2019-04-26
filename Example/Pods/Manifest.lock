@@ -5,12 +5,14 @@ PODS:
   - SpecialFor (0.4.0):
     - SpecialFor/AppEnvironment (= 0.4.0)
     - SpecialFor/AVFoundation (= 0.4.0)
+    - SpecialFor/Coordinator (= 0.4.0)
     - SpecialFor/Core (= 0.4.0)
     - SpecialFor/DataDriven (= 0.4.0)
     - SpecialFor/Photos (= 0.4.0)
     - SpecialFor/UIKit (= 0.4.0)
   - SpecialFor/AppEnvironment (0.4.0)
   - SpecialFor/AVFoundation (0.4.0)
+  - SpecialFor/Coordinator (0.4.0)
   - SpecialFor/Core (0.4.0):
     - SpecialFor/Core/Closure (= 0.4.0)
     - SpecialFor/Core/GCD (= 0.4.0)
@@ -120,9 +122,9 @@ SPEC CHECKSUMS:
   CellViewModel: d8d750ed7402098acd6af857777a087fc5bcffa7
   Kingfisher: d9e7e0b209b59b8f9873aa2f37654e81a7beea51
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
-  SpecialFor: a582da2c4432eb13fa39899bbb435e52279b9125
+  SpecialFor: 77e6bc6a11bede822eb52b3a18de1f4fa97f051f
   SwiftGifOrigin: fbd6cf37afcfcf97a5c3db996ddc0492e5c5c145
 
-PODFILE CHECKSUM: 16cf3c2916b711a5c600546be3242198a839b746
+PODFILE CHECKSUM: 766f7b70e5b1ac7c97824918187d1e9cb80c89b7
 
 COCOAPODS: 1.6.1

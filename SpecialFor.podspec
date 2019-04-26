@@ -43,6 +43,10 @@ Pod::Spec.new do |s|
       app_env.source_files = '**/AppEnvironment/**/*'
   end
   
+  s.subspec 'Coordinator' do |coord|
+      coord.source_files = '**/Coordinator.swift'
+  end
+  
   s.subspec 'DataDriven' do |data_driven|
       data_driven.dependency 'SpecialFor/UIKit/Renderable'
       data_driven.dependency 'SpecialFor/UIKit/Setupable'
