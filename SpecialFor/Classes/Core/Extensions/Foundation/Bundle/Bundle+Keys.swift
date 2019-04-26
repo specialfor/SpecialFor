@@ -9,7 +9,6 @@
 import Foundation
 
 extension Bundle {
-    
     public var bundleIdentifier: String {
         return object(forInfoDictionaryKey: kCFBundleIdentifierKey as String) as! String
     }

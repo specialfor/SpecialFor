@@ -9,7 +9,6 @@
 import ImageIO
 
 extension URL {
-    
     public var imageResolution: CGSize? {
         guard let source = CGImageSourceCreateWithURL(self as CFURL, nil),
             let header = CGImageSourceCopyPropertiesAtIndex(source, 0, nil) as? [String: AnyObject],

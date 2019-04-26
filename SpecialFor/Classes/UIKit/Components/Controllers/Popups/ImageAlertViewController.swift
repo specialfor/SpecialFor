@@ -11,13 +11,11 @@ import SnapKit
 private let _duration = 2.0
 
 public final class ImageAlertViewController: UIViewController {
-    
     // MARK: - Constraints
     
     private var imageViewSide: Constraint!
     
     private var messageLabelTopInset: Constraint!
-    
     
     // MARK: - Properties
     
@@ -29,7 +27,6 @@ public final class ImageAlertViewController: UIViewController {
     public var duration: Double?
     
     public var completion: Closure?
-    
     
     // MARK: - Subviews
     
@@ -95,7 +92,6 @@ public final class ImageAlertViewController: UIViewController {
         return label
     }()
     
-    
     // MARK: - Init
     
     public convenience init(image: UIImage?, message: String?) {
@@ -107,7 +103,6 @@ public final class ImageAlertViewController: UIViewController {
         self.modalTransitionStyle = .crossDissolve
         self.modalPresentationStyle = .overCurrentContext
     }
-    
     
     // MARK: - UIViewController
     
@@ -123,7 +118,6 @@ public final class ImageAlertViewController: UIViewController {
             self.presentingViewController?.dismiss(animated: true, completion: self.completion)
         }
     }
-    
     
     // MARK: - Base setup
     
@@ -145,11 +139,8 @@ public final class ImageAlertViewController: UIViewController {
     }
 }
 
-
 extension ImageAlertViewController {
-    
     enum Constraints {
-        
         enum popupView {
             static let width = 270
             static let cornerdRadius: CGFloat = 12
@@ -165,6 +156,5 @@ extension ImageAlertViewController {
             static let bottomInset = 24.0
             static let horizontalInset = 16.0
         }
-        
     }
 }

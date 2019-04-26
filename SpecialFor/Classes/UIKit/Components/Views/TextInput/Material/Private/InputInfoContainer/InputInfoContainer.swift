@@ -8,12 +8,11 @@
 
 import SnapKit
 
-fileprivate let _separatorHeight: CGFloat = 1.0
+private let _separatorHeight: CGFloat = 1.0
 
 final class InputInfoContainer: View, InputInfoProvider {
-    
-    
     // MARK: - Info
+
     private var workItem: DispatchWorkItem?
     
     var info: InputInfo? {
@@ -44,7 +43,6 @@ final class InputInfoContainer: View, InputInfoProvider {
     var infoFont: UIFont? = UIFont.systemFont(ofSize: 14.0) {
         didSet { adjustInfoFont(with: infoFont) }
     }
-    
     
     // MARK: - Separator
     
@@ -116,7 +114,6 @@ final class InputInfoContainer: View, InputInfoProvider {
         setupTestingKeys()
     }
     
-    
     // MARK: - Private
     
     private func setupInfoLabel(with info: InputInfo?) {
@@ -161,20 +158,18 @@ final class InputInfoContainer: View, InputInfoProvider {
         infoLabel.font = infoFont
         infoLabel.snp.updateConstraints { $0.height.equalTo(infoLabel.font.lineHeight) }
     }
-    
 }
 
 extension InputInfoContainer {
-    
     private enum Keys: String {
-        case inputContainer        = "material_input_container"
-        case infoLabel             = "material_info_label"
-        case separator             = "material_separator"
+        case inputContainer = "material_input_container"
+        case infoLabel = "material_info_label"
+        case separator = "material_separator"
     }
     
     func setupTestingKeys() {
-        inputContainer.accessibilityIdentifier  = Keys.inputContainer.rawValue
-        infoLabel.accessibilityIdentifier       = Keys.infoLabel.rawValue
-        separator.accessibilityIdentifier       = Keys.separator.rawValue
+        inputContainer.accessibilityIdentifier = Keys.inputContainer.rawValue
+        infoLabel.accessibilityIdentifier = Keys.infoLabel.rawValue
+        separator.accessibilityIdentifier = Keys.separator.rawValue
     }
 }

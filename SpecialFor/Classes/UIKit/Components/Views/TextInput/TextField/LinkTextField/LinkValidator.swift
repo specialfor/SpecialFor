@@ -39,7 +39,6 @@ public final class LinkValidator: NSObject, UITextViewDelegate {
     func materialTextInput(_ input: MaterialTextInput,
                            shouldChangeTextIn range: NSRange,
                            replacementText text: String) -> Bool {
-        
         guard range.location >= domen.count else {
             return false
         }
@@ -65,5 +64,4 @@ public final class LinkValidator: NSObject, UITextViewDelegate {
             validationClosure(.valid)
         }
     }
-    
 }

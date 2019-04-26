@@ -11,13 +11,11 @@ import SnapKit
 private let height: CGFloat = 1
 
 public final class SeparatorView: View {
-    
     public var color: UIColor = .darkGray {
         didSet {
             backgroundColor = color
         }
     }
-    
     
     // MARK: - View
     

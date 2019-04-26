@@ -17,7 +17,6 @@ public protocol FastScrollable: class {
 }
 
 extension FastScrollable {
-    
     public func handleFastScroll(in tableView: UITableView) {
         let offset = tableView.contentOffset.y
         

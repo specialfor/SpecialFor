@@ -9,7 +9,6 @@
 import SnapKit
 
 class MaterialTextView: MaterialTextContainer {
-
     // MARK: - MaterialTextInput
 
     override var text: String {
@@ -27,7 +26,6 @@ class MaterialTextView: MaterialTextContainer {
     override var cursorColor: UIColor {
         didSet { textView.tintColor = cursorColor }
     }
-
 
     // MARK: - Views
 
@@ -50,19 +48,17 @@ class MaterialTextView: MaterialTextContainer {
         return textView
     }()
 
-
     // MARK: - Setup
+
     override func baseSetup() {
         super.baseSetup()
 
         textView.delegate = self
         textView.accessibilityIdentifier = "material_text_view"
     }
-
 }
 
 extension MaterialTextView: UITextViewDelegate {
-
     func textViewDidBeginEditing(_ textView: UITextView) {
         beginEditingText()
     }

@@ -7,7 +7,6 @@
 //
 
 extension Sequence where Element: Comparable & Hashable {
-    
     /// Returns max element in sequence except `element` one.
     /// If sequence contains only `element`, return `element`.
     public func max(except element: Element) -> Element {

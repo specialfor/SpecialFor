@@ -14,7 +14,6 @@ private enum Side {
 }
 
 public final class ImagePlaceholderTextField: View {
-    
     public var returnHandler: Closure?
     
     public var leftInset: Double = 16.0 {
@@ -47,7 +46,6 @@ public final class ImagePlaceholderTextField: View {
         }
     }
     
-    
     // MARK: - Subviews
     
     private lazy var placeholderImageView: UIImageView = {
@@ -56,7 +54,7 @@ public final class ImagePlaceholderTextField: View {
         let width = 20.0
         
         self.addSubview(imgView)
-        imgView.snp.makeConstraints({ (make) in
+        imgView.snp.makeConstraints({ make in
             make.width.height.equalTo(width)
             make.centerY.equalToSuperview()
         })
@@ -65,7 +63,6 @@ public final class ImagePlaceholderTextField: View {
     }()
     
     private lazy var placeholderLabel: UILabel = {
-        
         let label = UILabel()
         label.textColor = .black
         label.font = UIFont.preferredFont(forTextStyle: .body)
@@ -73,7 +70,7 @@ public final class ImagePlaceholderTextField: View {
         let rightInset = 16.0
         
         self.addSubview(label)
-        label.snp.makeConstraints({ (make) in
+        label.snp.makeConstraints({ make in
             make.left.equalTo(placeholderImageView.snp.right).offset(4.0)
             make.right.equalTo(-rightInset)
             make.centerY.equalTo(placeholderImageView)
@@ -90,7 +87,7 @@ public final class ImagePlaceholderTextField: View {
         textField.textColor = UIColor.white
         
         self.addSubview(textField)
-        textField.snp.makeConstraints({ (make) in
+        textField.snp.makeConstraints({ make in
             make.top.bottom.equalToSuperview()
             make.left.equalTo(leftInset)
             make.right.equalTo(-rightInset)
@@ -100,7 +97,6 @@ public final class ImagePlaceholderTextField: View {
         
         return textField
     }()
-    
     
     // MARK: - sAccessibility
     
@@ -115,7 +111,6 @@ public final class ImagePlaceholderTextField: View {
             }
         }
     }
-    
     
     // MARK: - Setup
     
@@ -135,14 +130,12 @@ public final class ImagePlaceholderTextField: View {
         backgroundColor = UIColor.lightGray
     }
     
-    
     // MARK: - First responder
     
     @discardableResult
     override public func resignFirstResponder() -> Bool {
         return textField.resignFirstResponder()
     }
-    
     
     // MARK: - Actions
     
@@ -158,11 +151,10 @@ public final class ImagePlaceholderTextField: View {
         updatePlaceholder(for: textField.text)
     }
     
-    
     // MARK: - Constraints
     
     private func updateFieldInset(_ inset: Double, side: Side) {
-        textField.snp.updateConstraints { (make) in
+        textField.snp.updateConstraints { make in
             switch side {
             case .left:
                 make.left.equalTo(inset)
@@ -178,11 +170,9 @@ public final class ImagePlaceholderTextField: View {
     }
 }
 
-
 // MARK: UITextFieldDelegate
 
 extension ImagePlaceholderTextField: UITextFieldDelegate {
-    
     private func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         returnHandler?()
         return true
@@ -202,11 +192,9 @@ extension ImagePlaceholderTextField: UITextFieldDelegate {
     }
 }
 
-
 // MARK: - Show/Hide placeholder
 
 private extension ImagePlaceholderTextField {
-    
     func togglePlaceholder(shouldHide: Bool) {
         placeholderImageView.isHidden = shouldHide
         placeholderLabel.isHidden = shouldHide

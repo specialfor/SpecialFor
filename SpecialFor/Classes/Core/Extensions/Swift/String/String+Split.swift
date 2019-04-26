@@ -10,10 +10,9 @@ public protocol StringInitializable {
     init?(_ string: String)
 }
 
-extension Int64: StringInitializable { }
+extension Int64: StringInitializable {}
 
 extension String {
-    
     public func splitByComma<T: StringInitializable>(_ type: T.Type) -> [T]? {
         return components(separatedBy: ",").compactMap(T.init)
     }

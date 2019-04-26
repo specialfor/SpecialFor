@@ -27,7 +27,6 @@ public final class ImagesView: View {
         }
     }
     
-    
     // MARK: - Geometry
     
     public var size: CGSize = .zero {
@@ -45,7 +44,6 @@ public final class ImagesView: View {
             }
         }
     }
-    
     
     // MARK: - Appearance
     
@@ -73,7 +71,6 @@ public final class ImagesView: View {
         }
     }
     
-    
     // MARK: - Private properties
     
     private var imageViews: [UIImageView] = [] {
@@ -85,7 +82,6 @@ public final class ImagesView: View {
     private var leftConstraints: [Constraint] = []
     private var rightConstraint: Constraint?
     private var prevCountOfItems: Int = 0
-    
     
     // MARK: - Reload
     
@@ -164,7 +160,6 @@ public final class ImagesView: View {
         }
     }
     
-    
     // MARK: - Update constraints
     
     private func updateSpacings() {
@@ -176,7 +171,6 @@ public final class ImagesView: View {
             imageView.snp.updateConstraints { $0.size.equalTo(size) }
         }
     }
-    
     
     // MARK: - Adjust appearance
     
@@ -214,16 +208,14 @@ public final class ImagesView: View {
 }
 
 extension UIImageView {
-    
     func setImage(with type: ImagesView.ItemType) {
         let placeholder = #imageLiteral(resourceName: "ava_placeholder")
         
         switch type {
-        case .image(let image):
+        case let .image(image):
             self.image = image ?? placeholder
-        case .url(let url):
+        case let .url(url):
             kf.setImage(with: url, placeholder: placeholder)
         }
     }
 }
-

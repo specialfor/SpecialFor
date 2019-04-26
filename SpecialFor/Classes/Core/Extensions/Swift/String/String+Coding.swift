@@ -6,9 +6,7 @@
 //  Copyright © 2017 TecSynt Solutions. All rights reserved.
 //
 
-
 extension String {
-    
     // MARK: - Base64
     
     public var base64Encoded: String? {
@@ -24,7 +22,6 @@ extension String {
         }
         return nil
     }
-
     
     // MARK: - Percent encoding
     
@@ -45,7 +42,6 @@ extension String {
         return encoded.removingPercentEncoding
     }
     
-    
     // MARK: - HTML
     
     public var htmlDecoded: String? {
@@ -53,15 +49,15 @@ extension String {
             return nil
         }
         
-        let options: [NSAttributedString.DocumentReadingOptionKey : Any] = [
+        let options: [NSAttributedString.DocumentReadingOptionKey: Any] = [
             NSAttributedString.DocumentReadingOptionKey.documentType: NSAttributedString.DocumentType.html,
-            NSAttributedString.DocumentReadingOptionKey.characterEncoding: String.Encoding.utf8.rawValue
+            NSAttributedString.DocumentReadingOptionKey.characterEncoding: String.Encoding.utf8.rawValue,
         ]
         
         guard let attributedString = try? NSAttributedString(data: data, options: options, documentAttributes: nil) else {
             return nil
         }
         
-        return String.init(attributedString.string)
+        return String(attributedString.string)
     }
 }

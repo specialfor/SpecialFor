@@ -9,7 +9,6 @@
 import UIKit
 
 public protocol InputInfoProvider: class {
-    
     // MARK: - Info
     
     var info: InputInfo? { get set }
@@ -19,12 +18,10 @@ public protocol InputInfoProvider: class {
     
     var infoFont: UIFont? { get set }
     
-    
     // MARK: - Separator
     
     var shouldShowSeparator: Bool { get set }
     
     var separatorColor: UIColor { get set }
     var separatorHeight: CGFloat { get set }
-    
 }

@@ -9,7 +9,7 @@
 import UIKit
 
 public extension UIColor {
-    public convenience init(hexString: String, alpha: CGFloat = 1.0) {
+    convenience init(hexString: String, alpha: CGFloat = 1.0) {
         let hexint = Int(hexString.hexInt)
         
         let red = CGFloat((hexint & 0xff0000) >> 16) / 255.0

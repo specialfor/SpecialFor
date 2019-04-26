@@ -19,7 +19,7 @@ public final class ConcreteEnvironment: Environment {
 public extension ConcreteEnvironment {
     static let main = ConcreteEnvironment(bundle: .main)
     
-    public convenience init<T: AnyObject>(token: T.Type) {
+    convenience init<T: AnyObject>(token: T.Type) {
         self.init(bundle: Bundle(for: token))
     }
 }

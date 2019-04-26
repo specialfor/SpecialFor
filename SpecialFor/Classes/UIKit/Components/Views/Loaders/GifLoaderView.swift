@@ -14,7 +14,7 @@ public final class GifLoaderView: View, Renderable {
         return [overlayView, gifView]
     }
 
-    public var overlayBackgroundColor: UIColor?  {
+    public var overlayBackgroundColor: UIColor? {
         didSet { overlayView.backgroundColor = overlayBackgroundColor }
     }
     

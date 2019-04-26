@@ -1,0 +1,20 @@
+# file options
+
+--exclude **/Pods
+
+
+# options 
+
+--ranges no-space
+
+
+# rules
+
+--enable consecutiveSpaces, blankLinesAroundMark, blankLinesAtEndOfScope, blankLinesAtStartOfScope, blankLinesBetweenScopes, consecutiveBlankLines, braces, duplicateImports, elseOnSameLine, emptyBraces, hoistPatternLet, isEmpty, linebreakAtEndOfFile, linebreaks, ranges, redundantBackticks, redundantBreak, redundantExtensionACL, redundantFileprivate, redundantGet, redundantInit, redundantLet, redundantLetError, redundantNilInit, redundantObjc, redundantParens, redundantPattern, redundantRawValues, redundantVoidReturnType, semicolons, spaceAroundBraces, spaceAroundBrackets, spaceAroundComments, spaceAroundGenerics, spaceAroundOperators, spaceAroundParens, spaceInsideBraces, spaceInsideBrackets, spaceInsideComments, spaceInsideGenerics, spaceInsideParens, strongOutlets, strongifiedSelf, todos, trailingCommas, typeSugar, void
+
+--disable andOperator, anyObjectProtocol, fileHeader, indent, numberFormatting, redundantReturn, redundantSelf, sortedImports, specifiers, trailingClosures, trailingSpace, unusedArguments, wrapArguments
+
+
+# Too dangerous to use or produce too many changes in big project: redundantParens, redundantSelf, spaceAroundOperators, spaceInsideComments, trailingClosures, trailingSpace, unusedArguments
+# Need to implement `inline only` option for `redundantReturn` rule.
+# Need to investigate behavior of wrapArguments

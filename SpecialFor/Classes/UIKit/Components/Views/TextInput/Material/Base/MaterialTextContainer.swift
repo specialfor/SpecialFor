@@ -8,10 +8,9 @@
 
 import SnapKit
 
-fileprivate let defaultConfig = NynjaMTIConfig()
+private let defaultConfig = NynjaMTIConfig()
 
 public class MaterialTextContainer: View, MaterialTextInput {
-    
     public var validators: [MTIValidator] = []
     
     public var validationHandler: MTIValidationHandler?
@@ -90,7 +89,6 @@ public class MaterialTextContainer: View, MaterialTextInput {
         return view
     }()
     
-    
     // MARK: - Init
     
     public override init(frame: CGRect) {
@@ -102,7 +100,6 @@ public class MaterialTextContainer: View, MaterialTextInput {
         super.init(coder: aDecoder)
         baseSetup()
     }
-    
     
     // MARK: - Setup
     
@@ -129,7 +126,6 @@ public class MaterialTextContainer: View, MaterialTextInput {
         successColor = config.successColor
     }
     
-    
     // MARK: - Private
     
     private func adjustSeparatorHeight(_ height: CGFloat, state: MaterialTextInputState) {
@@ -145,16 +141,14 @@ public class MaterialTextContainer: View, MaterialTextInput {
     }
 }
 
-
 extension MaterialTextContainer {
-    
     private enum Keys: String {
-        case infoContainer        = "material_info_container"
-        case floatingContainer    = "material_floating_container"
+        case infoContainer = "material_info_container"
+        case floatingContainer = "material_floating_container"
     }
     
     func setupTestingKeys() {
-        infoContainer.accessibilityIdentifier       = Keys.infoContainer.rawValue
-        floatingContainer.accessibilityIdentifier   = Keys.floatingContainer.rawValue
+        infoContainer.accessibilityIdentifier = Keys.infoContainer.rawValue
+        floatingContainer.accessibilityIdentifier = Keys.floatingContainer.rawValue
     }
 }

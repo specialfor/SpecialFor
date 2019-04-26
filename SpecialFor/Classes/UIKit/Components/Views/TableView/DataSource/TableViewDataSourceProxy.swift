@@ -7,13 +7,11 @@
 //
 
 open class TableViewDataSourceProxy: NSObject, UITableViewDataSource {
-
     public let dataSource: UITableViewDataSource
     
     public init(dataSource: UITableViewDataSource) {
         self.dataSource = dataSource
     }
-    
     
     // MARK: - UITableViewDataSource
     

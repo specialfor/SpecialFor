@@ -8,7 +8,6 @@
 import UIKit
 
 extension UIView {
-    
     public func roundCorners() {
         let radius = self.bounds.height / 2
         roundCorners(radius: radius)
@@ -36,7 +35,6 @@ extension UIView {
 }
 
 extension Array where Element: UIView {
-    
     public func roundCorners() {
         forEach { $0.roundCorners() }
     }

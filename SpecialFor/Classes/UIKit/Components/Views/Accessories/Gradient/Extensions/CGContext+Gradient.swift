@@ -9,9 +9,7 @@
 import CoreGraphics
 
 extension CGContext {
-    
     public func drawLinearGradient(with colors: [CGColor], locations: [CGFloat], from: CGPoint, to: CGPoint) {
-        
         let colorSpace = CGColorSpaceCreateDeviceRGB()
         drawLinearGradient(with: colors, locations: locations, from: from, to: to, colorSpace: colorSpace)
     }
@@ -22,9 +20,7 @@ extension CGContext {
                                    to: CGPoint,
                                    colorSpace: CGColorSpace,
                                    options: CGGradientDrawingOptions = []) {
-        
         guard let gradient = CGGradient(colorsSpace: colorSpace, colors: colors as CFArray, locations: locations) else {
-            
             assertionFailure("Something gone wrong. Check arguments.")
             return
         }

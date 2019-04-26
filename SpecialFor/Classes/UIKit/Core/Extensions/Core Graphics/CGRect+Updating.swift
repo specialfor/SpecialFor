@@ -9,7 +9,6 @@
 import UIKit
 
 extension CGRect {
-    
     public func updating(x: CGFloat) -> CGRect {
         return CGRect(x: x, y: minY, width: width, height: height)
     }
@@ -26,4 +25,3 @@ extension CGRect {
         return CGRect(x: minX, y: minY, width: width, height: height)
     }
 }
-

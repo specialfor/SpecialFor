@@ -9,7 +9,6 @@
 import UIKit
 
 extension UIImageView {
-    
     public func roundCorners(borderWidth: CGFloat = 0, borderColor: UIColor = UIColor.black) {
         let cornerRadius = frame.height / 2
         roundCorners(borderWidth: borderWidth, cornerRadius: cornerRadius, borderColor: borderColor)
@@ -23,5 +22,3 @@ extension UIImageView {
         clipsToBounds = true
     }
 }
-
-

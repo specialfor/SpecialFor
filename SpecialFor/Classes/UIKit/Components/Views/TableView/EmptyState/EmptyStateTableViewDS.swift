@@ -9,7 +9,6 @@
 import SnapKit
 
 public class EmptyStateTableViewDS: TableViewDataSourceProxy {
-    
     private lazy var backgroundView: UIView = {
         let view = UIView()
         
@@ -60,9 +59,7 @@ public class EmptyStateTableViewDS: TableViewDataSourceProxy {
     }
 }
 
-
 extension EmptyStateTableViewDS {
-    
     public enum CollectionState<Input> {
         case empty(EmptyStateViewModel?)
         case filled(data: Input)

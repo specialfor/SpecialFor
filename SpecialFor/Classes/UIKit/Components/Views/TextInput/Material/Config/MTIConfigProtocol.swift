@@ -7,7 +7,6 @@
 //
 
 public protocol MTIConfigProtocol {
-  
     var font: UIFont { get }
     var textColor: UIColor { get }
     

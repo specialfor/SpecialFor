@@ -9,7 +9,6 @@
 import SnapKit
 
 public class MaterialTextField: MaterialTextContainer, UITextFieldDelegate {
-    
     // MARK: - MaterialTextInput
     
     public override var text: String {
@@ -74,7 +73,6 @@ public class MaterialTextField: MaterialTextContainer, UITextFieldDelegate {
         return textField
     }()
     
-    
     // MARK: - Setup
     
     public override func baseSetup() {
@@ -88,7 +86,6 @@ public class MaterialTextField: MaterialTextContainer, UITextFieldDelegate {
     public override func becomeFirstResponder() -> Bool {
         return self.textField.becomeFirstResponder()
     }
-    
     
     // MARK: - Actions
     

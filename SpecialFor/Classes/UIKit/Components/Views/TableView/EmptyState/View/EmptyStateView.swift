@@ -14,7 +14,6 @@ final class EmptyStateView: View {
     private var heightConstraint: Constraint?
     private var topInsetConstraint: Constraint?
     
-    
     // MARK: - Views
     
     private lazy var imageView: UIImageView = {
@@ -66,7 +65,6 @@ final class EmptyStateView: View {
         return button
     }()
     
-    
     // MARK: - View
     
     override func baseSetup() {
@@ -103,7 +101,6 @@ final class EmptyStateView: View {
         }
     }
     
-    
     // MARK: - Actions
     
     @objc private func actionTapped() {
@@ -111,11 +108,8 @@ final class EmptyStateView: View {
     }
 }
 
-
 extension EmptyStateView {
-    
     enum Constraints {
-        
         enum DescriptionLabel {
             static let height = CGFloat(22)
             static let topInset = 16.0

@@ -6,7 +6,6 @@
 //
 
 extension String {
-    
     public mutating func trim() {
         self = trimmed()
     }

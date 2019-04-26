@@ -9,7 +9,6 @@
 import UIKit
 
 extension UITextInput {
-    
     public var cursorPosition: Int? {
         get {
             guard let selectedRange = selectedTextRange else {

@@ -10,7 +10,6 @@
 import SnapKit
 
 public final class PartialCheckableButton: View {
-    
     public override var activatedViews: [UIView] {
         return [titleLabel, button]
     }
@@ -18,7 +17,6 @@ public final class PartialCheckableButton: View {
     public var viewModel: ViewModel? {
         didSet { setup(with: viewModel) }
     }
-    
     
     // MARK: - Views
     
@@ -51,7 +49,6 @@ public final class PartialCheckableButton: View {
         return label
     }()
     
-    
     // MARK: - Base Setup
 
     public override func baseSetup() {
@@ -66,7 +63,6 @@ public final class PartialCheckableButton: View {
         titleLabel.text = model?.info.title
         button.setImage(model?.info.image, for: .normal)
     }
-
     
     // MARK: - Actions
     
@@ -75,11 +71,9 @@ public final class PartialCheckableButton: View {
     }
 }
 
-
 // MARK: - ViewModel
 
 extension PartialCheckableButton {
-    
     public struct ViewModel {
         public let state: State
         public let info: Info
@@ -109,13 +103,10 @@ extension PartialCheckableButton {
     }
 }
 
-
 // MARK: - Contsraints
 
 extension PartialCheckableButton {
-    
     enum Constraints {
-        
         enum TitleLabel {
             static let height = CGFloat(20)
             static let rightInset = 32.0
@@ -123,18 +114,16 @@ extension PartialCheckableButton {
     }
 }
 
-
 // MARK: - Testable
 
 extension PartialCheckableButton {
-    
     private enum Keys: String {
-        case button         = "button"
-        case titleLabel     = "title_label"
+        case button
+        case titleLabel = "title_label"
     }
     
     func setupTestingKeys() {
-        button.accessibilityIdentifier       = Keys.button.rawValue
-        titleLabel.accessibilityIdentifier   = Keys.titleLabel.rawValue
+        button.accessibilityIdentifier = Keys.button.rawValue
+        titleLabel.accessibilityIdentifier = Keys.titleLabel.rawValue
     }
 }

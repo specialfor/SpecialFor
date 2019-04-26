@@ -6,7 +6,6 @@
 //
 
 extension String {
-    
     public func containsOnly(characters: String) -> Bool {
         let cs = CharacterSet(charactersIn: characters).inverted
         let filtered = self.components(separatedBy: cs).joined(separator: "")

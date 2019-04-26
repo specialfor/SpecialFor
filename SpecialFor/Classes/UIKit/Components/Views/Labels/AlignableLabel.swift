@@ -7,7 +7,6 @@
 //
 
 public final class AlignableLabel: UILabel {
-    
     /// Determines vertical alignement for label
     /// Default: center
     public var verticalAlignement: VerticalAlignment = .center {
@@ -32,7 +31,6 @@ public final class AlignableLabel: UILabel {
 }
 
 extension AlignableLabel {
-    
     public enum VerticalAlignment {
         case top
         case center

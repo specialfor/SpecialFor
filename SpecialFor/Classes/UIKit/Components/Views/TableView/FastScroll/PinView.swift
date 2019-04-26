@@ -9,7 +9,6 @@
 import SnapKit
 
 final class PinView: View {
-    
     // MARK: - Subviews
     
     lazy var titleLabel: UILabel = {
@@ -21,7 +20,7 @@ final class PinView: View {
         label.textAlignment = .center
         
         self.addSubview(label)
-        label.snp.makeConstraints({ (make) in
+        label.snp.makeConstraints({ make in
             make.height.equalTo(height)
             
             make.centerY.equalToSuperview()
@@ -30,7 +29,6 @@ final class PinView: View {
         
         return label
     }()
-    
     
     // MARK: - Setup
     
@@ -41,26 +39,22 @@ final class PinView: View {
         self.backgroundColor = .red
     }
     
-    
     // MARK: - UIView
     
     override func layoutSubviews() {
         super.layoutSubviews()
         self.roundCorners([.topLeft, .topRight, .bottomLeft], radius: self.bounds.width / 2)
     }
-    
 }
-
 
 // MARK: - Testable
 
 extension PinView {
-    
     private enum Keys: String {
-        case titleLabel         = "title_label"
+        case titleLabel = "title_label"
     }
     
     func setupTestingKeys() {
-        titleLabel.accessibilityIdentifier          = Keys.titleLabel.rawValue
+        titleLabel.accessibilityIdentifier = Keys.titleLabel.rawValue
     }
 }

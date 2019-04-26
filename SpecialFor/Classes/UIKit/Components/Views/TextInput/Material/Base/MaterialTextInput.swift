@@ -18,7 +18,6 @@ public typealias MTITextChangedHandler = ClosureWith<MaterialTextInput>
 public typealias MTIShouldChangeTextHandler = (MaterialTextInput, NSRange, String) -> Bool
 
 public protocol MaterialTextInput: FloatingPlaceholderProvider, InputInfoProvider {
-    
     var infoProvider: InputInfoProvider { get }
     var floatingPlaceholderProvider: FloatingPlaceholderProvider { get }
     
@@ -28,7 +27,7 @@ public protocol MaterialTextInput: FloatingPlaceholderProvider, InputInfoProvide
     var textChanged: MTITextChangedHandler? { get set }
     var shouldTextChanged: MTIShouldChangeTextHandler? { get set }
     
-    var state: MaterialTextInputState { get set  }
+    var state: MaterialTextInputState { get set }
     
     var config: MTIConfigProtocol { get set }
     
@@ -48,11 +47,9 @@ public protocol MaterialTextInput: FloatingPlaceholderProvider, InputInfoProvide
     
     func beginEditingText()
     func endEditingText()
-    
 }
 
 public extension MaterialTextInput {
-    
     // MARK: - InputInfoProvider
     
     var info: InputInfo? {
@@ -90,7 +87,6 @@ public extension MaterialTextInput {
         set { infoProvider.separatorHeight = newValue }
     }
     
-    
     // MARK: - FloatingPlaceholderProvider
     
     var placeholderCollapsedFontSize: CGFloat {
@@ -121,7 +117,6 @@ public extension MaterialTextInput {
     func updateFloatingState(_ state: FloatingState, animated: Bool) {
         floatingPlaceholderProvider.updateFloatingState(state, animated: animated)
     }
-    
     
     // MARK: - MaterialTextInput
     

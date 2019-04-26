@@ -9,7 +9,6 @@
 import UIKit
 
 public class Button: UIButton {
-    
     // MARK: - Init
     
     public override init(frame: CGRect) {

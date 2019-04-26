@@ -9,7 +9,6 @@
 import UIKit
 
 extension UIView {
-    
     func toggleIfNeeded(_ shouldShow: Bool, closure: (() -> Void)? = nil) {
         let isShown = !self.isHidden
         

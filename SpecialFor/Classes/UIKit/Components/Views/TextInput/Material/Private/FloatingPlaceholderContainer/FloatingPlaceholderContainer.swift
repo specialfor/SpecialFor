@@ -8,7 +8,7 @@
 
 import SnapKit
 
-fileprivate let collapsedFontSize: CGFloat = 14.0
+private let collapsedFontSize: CGFloat = 14.0
 
 final class FloatingPlaceholderContainer: View, FloatingPlaceholderProvider {
     private typealias TransformOptions = (transform: CGAffineTransform, horizontalInset: Int)
@@ -56,7 +56,6 @@ final class FloatingPlaceholderContainer: View, FloatingPlaceholderProvider {
         return placeholderHeight(from: placeholderFont)
     }
     
-    
     // MARK: - Views
     
     private lazy var placeholderLabel: UILabel = {
@@ -84,7 +83,6 @@ final class FloatingPlaceholderContainer: View, FloatingPlaceholderProvider {
         return view
     }()
     
-    
     // MARK: - Setup
     
     override func layoutSubviews() {
@@ -105,7 +103,6 @@ final class FloatingPlaceholderContainer: View, FloatingPlaceholderProvider {
         setupTestingKeys()
     }
     
-    
     // MARK: - Update
     
     func updateFloatingState(_ state: FloatingState, animated: Bool) {
@@ -113,7 +110,6 @@ final class FloatingPlaceholderContainer: View, FloatingPlaceholderProvider {
         _floatingState = state
         updatePlaceholderPosition(from: prevState, to: state, animated: animated)
     }
-    
     
     // MARK: - Private
     
@@ -148,7 +144,6 @@ final class FloatingPlaceholderContainer: View, FloatingPlaceholderProvider {
     private func updatePlaceholderHeight(_ height: CGFloat) {
         placeholderLabel.snp.updateConstraints { $0.height.equalTo(height) }
     }
-    
     
     // MARK: Placeholder Height
     
@@ -204,26 +199,23 @@ final class FloatingPlaceholderContainer: View, FloatingPlaceholderProvider {
             animations()
         }
     }
-    
 }
 
 extension FloatingPlaceholderContainer {
-    
     enum Keys: String {
-        case placeholderLabel        = "material_placeholder_label"
-        case inputContainer          = "material_floating_input_container"
+        case placeholderLabel = "material_placeholder_label"
+        case inputContainer = "material_floating_input_container"
         
         func allValues() -> [FloatingPlaceholderContainer.Keys] {
             return [
                 .placeholderLabel,
-                .inputContainer
+                .inputContainer,
             ]
         }
     }
     
     func setupTestingKeys() {
-        placeholderLabel.accessibilityIdentifier  = Keys.placeholderLabel.rawValue
-        inputContainer.accessibilityIdentifier    = Keys.inputContainer.rawValue
+        placeholderLabel.accessibilityIdentifier = Keys.placeholderLabel.rawValue
+        inputContainer.accessibilityIdentifier = Keys.inputContainer.rawValue
     }
-    
 }

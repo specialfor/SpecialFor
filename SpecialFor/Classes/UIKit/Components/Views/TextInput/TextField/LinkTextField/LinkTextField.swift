@@ -9,7 +9,6 @@
 import SnapKit
 
 public final class LinkTextField: MaterialTextField {
-    
     public var domen: String = "" {
         willSet { setupDomen(newValue, oldDomen: domen) }
     }
@@ -20,7 +19,6 @@ public final class LinkTextField: MaterialTextField {
     }
     
     public var linkValidator: LinkValidator?
-    
     
     // MARK: - Subviews
     
@@ -45,7 +43,6 @@ public final class LinkTextField: MaterialTextField {
         return button
     }()
     
-    
     // MARK: - Setup
     
     public override func baseSetup() {
@@ -53,7 +50,6 @@ public final class LinkTextField: MaterialTextField {
         actionButton.accessibilityIdentifier = "action_button"
         actionButton.setImage(#imageLiteral(resourceName: "ic_refresh"), for: .normal)
     }
-    
     
     // MARK: - Logic
     
@@ -71,14 +67,12 @@ public final class LinkTextField: MaterialTextField {
         return domen.endIndex..<text.endIndex
     }
     
-    
     // MARK: - Actions
     
     override func editingChanged() {
         super.editingChanged()
         linkValidator?.materialTextInputDidChange(self)
     }
-    
     
     // MARK: - UITextFieldDelegate
     

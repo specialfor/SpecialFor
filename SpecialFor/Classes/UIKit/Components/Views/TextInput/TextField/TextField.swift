@@ -16,14 +16,15 @@ public struct ProhibitedOptions: OptionSet {
         self.rawValue = rawValue
     }
     
+    // swiftformat:disable consecutiveSpaces
     static let none                     = ProhibitedOptions(rawValue: 0)
     static let copy                     = ProhibitedOptions(rawValue: 1 << 0)
     static let paste                    = ProhibitedOptions(rawValue: 1 << 1)
     static let all: ProhibitedOptions   = ProhibitedOptions(rawValue: Int.max)
+    // swiftformat:enable consecutiveSpaces
 }
 
 open class TextField: UITextField {
-    
     /// Determines which options are prohibited
     /// Default: .none
     public var prohibitedOptions: ProhibitedOptions = .none
@@ -46,7 +47,6 @@ open class TextField: UITextField {
     /// and app enters bakcground
     public var initialText: String?
     
-    
     // MARK: - Deinit
     
     deinit {
@@ -54,7 +54,6 @@ open class TextField: UITextField {
             unscribeFromBackgroundNotification()
         }
     }
-    
     
     // MARK: - Handle clipboard actions (prohibited options)
     
@@ -73,7 +72,6 @@ open class TextField: UITextField {
         
         return super.canPerformAction(action, withSender: sender)
     }
-    
     
     // MARK: - Clear in background
     

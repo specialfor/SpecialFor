@@ -7,7 +7,6 @@
 //
 
 public class GradientButton: UIButton {
-    
     public var startColor: UIColor {
         didSet { setNeedsDisplay() }
     }
@@ -15,7 +14,6 @@ public class GradientButton: UIButton {
     public var endColor: UIColor {
         didSet { setNeedsDisplay() }
     }
-    
     
     // MARK: Init
     
@@ -28,7 +26,6 @@ public class GradientButton: UIButton {
     public required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
     
     // MARK: Draw
     

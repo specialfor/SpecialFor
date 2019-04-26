@@ -7,7 +7,6 @@
 //
 
 public struct InputInfo {
-    
     public enum Kind {
         case warning
         case success

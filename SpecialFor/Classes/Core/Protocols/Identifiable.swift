@@ -13,7 +13,6 @@ public protocol Identifiable: AnyObject {
 }
 
 extension Identifiable {
-    
     public var id: ObjectIdentifier {
         return ObjectIdentifier(self)
     }

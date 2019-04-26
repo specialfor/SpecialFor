@@ -9,7 +9,6 @@
 import Photos
 
 extension PHFetchOptions {
-    
     public convenience init(sortedByCreationDateOrder isAscending: Bool) {
         self.init()
         self.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: isAscending)]

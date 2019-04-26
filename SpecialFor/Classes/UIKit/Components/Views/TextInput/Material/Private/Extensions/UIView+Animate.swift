@@ -8,10 +8,9 @@
 
 import UIKit
 
-fileprivate let duration: TimeInterval = 0.3
+private let duration: TimeInterval = 0.3
 
 extension UIView {
-
     func animate(with duration: TimeInterval = duration, animations: @escaping () -> Void) {
         animate(with: duration, animations: animations, completion: nil)
     }
@@ -21,9 +20,8 @@ extension UIView {
         UIView.animate(withDuration: duration, animations: {
             animations()
             self.layoutIfNeeded()
-        }) { (isFinished) in
+        }) { isFinished in
             completion?(isFinished)
         }
     }
-    
 }

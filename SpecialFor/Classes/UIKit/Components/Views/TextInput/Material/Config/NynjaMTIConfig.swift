@@ -6,12 +6,11 @@
 //  Copyright © 2018 TecSynt Solutions. All rights reserved.
 //
 
-fileprivate let defaultFont = UIFont.preferredFont(forTextStyle: .title1)
-fileprivate let defaultColor = UIColor.red
-fileprivate let darkGrayColor = UIColor.darkGray
+private let defaultFont = UIFont.preferredFont(forTextStyle: .title1)
+private let defaultColor = UIColor.red
+private let darkGrayColor = UIColor.darkGray
 
 struct NynjaMTIConfig: MTIConfigProtocol {
-    
     let font: UIFont = defaultFont
     let textColor: UIColor = .white
     

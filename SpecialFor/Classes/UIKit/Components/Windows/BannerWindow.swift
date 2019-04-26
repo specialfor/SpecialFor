@@ -9,7 +9,6 @@
 import SnapKit
 
 public final class BannerWindow: UIWindow {
-    
     public var duration: TimeInterval = 0.3
     public var delay: TimeInterval = 3.0
     

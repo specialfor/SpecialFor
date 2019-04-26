@@ -14,7 +14,6 @@ public enum FloatingState {
 }
 
 public protocol FloatingPlaceholderProvider: class {
-    
     var placeholderCollapsedFontSize: CGFloat { get set }
     var placeholderFont: UIFont { get set }
     
@@ -24,5 +23,4 @@ public protocol FloatingPlaceholderProvider: class {
     var floatingState: FloatingState { get set }
     
     func updateFloatingState(_ state: FloatingState, animated: Bool)
-    
 }

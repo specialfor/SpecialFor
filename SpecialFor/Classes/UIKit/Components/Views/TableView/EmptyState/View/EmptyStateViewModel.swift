@@ -19,11 +19,9 @@ public struct EmptyStateViewModel {
     }
 }
 
-
 // MARK: - ActionViewModel
 
 extension EmptyStateViewModel {
-    
     public struct ActionViewModel {
         public let title: String
         public let handler: Closure?

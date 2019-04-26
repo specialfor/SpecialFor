@@ -9,7 +9,6 @@
 import UIKit
 
 extension UICollectionViewFlowLayout {
-    
     public struct ItemLayout {
         var bounds: CGRect
         var horizontalVisibleCount: Int

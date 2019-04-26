@@ -33,7 +33,6 @@ public final class LengthValidator: MTIValidator {
 }
 
 extension LengthValidator {
-    
     public enum Length {
         public typealias MessageProvider = (Int) -> String
         

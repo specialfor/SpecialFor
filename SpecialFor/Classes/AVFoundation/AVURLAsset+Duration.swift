@@ -9,7 +9,6 @@
 import AVFoundation.AVAsset
 
 extension AVURLAsset {
-    
     public static func duration(from url: URL) -> Double {
         let asset = AVURLAsset(url: url, options: nil)
         return CMTimeGetSeconds(asset.duration)

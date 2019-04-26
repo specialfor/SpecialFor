@@ -7,7 +7,6 @@
 //
 
 extension Dictionary {
-    
     public func mergingUniquingFirst(with other: [Key: Value]) -> [Key: Value] {
         return (try? merging(other, uniquingKeysWith: uniquingUsingFirst)) ?? self
     }

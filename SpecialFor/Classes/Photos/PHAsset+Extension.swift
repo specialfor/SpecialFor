@@ -9,7 +9,6 @@
 import Photos
 
 extension PHAsset {
-    
     public var fileSize: Int64 {
         return valueFromResource(forKey: "fileSize", defaultValue: 0)
     }

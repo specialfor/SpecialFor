@@ -7,7 +7,6 @@
 //
 
 extension UITableView {
-    
     public func performUpdates(animated: Bool = true, closure: () -> Void) {
         if !animated {
             CATransaction.begin()

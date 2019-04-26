@@ -9,7 +9,6 @@
 import Foundation
 
 extension Bundle {
-    
     public enum BuildType {
         case developer
         case adHoc

@@ -7,7 +7,6 @@
 //
 
 extension String {
-    
     public func isIn(string: String, options: String.CompareOptions) -> Bool {
         return string.contains(substring: self, options: options)
     }
@@ -41,5 +40,4 @@ extension Array where Element == String {
         
         return filtered
     }
-
 }

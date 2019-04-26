@@ -7,7 +7,6 @@
 //
 
 extension UIView {
-    
     func firstAncestor<T: UIView>(ofType type: T.Type) -> T? {
         var superview = self.superview
         

@@ -8,7 +8,6 @@
 import Foundation
 
 public class WeakRef<T> where T: AnyObject {
-    
     private(set) weak var value: T?
     
     public init(value: T?) {

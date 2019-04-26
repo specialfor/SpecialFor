@@ -17,7 +17,7 @@ public final class ScrollBar: View {
     
     private var sliderSize: CGSize = _sliderSize
     
-    //Set true if you want to keep scroll bar position on reloadData
+    // Set true if you want to keep scroll bar position on reloadData
     public var isOnUpdate: Bool = false
     
     /// Default: main theme red color
@@ -39,12 +39,10 @@ public final class ScrollBar: View {
     private let handleRightInset = CGFloat(4.0)
     private let pinTopInset = CGFloat(16.0)
     
-    
     // MARK: - Constraints
     
     private var topInsetConstraint: Constraint!
     private var bottomInsetContraint: Constraint!
-    
     
     // MARK: - Subviews
     
@@ -90,7 +88,7 @@ public final class ScrollBar: View {
         let width = 64.0
         
         self.addSubview(pin)
-        pin.snp.makeConstraints { (make) in
+        pin.snp.makeConstraints { make in
             make.width.height.equalTo(width)
             
             make.top.greaterThanOrEqualToSuperview()
@@ -101,7 +99,6 @@ public final class ScrollBar: View {
         return pin
     }()
     
-    
     // MARK: - Init
     
     public convenience init(scrollView: UIScrollView) {
@@ -109,7 +106,6 @@ public final class ScrollBar: View {
         self.scrollView = scrollView
         adjustScrollBar()
     }
-    
     
     // MARK: - Setup
     
@@ -145,7 +141,7 @@ public final class ScrollBar: View {
             let topInset = scrollView.contentInset.top + verticalInset.top
             let bottomInset = scrollView.contentInset.bottom + verticalInset.bottom
             
-            self.snp.remakeConstraints({ (make) in
+            self.snp.remakeConstraints({ make in
                 make.width.equalTo(_scrollBarWidth)
                 make.right.equalTo(scrollView)
                 topInsetConstraint = make.top.equalTo(scrollView).offset(topInset).constraint
@@ -158,7 +154,6 @@ public final class ScrollBar: View {
         subscribeKVO()
     }
     
-    
     // MARK: - KVO
     
     private var offsetObservation: NSKeyValueObservation?
@@ -166,15 +161,15 @@ public final class ScrollBar: View {
     private var insetsObservation: NSKeyValueObservation?
     
     private func subscribeKVO() {
-        offsetObservation = observe(\.scrollView?.contentOffset, changeHandler: { (object, change) in
+        offsetObservation = observe(\.scrollView?.contentOffset, changeHandler: { object, change in
             self.didOffsetChanged()
         })
         
-        sizeObservation = observe(\.scrollView?.contentSize, changeHandler: { (object, change) in
+        sizeObservation = observe(\.scrollView?.contentSize, changeHandler: { object, change in
             self.didSizeChanged()
         })
         
-        insetsObservation = observe(\.scrollView?.contentInset, changeHandler: { (object, change) in
+        insetsObservation = observe(\.scrollView?.contentInset, changeHandler: { object, change in
             self.didInsetsChanged()
         })
     }
@@ -213,12 +208,10 @@ public final class ScrollBar: View {
         }
     }
     
-    
     // MARK: - UIPanGestureRecognizer
     
     private var deltaY: CGFloat = 0
     private var isDragging: Bool = false
-    
     
     @objc private func sliderPanned(_ recognizer: UIPanGestureRecognizer) {
         let location = recognizer.location(in: self)
@@ -229,21 +222,17 @@ public final class ScrollBar: View {
             isDragging = true
             
             toggleInfoView(shouldHide: false)
-            break
         case .changed:
             updateLocation(location)
-            break
         case .ended, .cancelled:
             deltaY = 0
             isDragging = false
             
             toggleInfoView(shouldHide: true)
-            break
         default:
             break
         }
     }
-
     
     // MARK: - TapGestureRecognizer
     
@@ -251,7 +240,6 @@ public final class ScrollBar: View {
         let location = recognizer.location(in: self)
         updateLocation(location)
     }
-    
     
     // MARK: - Utils
     
@@ -280,11 +268,9 @@ public final class ScrollBar: View {
     }
 }
 
-
 // MARK: - Calculation
 
-fileprivate extension ScrollBar {
-    
+private extension ScrollBar {
     private var halfSliderHeight: CGFloat {
         return sliderView.bounds.height / 2
     }
@@ -298,7 +284,7 @@ fileprivate extension ScrollBar {
     }
     
     private func calculateOffsetY(_ scrollView: UIScrollView, centerY: CGFloat) -> CGFloat {
-        let proportion = (centerY - halfSliderHeight) / (sliderDistance)
+        let proportion = (centerY - halfSliderHeight) / sliderDistance
         return scrollableHeight(scrollView) * proportion
     }
     
@@ -326,11 +312,9 @@ fileprivate extension ScrollBar {
     }
 }
 
-
 // MARK: - Constraints
 
 extension ScrollBar {
-    
     public struct VerticalInset {
         public let top: CGFloat
         public let bottom: CGFloat
@@ -339,20 +323,18 @@ extension ScrollBar {
     }
 }
 
-
 // MARK: - Testable
 
 extension ScrollBar {
-    
     private enum Keys: String {
-        case sliderView         = "slider_view"
-        case handleView         = "handle_view"
-        case infoView           = "info_view"
+        case sliderView = "slider_view"
+        case handleView = "handle_view"
+        case infoView = "info_view"
     }
     
     func setupTestingKeys() {
-        sliderView.accessibilityIdentifier          = Keys.sliderView.rawValue
-        handleView.accessibilityIdentifier          = Keys.handleView.rawValue
-        infoView.accessibilityIdentifier            = Keys.infoView.rawValue
+        sliderView.accessibilityIdentifier = Keys.sliderView.rawValue
+        handleView.accessibilityIdentifier = Keys.handleView.rawValue
+        infoView.accessibilityIdentifier = Keys.infoView.rawValue
     }
 }

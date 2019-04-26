@@ -16,7 +16,6 @@ public enum GradientDirection {
 private typealias Points = (start: CGPoint, end: CGPoint)
 
 extension UIView {
-    
     public func drawLinearGradient(in context: CGContext?, colors: [CGColor], direction: GradientDirection) {
         let points = self.points(direction)
         let locations: [CGFloat] = [0.0, 1.0]
@@ -40,17 +39,17 @@ extension UIView {
         return (startPoint, endPoint)
     }
     
-    public func setGradientMask (firstInset: CGFloat, secondInset:CGFloat, vertical:Bool) {
+    public func setGradientMask(firstInset: CGFloat, secondInset: CGFloat, vertical: Bool) {
         let layer = layerForGradient(firstInset: firstInset, secondInset: secondInset, vertical: vertical)
         
-        let view = UIView(frame: CGRect(x:0, y:0, width:frame.width, height: frame.height))
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: frame.width, height: frame.height))
         view.layer.addSublayer(layer)
         self.mask = view
     }
 
-    private func layerForGradient (firstInset: CGFloat, secondInset:CGFloat, vertical:Bool) -> CALayer {
+    private func layerForGradient(firstInset: CGFloat, secondInset: CGFloat, vertical: Bool) -> CALayer {
         let layer = CAGradientLayer()
-        layer.frame = CGRect(x:0, y:0, width:frame.width, height: frame.height)
+        layer.frame = CGRect(x: 0, y: 0, width: frame.width, height: frame.height)
         layer.colors = [UIColor.clear.cgColor,
                         UIColor.black.cgColor,
                         UIColor.black.cgColor,
@@ -63,8 +62,8 @@ extension UIView {
         layer.locations = [0.0, NSNumber(value: Float(firstCoeff)), NSNumber(value: Float(secondCoeff)), 1.0]
         
         if !vertical {
-            layer.startPoint = CGPoint(x:0.0, y:0.5);
-            layer.endPoint = CGPoint(x:1.0, y:0.5);
+            layer.startPoint = CGPoint(x: 0.0, y: 0.5)
+            layer.endPoint = CGPoint(x: 1.0, y: 0.5)
         }
         
         return layer
