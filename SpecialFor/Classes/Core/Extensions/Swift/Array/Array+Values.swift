@@ -6,8 +6,14 @@
 //  Copyright © 2019 CocoaPods. All rights reserved.
 //
 
-extension Array {
+public extension Array {
+    func values<T>(_ getter: (Element) -> T) -> [T] {
+        return map(getter)
+    }
+    
     func values<T>(of keyPath: KeyPath<Element, T>) -> [T] {
-        return map { $0[keyPath: keyPath] }
+        return values {
+            $0[keyPath: keyPath]
+        }
     }
 }

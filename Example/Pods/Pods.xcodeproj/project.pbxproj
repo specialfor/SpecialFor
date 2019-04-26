@@ -68,6 +68,9 @@
 		47DDF3F4654CD1D7618A1A8244FD361A /* RedirectHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E2C3EFD030EE0611ACF6847E117B8C /* RedirectHandler.swift */; };
 		49B7A0E3AED5BBA009CCD6A7A618D5F8 /* ClosureValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEA40FA0EDA9732AA6805EC5D55A361 /* ClosureValidator.swift */; };
 		4ACE2DE480F2120350A45C6D93D80D21 /* String+MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48FF532F76928E0262AFC5903FC3443 /* String+MD5.swift */; };
+		4B2BD54C22738F7F00D1E54C /* Optional+Try.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2BD54922738F7F00D1E54C /* Optional+Try.swift */; };
+		4B2BD54D22738F7F00D1E54C /* Bool+Toggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2BD54B22738F7F00D1E54C /* Bool+Toggle.swift */; };
+		4B2BD55022738FE400D1E54C /* zip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2BD54F22738FE400D1E54C /* zip.swift */; };
 		4CC1BEE152097FB74DF675308F702D54 /* LinkTextField.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A23FF57CEA6ADDE9623DC0EE3D0FFCC7 /* LinkTextField.xcassets */; };
 		4D7C4EAD3B5AAD99D9F0E47D0DF789E5 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A08A65F4D351D77DDBE6B7271DE8B934 /* Kingfisher.framework */; };
 		4E99B38D51C87D3D652B88F935ABD508 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321BDBCFA869DC9E46A3096A9B64A1B9 /* Result.swift */; };
@@ -314,13 +317,13 @@
 		11304E87FD74449496CDA9CCC6364C91 /* Setupable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Setupable.swift; sourceTree = "<group>"; };
 		11D32F30EB78C5968EB3282DF861AF2D /* Validator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		1200012703707B4C9FF8AD8AF14A9671 /* ScrollBar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ScrollBar.swift; sourceTree = "<group>"; };
-		12851030CBA702A64D7FF763D4C77800 /* SwiftGifOrigin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftGifOrigin.framework; path = SwiftGifOrigin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		160CF5849EF78F92C33DD9758F70F2F5 /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SnapKit.framework; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1656CA14B8AF851FA66BCD812D5D1B4F /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Kingfisher.framework; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		12851030CBA702A64D7FF763D4C77800 /* SwiftGifOrigin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftGifOrigin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		160CF5849EF78F92C33DD9758F70F2F5 /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1656CA14B8AF851FA66BCD812D5D1B4F /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		166607F38373D35B53CDEC725AA323C6 /* TableViewManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TableViewManager.swift; sourceTree = "<group>"; };
 		166883D8D4627158AA61BADE630ECC77 /* SpecialFor.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SpecialFor.modulemap; sourceTree = "<group>"; };
 		166CD23C4954C7CCF6A6369AEECCF861 /* LayoutConstraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutConstraint.swift; path = Source/LayoutConstraint.swift; sourceTree = "<group>"; };
-		1734153BE3F6843ABEB2D69063DF3B6B /* SpecialFor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SpecialFor.framework; path = SpecialFor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1734153BE3F6843ABEB2D69063DF3B6B /* SpecialFor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SpecialFor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		183BE016B18CD8B4E54EE5A7C1CFCDF2 /* Array+Values.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Array+Values.swift"; sourceTree = "<group>"; };
 		183E276E4FE3B4A7472BEA867739C27B /* UITableView+ViewModels.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITableView+ViewModels.swift"; path = "CellViewModel/Sources/Extensions/UITableView+ViewModels.swift"; sourceTree = "<group>"; };
 		187297F0201F6B3A9B0C93AD842C5A94 /* CellViewModel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CellViewModel-prefix.pch"; sourceTree = "<group>"; };
@@ -342,7 +345,7 @@
 		286C7A02F9F16E58FAFCAF21A205A051 /* UIColor+Hex.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		29F6A00925E623BF5153B7F0757D8317 /* Runtime.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Runtime.swift; path = Sources/Utility/Runtime.swift; sourceTree = "<group>"; };
 		2AFE34105175CC15BF124D86797E5BD8 /* Array+Count.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Array+Count.swift"; sourceTree = "<group>"; };
-		2BCBE762D9E9B930E1E0D9E974A101BB /* SpecialFor.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = SpecialFor.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		2BCBE762D9E9B930E1E0D9E974A101BB /* SpecialFor.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = SpecialFor.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		2C13A442CB2AC62132DC87BD4AB0213C /* EmptyStateViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EmptyStateViewModel.swift; sourceTree = "<group>"; };
 		2C162FC21D423A87FC143A0B632CFC08 /* Pods-Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Example-frameworks.sh"; sourceTree = "<group>"; };
 		2C59A89BEC9A6AF057E1692917F8990E /* Collections+SafeSubscript.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Collections+SafeSubscript.swift"; sourceTree = "<group>"; };
@@ -352,7 +355,7 @@
 		321BDBCFA869DC9E46A3096A9B64A1B9 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Sources/Utility/Result.swift; sourceTree = "<group>"; };
 		34A348AEE15C7FD688CA124F49ED45E0 /* Identifiable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
 		34D6945FBF7E53D53489B67B821665DA /* LayoutConstraintItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutConstraintItem.swift; path = Source/LayoutConstraintItem.swift; sourceTree = "<group>"; };
-		34E0F800748A2D1DA7784403A0E61B03 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		34E0F800748A2D1DA7784403A0E61B03 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		35E2C288A180219D12F161F8F67849E8 /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
 		3645C03D204904ECF821B9747147AFC2 /* CellViewModel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CellViewModel.modulemap; sourceTree = "<group>"; };
 		368F1D473132D61643C24285EF2554B6 /* UICollectionView+ViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UICollectionView+ViewModel.swift"; path = "CellViewModel/Sources/Extensions/UICollectionView+ViewModel.swift"; sourceTree = "<group>"; };
@@ -378,6 +381,9 @@
 		469B9C1B50AC0D1575757C8642C74461 /* Kingfisher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Kingfisher.swift; path = Sources/General/Kingfisher.swift; sourceTree = "<group>"; };
 		487D60D67BFC828C25EBB99B7F5B7C0B /* Renderable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Renderable.swift; sourceTree = "<group>"; };
 		48BCBB8BB4D99452686DEA7786FF9EFE /* Presenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
+		4B2BD54922738F7F00D1E54C /* Optional+Try.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Optional+Try.swift"; sourceTree = "<group>"; };
+		4B2BD54B22738F7F00D1E54C /* Bool+Toggle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bool+Toggle.swift"; sourceTree = "<group>"; };
+		4B2BD54F22738FE400D1E54C /* zip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = zip.swift; sourceTree = "<group>"; };
 		4CA9A85DBD769557973A9EAFE3B2C73C /* ConstraintLayoutSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutSupport.swift; path = Source/ConstraintLayoutSupport.swift; sourceTree = "<group>"; };
 		4D4660E4806614236846E1ACB1FEE9E3 /* ConstraintMultiplierTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMultiplierTarget.swift; path = Source/ConstraintMultiplierTarget.swift; sourceTree = "<group>"; };
 		4D9DF03295115B4C7F5B96044A6B4B16 /* Kingfisher-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Kingfisher-prefix.pch"; sourceTree = "<group>"; };
@@ -417,7 +423,7 @@
 		72CA67E716387B8AC2EF59CE91D99C6E /* Delegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Delegate.swift; path = Sources/Utility/Delegate.swift; sourceTree = "<group>"; };
 		73EC8503F0B14307CCDC527BB323C703 /* MaterialTextContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MaterialTextContainer.swift; sourceTree = "<group>"; };
 		7481BA6958F372EFEA8DDD27AB01E270 /* SpecialFor-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SpecialFor-dummy.m"; sourceTree = "<group>"; };
-		74BC8DD08D0B957DED74C4F0BF481BC7 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		74BC8DD08D0B957DED74C4F0BF481BC7 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		756DE6B80818C4209D2B30B8763821B7 /* InputInfoContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = InputInfoContainer.swift; sourceTree = "<group>"; };
 		761C4235305197331B0D6B0CED13039E /* ImageDownloaderDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageDownloaderDelegate.swift; path = Sources/Networking/ImageDownloaderDelegate.swift; sourceTree = "<group>"; };
 		76ACFBF7097B199449E8749F7EE01465 /* Pods-Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Example-dummy.m"; sourceTree = "<group>"; };
@@ -442,7 +448,7 @@
 		89FEBFE7E3BC2081CDB4FB6B9F729B33 /* UIButton+CenterVertically.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIButton+CenterVertically.swift"; sourceTree = "<group>"; };
 		8A516AD2226AFCBCA2CA50F14F91785D /* CGSize+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "CGSize+Extension.swift"; sourceTree = "<group>"; };
 		8C100677B09AEB56C3F8651767B77491 /* SwiftGifOrigin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftGifOrigin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8D16F2E0CB7F7B496246669737ED7A95 /* Pods_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Example.framework; path = "Pods-Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D16F2E0CB7F7B496246669737ED7A95 /* Pods_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FBAFA4F66B2A3CF09E653253BD80DC7 /* ConstraintInsets.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintInsets.swift; path = Source/ConstraintInsets.swift; sourceTree = "<group>"; };
 		8FCC9E524399D1474B448D96EDCE56B2 /* EmptyStateView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
 		9077DB17174367AC05169CDE8D097F73 /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -459,7 +465,7 @@
 		9C466ABDC67B75D9318D987177A75AAD /* SpecialFor-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SpecialFor-umbrella.h"; sourceTree = "<group>"; };
 		9C997A646832F7044832EA143216772F /* TableViewDataSourceProxy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TableViewDataSourceProxy.swift; sourceTree = "<group>"; };
 		9D06DFDB16266CD5B72BCC87896A8896 /* SwiftGifOrigin-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftGifOrigin-umbrella.h"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9DD3461F0CF1D068106BF8F0A69910C3 /* GCD.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GCD.swift; sourceTree = "<group>"; };
 		9FA0124C36CE378351A2CCEECF57F798 /* Bundle+Provision.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Bundle+Provision.swift"; sourceTree = "<group>"; };
 		A08A65F4D351D77DDBE6B7271DE8B934 /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -494,7 +500,7 @@
 		B89DBA6080C6C7AC5EBA89374F88D96F /* Kingfisher.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Kingfisher.xcconfig; sourceTree = "<group>"; };
 		BBBD43AF91F15B244694BDB6B295CC00 /* ConstraintViewDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintViewDSL.swift; path = Source/ConstraintViewDSL.swift; sourceTree = "<group>"; };
 		BDE563C3FCFDBEC48577BC2B28870341 /* MemoryStorage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MemoryStorage.swift; path = Sources/Cache/MemoryStorage.swift; sourceTree = "<group>"; };
-		BED3547D6BD22D2D5883F2A3AF0275F3 /* CellViewModel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CellViewModel.framework; path = CellViewModel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BED3547D6BD22D2D5883F2A3AF0275F3 /* CellViewModel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CellViewModel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEFE3F46C09B4E5DB1BF86C217E6347D /* LinkTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LinkTextField.swift; sourceTree = "<group>"; };
 		C00533818B3FF5250D5151080585A776 /* SizeExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SizeExtensions.swift; path = Sources/Utility/SizeExtensions.swift; sourceTree = "<group>"; };
 		C59DAC0F7DA1D4BC65D6A86B6EE7C8C6 /* SnapKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SnapKit-umbrella.h"; sourceTree = "<group>"; };
@@ -625,7 +631,6 @@
 				73EC8503F0B14307CCDC527BB323C703 /* MaterialTextContainer.swift */,
 				B7137D0BA11434E3E583D9D4C16B1D59 /* MaterialTextInput.swift */,
 			);
-			name = Base;
 			path = Base;
 			sourceTree = "<group>";
 		};
@@ -643,7 +648,6 @@
 				724A4E3B60B304DDA82F83E531050CF0 /* FloatingPlaceholderContainer.swift */,
 				DA54A03B4A9F757D4B976D4BD9905A2F /* FloatingPlaceholderProvider.swift */,
 			);
-			name = FloatingPlaceholderContainer;
 			path = FloatingPlaceholderContainer;
 			sourceTree = "<group>";
 		};
@@ -680,7 +684,6 @@
 				4B5A75F9C32B45F877E975B37621B147 /* View */,
 				816B832906C95EB9BB6C596534E5A3E4 /* Window */,
 			);
-			name = Components;
 			path = Components;
 			sourceTree = "<group>";
 		};
@@ -695,7 +698,6 @@
 				519DF6B9818F09E0170F5155499F947C /* TableView */,
 				213C51FBAB57504C55332B57F3FB4204 /* TextInput */,
 			);
-			name = Views;
 			path = Views;
 			sourceTree = "<group>";
 		};
@@ -712,7 +714,6 @@
 				C9272A53FFC25E8E28E9709EC406D6FD /* CGRect+Updating.swift */,
 				8A516AD2226AFCBCA2CA50F14F91785D /* CGSize+Extension.swift */,
 			);
-			name = "Core Graphics";
 			path = "Core Graphics";
 			sourceTree = "<group>";
 		};
@@ -751,7 +752,6 @@
 				CC51A62E85BCA9246304F4BAA3C0CFED /* Material */,
 				DB390BB651F602334D1DDD785A647DF1 /* TextField */,
 			);
-			name = TextInput;
 			path = TextInput;
 			sourceTree = "<group>";
 		};
@@ -767,7 +767,6 @@
 			children = (
 				85E6302C094DC93348C248023355D57C /* GifLoaderView.swift */,
 			);
-			name = Loaders;
 			path = Loaders;
 			sourceTree = "<group>";
 		};
@@ -792,7 +791,6 @@
 				CE0E3866C8712822468A8FA690F92041 /* UIImage+Gif.swift */,
 				E08887046735FF897D336E18FE45D75A /* Support Files */,
 			);
-			name = SwiftGifOrigin;
 			path = SwiftGifOrigin;
 			sourceTree = "<group>";
 		};
@@ -818,7 +816,6 @@
 				2F35573172D180F2602F2FB6A6EBF87F /* Swift */,
 				446E063C7D7570C89104A78B2D04D816 /* UIKit */,
 			);
-			name = Extensions;
 			path = Extensions;
 			sourceTree = "<group>";
 		};
@@ -839,7 +836,6 @@
 				9BCD93CC515AEFAE12A9D81871DDEDF9 /* EmptyStateTableViewDS.swift */,
 				6F3E116114DAB86DEDF61CFE561852A8 /* View */,
 			);
-			name = EmptyState;
 			path = EmptyState;
 			sourceTree = "<group>";
 		};
@@ -847,12 +843,14 @@
 			isa = PBXGroup;
 			children = (
 				312456809AA6A99521D202CFD9A75688 /* Array */,
+				4B2BD54A22738F7F00D1E54C /* Bool */,
 				4F2C30B0DE4CF9165F5EDCA9D9C21C03 /* Collection */,
 				8B0A44686010801C31BED144A5415C4F /* Dictionary */,
+				4B2BD54E22738FD700D1E54C /* Functions */,
+				4B2BD54822738F7F00D1E54C /* Optional */,
 				DF3B1BB42F8156C243C332301EFC3D73 /* Sequence */,
 				CD8AA162FC2496FCA36A764F3BA23E7B /* String */,
 			);
-			name = Swift;
 			path = Swift;
 			sourceTree = "<group>";
 		};
@@ -865,7 +863,6 @@
 				B0CD33464CDE4CFF3A0D0770DFD7732B /* Array+Remove.swift */,
 				183BE016B18CD8B4E54EE5A7C1CFCDF2 /* Array+Values.swift */,
 			);
-			name = Array;
 			path = Array;
 			sourceTree = "<group>";
 		};
@@ -874,7 +871,6 @@
 			children = (
 				CC80AB26F5C8117F02491D7CE62C1544 /* Array+UIView.swift */,
 			);
-			name = Swift;
 			path = Swift;
 			sourceTree = "<group>";
 		};
@@ -903,7 +899,6 @@
 				096C2C8A7973586059586F9179266D8B /* FloatingPlaceholderContainer */,
 				F510984D1C42A84B94C39AE5B811571F /* InputInfoContainer */,
 			);
-			name = Private;
 			path = Private;
 			sourceTree = "<group>";
 		};
@@ -927,7 +922,6 @@
 			children = (
 				59E01CB3C76783890DE2A7607C3EB04B /* Coordinator.swift */,
 			);
-			name = Coordinator;
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
@@ -949,7 +943,6 @@
 				5419606889AC8516898949A6E13B5440 /* XibInitializable.swift */,
 				D3DD1B231C835BACF304B08ED946DC6B /* Support Files */,
 			);
-			name = CellViewModel;
 			path = CellViewModel;
 			sourceTree = "<group>";
 		};
@@ -966,7 +959,6 @@
 				4DC0CD3636D9BF93BC8214723B993860 /* UIDevice+Model.swift */,
 				C9C4BFC33A9DD8FB09857CA10AAE2A6C /* UIImage+Bundle.swift */,
 			);
-			name = UIKit;
 			path = UIKit;
 			sourceTree = "<group>";
 		};
@@ -984,7 +976,6 @@
 				0F3D7B54496FFC645E79DF7920BFDAC3 /* Views */,
 				55770ED27550D57C613B761404E69DBC /* Windows */,
 			);
-			name = Components;
 			path = Components;
 			sourceTree = "<group>";
 		};
@@ -1000,8 +991,31 @@
 			children = (
 				E784E7CFB100BA1FA7CC95AE3EDB0300 /* Closure.swift */,
 			);
-			name = Closure;
 			path = Closure;
+			sourceTree = "<group>";
+		};
+		4B2BD54822738F7F00D1E54C /* Optional */ = {
+			isa = PBXGroup;
+			children = (
+				4B2BD54922738F7F00D1E54C /* Optional+Try.swift */,
+			);
+			path = Optional;
+			sourceTree = "<group>";
+		};
+		4B2BD54A22738F7F00D1E54C /* Bool */ = {
+			isa = PBXGroup;
+			children = (
+				4B2BD54B22738F7F00D1E54C /* Bool+Toggle.swift */,
+			);
+			path = Bool;
+			sourceTree = "<group>";
+		};
+		4B2BD54E22738FD700D1E54C /* Functions */ = {
+			isa = PBXGroup;
+			children = (
+				4B2BD54F22738FE400D1E54C /* zip.swift */,
+			);
+			path = Functions;
 			sourceTree = "<group>";
 		};
 		4B5A75F9C32B45F877E975B37621B147 /* View */ = {
@@ -1011,7 +1025,6 @@
 				908C87E986D8F910AA298FB0E958014A /* UIView+Corners.swift */,
 				B0AAF0DB9C93CB2BBEB52E222DCCD0A0 /* UIView+Toggle.swift */,
 			);
-			name = View;
 			path = View;
 			sourceTree = "<group>";
 		};
@@ -1020,7 +1033,6 @@
 			children = (
 				3A70F806BB1EC7DCB5E095C40C342984 /* View.swift */,
 			);
-			name = View;
 			path = View;
 			sourceTree = "<group>";
 		};
@@ -1030,7 +1042,6 @@
 				CC371205CBF9C47282002E3EFFD76578 /* ConcreteEnvironment.swift */,
 				AEC373BC428A2BA30E541E3E5FE6916B /* Environment.swift */,
 			);
-			name = Environments;
 			path = Environments;
 			sourceTree = "<group>";
 		};
@@ -1039,7 +1050,6 @@
 			children = (
 				2C59A89BEC9A6AF057E1692917F8990E /* Collections+SafeSubscript.swift */,
 			);
-			name = Collection;
 			path = Collection;
 			sourceTree = "<group>";
 		};
@@ -1051,7 +1061,6 @@
 				D2173976505BA04F9CF1BF29D4F97B8B /* FastScroll */,
 				957C1A8F230C808755CF6F0F0B3A2138 /* TableViewManager */,
 			);
-			name = TableView;
 			path = TableView;
 			sourceTree = "<group>";
 		};
@@ -1067,7 +1076,6 @@
 			children = (
 				ABCEE76BDC5F1ED327402D0574C70C48 /* BannerWindow.swift */,
 			);
-			name = Windows;
 			path = Windows;
 			sourceTree = "<group>";
 		};
@@ -1077,7 +1085,6 @@
 				D2C7C435137D0EE061293C24C05D5040 /* Gradient */,
 				C3BDB88CC5A1AB9238F5367FB18D2712 /* SeparatorView */,
 			);
-			name = Accessories;
 			path = Accessories;
 			sourceTree = "<group>";
 		};
@@ -1087,7 +1094,6 @@
 				48BCBB8BB4D99452686DEA7786FF9EFE /* Presenter.swift */,
 				004395BC18D2D03B14DD0A6E4C7BF858 /* PresenterWith.swift */,
 			);
-			name = Presenters;
 			path = Presenters;
 			sourceTree = "<group>";
 		};
@@ -1119,7 +1125,6 @@
 				B14D6F58B507AD37DF6ECD8F2BF00EAF /* ViewController.swift */,
 				E031515964A101A871E9C08A0A491F9B /* ViewControllerWith.swift */,
 			);
-			name = Controllers;
 			path = Controllers;
 			sourceTree = "<group>";
 		};
@@ -1131,7 +1136,6 @@
 				487D60D67BFC828C25EBB99B7F5B7C0B /* Renderable.swift */,
 				11304E87FD74449496CDA9CCC6364C91 /* Setupable.swift */,
 			);
-			name = Protocols;
 			path = Protocols;
 			sourceTree = "<group>";
 		};
@@ -1140,7 +1144,6 @@
 			children = (
 				9283F98916671DADC45EB394FA13875F /* Popups */,
 			);
-			name = Controllers;
 			path = Controllers;
 			sourceTree = "<group>";
 		};
@@ -1150,7 +1153,6 @@
 				0D70F0B1FFECC941DBA6F7A821C016A4 /* Components */,
 				B895BC6B0A52145F75D5EB783D8BFD89 /* Models */,
 			);
-			name = UIKit;
 			path = UIKit;
 			sourceTree = "<group>";
 		};
@@ -1159,7 +1161,6 @@
 			children = (
 				B57FC44AFDABF8F30F3496D329FF313A /* WeakRef.swift */,
 			);
-			name = "New Group";
 			path = "New Group";
 			sourceTree = "<group>";
 		};
@@ -1169,7 +1170,6 @@
 				BEFE3F46C09B4E5DB1BF86C217E6347D /* LinkTextField.swift */,
 				B265458969498283975D2358F70C2FB2 /* LinkValidator.swift */,
 			);
-			name = LinkTextField;
 			path = LinkTextField;
 			sourceTree = "<group>";
 		};
@@ -1186,7 +1186,6 @@
 				8FCC9E524399D1474B448D96EDCE56B2 /* EmptyStateView.swift */,
 				2C13A442CB2AC62132DC87BD4AB0213C /* EmptyStateViewModel.swift */,
 			);
-			name = View;
 			path = View;
 			sourceTree = "<group>";
 		};
@@ -1221,7 +1220,6 @@
 			children = (
 				3D7BB68D4A9C7CBF3B88516E43E4F1A7 /* UIImageView+Corners.swift */,
 			);
-			name = ImageView;
 			path = ImageView;
 			sourceTree = "<group>";
 		};
@@ -1237,7 +1235,6 @@
 			children = (
 				7D30355991F134B34707FA1B13EDDC04 /* ImagesView.swift */,
 			);
-			name = ImagesView;
 			path = ImagesView;
 			sourceTree = "<group>";
 		};
@@ -1248,7 +1245,6 @@
 				34A348AEE15C7FD688CA124F49ED45E0 /* Identifiable.swift */,
 				AE2665F8E99D0000493C72E843FD88C6 /* Injectable.swift */,
 			);
-			name = Protocols;
 			path = Protocols;
 			sourceTree = "<group>";
 		};
@@ -1257,7 +1253,6 @@
 			children = (
 				1DE39EF3777E1CA8511A1D958D035A6F /* UIImage+Environment.swift */,
 			);
-			name = Extensions;
 			path = Extensions;
 			sourceTree = "<group>";
 		};
@@ -1266,7 +1261,6 @@
 			children = (
 				1A185CE7298046D652497EBB0B7B21EE /* UIWindow+SafeArea.swift */,
 			);
-			name = Window;
 			path = Window;
 			sourceTree = "<group>";
 		};
@@ -1276,7 +1270,6 @@
 				CB03038C16799BB8994CA575FB189A49 /* Button */,
 				4C4EE74A50951A501AAB21CD5C04211B /* View */,
 			);
-			name = Components;
 			path = Components;
 			sourceTree = "<group>";
 		};
@@ -1285,7 +1278,6 @@
 			children = (
 				5D3D361659A0C6F7715C6416FD47E182 /* PartialCheckableButton.swift */,
 			);
-			name = PartialCheckableButton;
 			path = PartialCheckableButton;
 			sourceTree = "<group>";
 		};
@@ -1306,7 +1298,6 @@
 			children = (
 				E84107A2F6953AA0845FE716F8FCECBB /* Dictionary+Merge.swift */,
 			);
-			name = Dictionary;
 			path = Dictionary;
 			sourceTree = "<group>";
 		};
@@ -1363,7 +1354,6 @@
 				018F1842C39B4728BC8D31AF37960580 /* UILayoutSupport+Extensions.swift */,
 				63240D44C2718B506AFC04742B388EAA /* Support Files */,
 			);
-			name = SnapKit;
 			path = SnapKit;
 			sourceTree = "<group>";
 		};
@@ -1373,7 +1363,6 @@
 				F748E024DC8C528559F51C1801B2741F /* MTIConfigProtocol.swift */,
 				FB0FBFE7C0B2A3017C453E1960C3E345 /* NynjaMTIConfig.swift */,
 			);
-			name = Config;
 			path = Config;
 			sourceTree = "<group>";
 		};
@@ -1382,7 +1371,6 @@
 			children = (
 				FD2BC2F532ADE80AAF14C449461F7464 /* ImageAlertViewController.swift */,
 			);
-			name = Popups;
 			path = Popups;
 			sourceTree = "<group>";
 		};
@@ -1391,7 +1379,6 @@
 			children = (
 				166607F38373D35B53CDEC725AA323C6 /* TableViewManager.swift */,
 			);
-			name = TableViewManager;
 			path = TableViewManager;
 			sourceTree = "<group>";
 		};
@@ -1401,7 +1388,6 @@
 				6401D76195D089ED8870F967FCFE34E8 /* Controllers */,
 				61C9A535CD371089BBC61FE371A5527E /* Presenters */,
 			);
-			name = DataDriven;
 			path = DataDriven;
 			sourceTree = "<group>";
 		};
@@ -1411,7 +1397,6 @@
 				DFC7E068623943C08C3115CB005BC268 /* CGContext+Gradient.swift */,
 				52E1E801D8D8344CA27E36EEEF526EF3 /* UIView+Gradient.swift */,
 			);
-			name = Extensions;
 			path = Extensions;
 			sourceTree = "<group>";
 		};
@@ -1428,7 +1413,6 @@
 			children = (
 				558DF1EE1422B524565C561DF9BC4E03 /* UITableViewExtensions.swift */,
 			);
-			name = TableView;
 			path = TableView;
 			sourceTree = "<group>";
 		};
@@ -1437,7 +1421,6 @@
 			children = (
 				80E8351741DE8F4A8371C2128DD123C4 /* AlignableLabel.swift */,
 			);
-			name = Labels;
 			path = Labels;
 			sourceTree = "<group>";
 		};
@@ -1446,7 +1429,6 @@
 			children = (
 				855647BFD92EA8362B6C0326B3F800D7 /* PartialCheckableButton */,
 			);
-			name = Buttons;
 			path = Buttons;
 			sourceTree = "<group>";
 		};
@@ -1455,7 +1437,6 @@
 			children = (
 				E682DEF89D6421DD6930402A379FBFAC /* URL+ImageResolution.swift */,
 			);
-			name = Foundation;
 			path = Foundation;
 			sourceTree = "<group>";
 		};
@@ -1464,7 +1445,6 @@
 			children = (
 				D5B19EEEDE8ACBCA6DB68B88AEF5F7BF /* Bundle */,
 			);
-			name = Foundation;
 			path = Foundation;
 			sourceTree = "<group>";
 		};
@@ -1488,7 +1468,6 @@
 			children = (
 				89FEBFE7E3BC2081CDB4FB6B9F729B33 /* UIButton+CenterVertically.swift */,
 			);
-			name = Button;
 			path = Button;
 			sourceTree = "<group>";
 		};
@@ -1497,7 +1476,6 @@
 			children = (
 				993C6D28A5BE26D6187E984664BCB7D8 /* UICollectionViewFlowLayout+ItemSize.swift */,
 			);
-			name = CollectionView;
 			path = CollectionView;
 			sourceTree = "<group>";
 		};
@@ -1507,7 +1485,6 @@
 				286C7A02F9F16E58FAFCAF21A205A051 /* UIColor+Hex.swift */,
 				B5346B7AAB1134DE3619B74F37E7FF49 /* UIImage+Extension.swift */,
 			);
-			name = Models;
 			path = Models;
 			sourceTree = "<group>";
 		};
@@ -1516,7 +1493,6 @@
 			children = (
 				9DD3461F0CF1D068106BF8F0A69910C3 /* GCD.swift */,
 			);
-			name = GCD;
 			path = GCD;
 			sourceTree = "<group>";
 		};
@@ -1532,7 +1508,6 @@
 			children = (
 				BCFAA2CB73C4DA125DF9B3170E23619C /* GCD */,
 			);
-			name = Application;
 			path = Application;
 			sourceTree = "<group>";
 		};
@@ -1588,7 +1563,6 @@
 			children = (
 				D7B196407D7A5F257A6345889197B837 /* SeparatorView.swift */,
 			);
-			name = SeparatorView;
 			path = SeparatorView;
 			sourceTree = "<group>";
 		};
@@ -1612,7 +1586,6 @@
 			children = (
 				41F1A0336EB5B8CC7405BE008ACA9751 /* Button.swift */,
 			);
-			name = Button;
 			path = Button;
 			sourceTree = "<group>";
 		};
@@ -1631,7 +1604,6 @@
 				315FC73FC5EE8F251CD41CA0AA50E873 /* Swift */,
 				68C6FEA08541E69EE448B49543F80231 /* UIKit */,
 			);
-			name = Extensions;
 			path = Extensions;
 			sourceTree = "<group>";
 		};
@@ -1645,7 +1617,6 @@
 				376A69A753616DFF1B6FDA8A24B57DA6 /* Private */,
 				ECEEEE23269E7F804C674D6AE8AAC526 /* Validator */,
 			);
-			name = Material;
 			path = Material;
 			sourceTree = "<group>";
 		};
@@ -1659,7 +1630,6 @@
 				EF52B871E3491C8A5A82F23AA9FEE57E /* String+Split.swift */,
 				EA2206C28221C5580CE90EF62B04B470 /* String+Trim.swift */,
 			);
-			name = String;
 			path = String;
 			sourceTree = "<group>";
 		};
@@ -1670,7 +1640,6 @@
 				4D6C094CB65B1852A17AC4B3FBDB75B3 /* Environments */,
 				7C8BF3461447DFAB6DDD525A4DFBBFF1 /* Extensions */,
 			);
-			name = AppEnvironment;
 			path = AppEnvironment;
 			sourceTree = "<group>";
 		};
@@ -1701,7 +1670,6 @@
 				D9EC5BF83D3BDDAB57ABA0F4947483D8 /* PinView.swift */,
 				1200012703707B4C9FF8AD8AF14A9671 /* ScrollBar.swift */,
 			);
-			name = FastScroll;
 			path = FastScroll;
 			sourceTree = "<group>";
 		};
@@ -1712,7 +1680,6 @@
 				B2733AB92BFC79A84A7936C994B41BDF /* GradientView.swift */,
 				9834808C10A7D95E11D182B244EC21F9 /* Extensions */,
 			);
-			name = Gradient;
 			path = Gradient;
 			sourceTree = "<group>";
 		};
@@ -1743,7 +1710,6 @@
 				B1DD38C93D513C6E78A648F387CEFEBC /* Bundle+Keys.swift */,
 				9FA0124C36CE378351A2CCEECF57F798 /* Bundle+Provision.swift */,
 			);
-			name = Bundle;
 			path = Bundle;
 			sourceTree = "<group>";
 		};
@@ -1767,7 +1733,6 @@
 				435EB2ACCA8E1FC88C590D405DD21EA8 /* UIView+Animate.swift */,
 				69249BFDF21968BED55065D159C49255 /* UIView+Hierarchy.swift */,
 			);
-			name = Extensions;
 			path = Extensions;
 			sourceTree = "<group>";
 		};
@@ -1778,7 +1743,6 @@
 				B0A38791091C59DE4C3F20B37C9C8A4A /* TextField.swift */,
 				6E05A8BBB16F8788CF3EFDBAD54B697E /* LinkTextField */,
 			);
-			name = TextField;
 			path = TextField;
 			sourceTree = "<group>";
 		};
@@ -1787,7 +1751,6 @@
 			children = (
 				7CEAF7C69C589F613362BB1E80728D28 /* Sequence+MaxExcept.swift */,
 			);
-			name = Sequence;
 			path = Sequence;
 			sourceTree = "<group>";
 		};
@@ -1810,7 +1773,6 @@
 			children = (
 				9C997A646832F7044832EA143216772F /* TableViewDataSourceProxy.swift */,
 			);
-			name = DataSource;
 			path = DataSource;
 			sourceTree = "<group>";
 		};
@@ -1819,7 +1781,6 @@
 			children = (
 				42E436A21553B8320DAC1DD10E306B55 /* UITextInput+Cursor.swift */,
 			);
-			name = TextInput;
 			path = TextInput;
 			sourceTree = "<group>";
 		};
@@ -1830,7 +1791,6 @@
 				A7651D65F57ADC8A82AEF36C10838439 /* LengthValidator.swift */,
 				11D32F30EB78C5968EB3282DF861AF2D /* Validator.swift */,
 			);
-			name = Validator;
 			path = Validator;
 			sourceTree = "<group>";
 		};
@@ -1884,7 +1844,6 @@
 				9B4BE569AA518028D76FCD2CED902803 /* UIButton+Kingfisher.swift */,
 				1A5E9EF3943B5C08C1A5235B56051514 /* Support Files */,
 			);
-			name = Kingfisher;
 			path = Kingfisher;
 			sourceTree = "<group>";
 		};
@@ -1902,7 +1861,6 @@
 				756DE6B80818C4209D2B30B8763821B7 /* InputInfoContainer.swift */,
 				F85E890D2C6344B60DEB73FA893D9740 /* InputInfoProvider.swift */,
 			);
-			name = InputInfoContainer;
 			path = InputInfoContainer;
 			sourceTree = "<group>";
 		};
@@ -1961,7 +1919,6 @@
 				CBD1F934E09C864E05C4DF9A5486B957 /* Extensions */,
 				66A16612C2858F24221D28503EF80D2E /* Protocols */,
 			);
-			name = Core;
 			path = Core;
 			sourceTree = "<group>";
 		};
@@ -1971,7 +1928,6 @@
 				7FD3CBFE22A791B79B4070AB412A3F6B /* Result.swift */,
 				FA3AFBB8937E6FFF8C4E54F355086DCC /* ResultCompletion.swift */,
 			);
-			name = Result;
 			path = Result;
 			sourceTree = "<group>";
 		};
@@ -1982,7 +1938,6 @@
 				6DE30EF89596562D849864DC5FDA050D /* New Group */,
 				FCE2DAA3954E03667B07DFB49E30B5C4 /* Result */,
 			);
-			name = Types;
 			path = Types;
 			sourceTree = "<group>";
 		};
@@ -2294,6 +2249,7 @@
 				8F324B159CE67FAD062C89F8E3096666 /* MaterialTextField.swift in Sources */,
 				E724C96D5C8C8B9FEF7DF03F8B9F8A4C /* MaterialTextInput.swift in Sources */,
 				F6C69DB21575B0CD8823F96CA08716D0 /* MaterialTextView.swift in Sources */,
+				4B2BD54D22738F7F00D1E54C /* Bool+Toggle.swift in Sources */,
 				D2C9E27B63E3B322197714049BCA04B2 /* MTIConfigProtocol.swift in Sources */,
 				39CEF0C7FF571BE2BC7BDFD66026AF24 /* NynjaMTIConfig.swift in Sources */,
 				7DCFF299B884FB00B8C042762511E049 /* PartialCheckableButton.swift in Sources */,
@@ -2320,6 +2276,7 @@
 				70763898B302B41D725F4E7E05F545FB /* TableViewDataSourceProxy.swift in Sources */,
 				D0CB9FC8CA92A142E40B2DD538985FF1 /* TableViewManager.swift in Sources */,
 				70D17293A897809CB8A556E41D7075D1 /* TextField.swift in Sources */,
+				4B2BD54C22738F7F00D1E54C /* Optional+Try.swift in Sources */,
 				8BB01819CD64457F8AA92F8DDD069181 /* UIButton+CenterVertically.swift in Sources */,
 				40B074CE6236416732F0957585BFD387 /* UICollectionViewFlowLayout+ItemSize.swift in Sources */,
 				EA80AA6AAA2DE28D1A98FA4F01D278FF /* UIColor+Hex.swift in Sources */,
@@ -2332,6 +2289,7 @@
 				E0E2FB44F6559EBD65ECA06DE135D3A9 /* UITextInput+Cursor.swift in Sources */,
 				17AB6077F7548B9F7ECFC335E216D266 /* UIView+Animate.swift in Sources */,
 				FA291DEEACAAEBA84FCCD64D30598C0D /* UIView+Constraint.swift in Sources */,
+				4B2BD55022738FE400D1E54C /* zip.swift in Sources */,
 				C84F5D85A974141CC19EB534DD0AB79E /* UIView+Corners.swift in Sources */,
 				B722409AF7DC78736ECD02B9BAC3C456 /* UIView+Gradient.swift in Sources */,
 				00297438BBF54ABF219903C0FAB6ED6E /* UIView+Hierarchy.swift in Sources */,
@@ -2858,8 +2816,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
 			};

@@ -6,8 +6,8 @@
 //  Copyright © 2019 CocoaPods. All rights reserved.
 //
 
-extension Array {
-    public mutating func move(at index: Int, to newIndex: Int) {
+public extension Array {
+    mutating func move(at index: Int, to newIndex: Int) {
         let element = remove(at: index)
         insert(element, at: newIndex)
     }

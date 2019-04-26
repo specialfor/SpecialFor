@@ -8,8 +8,8 @@
 
 import UIKit
 
-extension UIImage {
-    public convenience init?(fileUrl: URL) {
+public extension UIImage {
+    convenience init?(fileUrl: URL) {
         guard let data = try? Data(contentsOf: fileUrl, options: .uncached) else {
             return nil
         }
@@ -17,35 +17,19 @@ extension UIImage {
         self.init(data: data, scale: UIScreen.main.scale)
     }
     
-    public static func imageWithColor(color: UIColor) -> UIImage {
-        let size = CGSize(width: 1, height: 1)
-        
-        UIGraphicsBeginImageContextWithOptions(size, false, 0)
-        defer { UIGraphicsEndImageContext() }
-        
+    convenience init?(color: UIColor, size: CGSize) {
+        let rect = CGRect(origin: .zero, size: size)
+        UIGraphicsBeginImageContextWithOptions(rect.size, false, 0.0)
         color.setFill()
-        let rect = CGRect(origin: .zero, size: size)
         UIRectFill(rect)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
         
-        return UIGraphicsGetImageFromCurrentImageContext()!
+        guard let cgImage = image?.cgImage else { return nil }
+        self.init(cgImage: cgImage)
     }
-
-    public func imageByTintColor(color: UIColor) -> UIImage? {
-        let size = self.size
-        
-        UIGraphicsBeginImageContextWithOptions(size, false, scale)
-        defer { UIGraphicsEndImageContext() }
-        
-        color.set()
-        let rect = CGRect(origin: .zero, size: size)
-        UIRectFill(rect)
-        
-        draw(at: CGPoint(x: 0, y: 0), blendMode: .destinationIn, alpha: 1)
-        
-        return UIGraphicsGetImageFromCurrentImageContext()
-    }
-
-    public func cropping(to rect: CGRect) -> UIImage? {
+    
+    func cropping(to rect: CGRect) -> UIImage? {
         guard let cgImage = cgImage,
             let imageRef = cgImage.cropping(to: rect) else {
                 return nil

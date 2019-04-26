@@ -6,8 +6,8 @@
 //  Copyright © 2019 CocoaPods. All rights reserved.
 //
 
-extension Array {
-    public mutating func complete(to length: Int, with element: Element) {
+public extension Array {
+    mutating func complete(to length: Int, with element: Element) {
         guard self.count <= length else {
             return
         }
@@ -17,7 +17,7 @@ extension Array {
         }
     }
     
-    public func completed(to length: Int, with element: Element) -> [Element] {
+    func completed(to length: Int, with element: Element) -> [Element] {
         var temp = self
         temp.complete(to: length, with: element)
         return temp
