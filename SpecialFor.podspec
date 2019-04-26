@@ -183,6 +183,10 @@ Pod::Spec.new do |s|
           backable.resources = '**/Backable.xcassets'
       end
       
+      ui_kit.subspec 'Scrollable' do |scrollable|
+          scrollable.source_files = '**/Scrollable.swift'
+      end
+      
       ui_kit.subspec 'TableViewManager' do |tv_manager|
           tv_manager.dependency 'CellViewModel'
           

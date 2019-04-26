@@ -302,6 +302,10 @@
           "resources": "**/Backable.xcassets"
         },
         {
+          "name": "Scrollable",
+          "source_files": "**/Scrollable.swift"
+        },
+        {
           "name": "TableViewManager",
           "dependencies": {
             "CellViewModel": [

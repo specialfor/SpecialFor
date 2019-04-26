@@ -45,6 +45,7 @@ PODS:
     - SpecialFor/UIKit/MaterialTextInput (= 0.4.0)
     - SpecialFor/UIKit/PartialCheckableButton (= 0.4.0)
     - SpecialFor/UIKit/Renderable (= 0.4.0)
+    - SpecialFor/UIKit/Scrollable (= 0.4.0)
     - SpecialFor/UIKit/SeparatorView (= 0.4.0)
     - SpecialFor/UIKit/Setupable (= 0.4.0)
     - SpecialFor/UIKit/TableViewManager (= 0.4.0)
@@ -94,6 +95,7 @@ PODS:
     - SnapKit (= 4.2.0)
     - SpecialFor/UIKit/View
   - SpecialFor/UIKit/Renderable (0.4.0)
+  - SpecialFor/UIKit/Scrollable (0.4.0)
   - SpecialFor/UIKit/SeparatorView (0.4.0):
     - SnapKit (= 4.2.0)
     - SpecialFor/UIKit/View
@@ -124,7 +126,7 @@ SPEC CHECKSUMS:
   CellViewModel: d8d750ed7402098acd6af857777a087fc5bcffa7
   Kingfisher: d9e7e0b209b59b8f9873aa2f37654e81a7beea51
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
-  SpecialFor: a09c42b0a8a8c6a28afeb3aaa80369e375901060
+  SpecialFor: aa3fd3bc4e0500dece7f26a6bbf956f2365e2543
   SwiftGifOrigin: fbd6cf37afcfcf97a5c3db996ddc0492e5c5c145
 
 PODFILE CHECKSUM: 766f7b70e5b1ac7c97824918187d1e9cb80c89b7
