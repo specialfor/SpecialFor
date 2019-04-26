@@ -11,3 +11,11 @@ public typealias Closure = () -> Void
 public typealias ClosureWith<T> = (T) -> Void
 public typealias ClosureProducer<T> = () -> T
 public typealias ThrowableClosureProducer<T> = () throws -> T
+
+public func call<T>(_ closure: ClosureProducer<T>) -> T {
+    return closure()
+}
+
+public func call(_ closure: Closure) {
+    return closure()
+}
