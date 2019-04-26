@@ -188,6 +188,10 @@ Pod::Spec.new do |s|
           
           tv_manager.source_files = '**/TableViewManager.swift'
       end
+      
+      ui_kit.subspec 'Animation' do |anim|
+          anim.source_files = '**/QuartzCore/**/*', '**/Array+Values.swift'
+      end
   end
   
   s.subspec 'AVFoundation' do |av_foundation|

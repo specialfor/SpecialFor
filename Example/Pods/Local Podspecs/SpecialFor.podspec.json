@@ -309,6 +309,13 @@
             ]
           },
           "source_files": "**/TableViewManager.swift"
+        },
+        {
+          "name": "Animation",
+          "source_files": [
+            "**/QuartzCore/**/*",
+            "**/Array+Values.swift"
+          ]
         }
       ]
     },

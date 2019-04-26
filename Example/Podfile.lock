@@ -30,6 +30,7 @@ PODS:
   - SpecialFor/UIKit (0.4.0):
     - SpecialFor/UIKit/Accessories (= 0.4.0)
     - SpecialFor/UIKit/AlignableLabel (= 0.4.0)
+    - SpecialFor/UIKit/Animation (= 0.4.0)
     - SpecialFor/UIKit/Backable (= 0.4.0)
     - SpecialFor/UIKit/BannerWindow (= 0.4.0)
     - SpecialFor/UIKit/EmptyStateTableViewDS (= 0.4.0)
@@ -53,6 +54,7 @@ PODS:
     - SpecialFor/UIKit/Gradient
     - SpecialFor/UIKit/SeparatorView
   - SpecialFor/UIKit/AlignableLabel (0.4.0)
+  - SpecialFor/UIKit/Animation (0.4.0)
   - SpecialFor/UIKit/Backable (0.4.0)
   - SpecialFor/UIKit/BannerWindow (0.4.0):
     - SnapKit (= 4.2.0)
@@ -122,7 +124,7 @@ SPEC CHECKSUMS:
   CellViewModel: d8d750ed7402098acd6af857777a087fc5bcffa7
   Kingfisher: d9e7e0b209b59b8f9873aa2f37654e81a7beea51
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
-  SpecialFor: 77e6bc6a11bede822eb52b3a18de1f4fa97f051f
+  SpecialFor: a09c42b0a8a8c6a28afeb3aaa80369e375901060
   SwiftGifOrigin: fbd6cf37afcfcf97a5c3db996ddc0492e5c5c145
 
 PODFILE CHECKSUM: 766f7b70e5b1ac7c97824918187d1e9cb80c89b7
