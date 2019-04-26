@@ -178,6 +178,12 @@ Pod::Spec.new do |s|
           backable.source_files = '**/Backable.swift'
           backable.resources = '**/Backable.xcassets'
       end
+      
+      ui_kit.subspec 'TableViewManager' do |tv_manager|
+          tv_manager.dependency 'CellViewModel'
+          
+          tv_manager.source_files = '**/TableViewManager.swift'
+      end
   end
   
   s.subspec 'AVFoundation' do |av_foundation|

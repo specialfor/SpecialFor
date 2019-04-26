@@ -1,6 +1,6 @@
 {
   "name": "SpecialFor",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "summary": "Useful codebase which I used among projects",
   "homepage": "https://github.com/specialfor/SpecialFor",
   "license": {
@@ -12,7 +12,7 @@
   },
   "source": {
     "git": "https://github.com/specialfor/SpecialFor.git",
-    "tag": "0.3.0"
+    "tag": "0.4.0"
   },
   "social_media_url": "https://twitter.com/specialfor_ios",
   "platforms": {
@@ -296,6 +296,15 @@
           "name": "Backable",
           "source_files": "**/Backable.swift",
           "resources": "**/Backable.xcassets"
+        },
+        {
+          "name": "TableViewManager",
+          "dependencies": {
+            "CellViewModel": [
+
+            ]
+          },
+          "source_files": "**/TableViewManager.swift"
         }
       ]
     },
