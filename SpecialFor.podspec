@@ -188,7 +188,7 @@ Pod::Spec.new do |s|
       end
       
       ui_kit.subspec 'TableViewManager' do |tv_manager|
-          tv_manager.dependency 'CellViewModel'
+          tv_manager.dependency 'CellViewModel', '= 1.4.0'
           
           tv_manager.source_files = '**/TableViewManager.swift'
       end
