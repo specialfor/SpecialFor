@@ -8,7 +8,7 @@
 
 extension Array where Element: Equatable {
     public mutating func remove(_ element: Element) {
-        guard let index = index(of: element) else {
+        guard let index = firstIndex(of: element) else {
             return
         }
         remove(at: index)

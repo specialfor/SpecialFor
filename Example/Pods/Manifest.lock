@@ -1,110 +1,107 @@
 PODS:
-  - CellViewModel (1.4.0)
-  - Kingfisher (5.3.1)
-  - SnapKit (4.2.0)
-  - SpecialFor (0.4.0):
-    - SpecialFor/AppEnvironment (= 0.4.0)
-    - SpecialFor/AVFoundation (= 0.4.0)
-    - SpecialFor/Coordinator (= 0.4.0)
-    - SpecialFor/Core (= 0.4.0)
-    - SpecialFor/DataDriven (= 0.4.0)
-    - SpecialFor/Photos (= 0.4.0)
-    - SpecialFor/UIKit (= 0.4.0)
-  - SpecialFor/AppEnvironment (0.4.0)
-  - SpecialFor/AVFoundation (0.4.0)
-  - SpecialFor/Coordinator (0.4.0)
-  - SpecialFor/Core (0.4.0):
-    - SpecialFor/Core/Closure (= 0.4.0)
-    - SpecialFor/Core/GCD (= 0.4.0)
-    - SpecialFor/Core/Result (= 0.4.0)
-  - SpecialFor/Core/Closure (0.4.0)
-  - SpecialFor/Core/GCD (0.4.0):
+  - CellViewModel (1.7.5)
+  - Kingfisher (5.6.0)
+  - SnapKit (5.0.0)
+  - SpecialFor (1.0.0):
+    - SpecialFor/AppEnvironment (= 1.0.0)
+    - SpecialFor/AVFoundation (= 1.0.0)
+    - SpecialFor/Coordinator (= 1.0.0)
+    - SpecialFor/Core (= 1.0.0)
+    - SpecialFor/DataDriven (= 1.0.0)
+    - SpecialFor/Photos (= 1.0.0)
+    - SpecialFor/UIKit (= 1.0.0)
+  - SpecialFor/AppEnvironment (1.0.0)
+  - SpecialFor/AVFoundation (1.0.0)
+  - SpecialFor/Coordinator (1.0.0)
+  - SpecialFor/Core (1.0.0):
+    - SpecialFor/Core/Closure (= 1.0.0)
+    - SpecialFor/Core/GCD (= 1.0.0)
+  - SpecialFor/Core/Closure (1.0.0)
+  - SpecialFor/Core/GCD (1.0.0):
     - SpecialFor/Core/Closure
-  - SpecialFor/Core/Result (0.4.0):
-    - SpecialFor/Core/Closure
-  - SpecialFor/DataDriven (0.4.0):
-    - SnapKit (= 4.2.0)
+  - SpecialFor/DataDriven (1.0.0):
+    - SnapKit (~> 5.0.0)
     - SpecialFor/UIKit/Renderable
     - SpecialFor/UIKit/Setupable
-  - SpecialFor/Photos (0.4.0)
-  - SpecialFor/UIKit (0.4.0):
-    - SpecialFor/UIKit/Accessories (= 0.4.0)
-    - SpecialFor/UIKit/AlignableLabel (= 0.4.0)
-    - SpecialFor/UIKit/Animation (= 0.4.0)
-    - SpecialFor/UIKit/Backable (= 0.4.0)
-    - SpecialFor/UIKit/BannerWindow (= 0.4.0)
-    - SpecialFor/UIKit/EmptyStateTableViewDS (= 0.4.0)
-    - SpecialFor/UIKit/FastScroll (= 0.4.0)
-    - SpecialFor/UIKit/GifLoaderView (= 0.4.0)
-    - SpecialFor/UIKit/Gradient (= 0.4.0)
-    - SpecialFor/UIKit/ImageAlertViewController (= 0.4.0)
-    - SpecialFor/UIKit/ImagePlaceholderTextField (= 0.4.0)
-    - SpecialFor/UIKit/ImagesView (= 0.4.0)
-    - SpecialFor/UIKit/LinkTextField (= 0.4.0)
-    - SpecialFor/UIKit/Loadable (= 0.4.0)
-    - SpecialFor/UIKit/MaterialTextInput (= 0.4.0)
-    - SpecialFor/UIKit/PartialCheckableButton (= 0.4.0)
-    - SpecialFor/UIKit/Renderable (= 0.4.0)
-    - SpecialFor/UIKit/Scrollable (= 0.4.0)
-    - SpecialFor/UIKit/SeparatorView (= 0.4.0)
-    - SpecialFor/UIKit/Setupable (= 0.4.0)
-    - SpecialFor/UIKit/TableViewManager (= 0.4.0)
-    - SpecialFor/UIKit/TextField (= 0.4.0)
-    - SpecialFor/UIKit/View (= 0.4.0)
-  - SpecialFor/UIKit/Accessories (0.4.0):
+  - SpecialFor/Photos (1.0.0)
+  - SpecialFor/UIKit (1.0.0):
+    - SpecialFor/UIKit/Accessories (= 1.0.0)
+    - SpecialFor/UIKit/AlignableLabel (= 1.0.0)
+    - SpecialFor/UIKit/Animation (= 1.0.0)
+    - SpecialFor/UIKit/Backable (= 1.0.0)
+    - SpecialFor/UIKit/BannerWindow (= 1.0.0)
+    - SpecialFor/UIKit/EmptyStateTableViewDS (= 1.0.0)
+    - SpecialFor/UIKit/FastScroll (= 1.0.0)
+    - SpecialFor/UIKit/GifLoaderView (= 1.0.0)
+    - SpecialFor/UIKit/Gradient (= 1.0.0)
+    - SpecialFor/UIKit/ImageAlertViewController (= 1.0.0)
+    - SpecialFor/UIKit/ImagePlaceholderTextField (= 1.0.0)
+    - SpecialFor/UIKit/ImagesView (= 1.0.0)
+    - SpecialFor/UIKit/LinkTextField (= 1.0.0)
+    - SpecialFor/UIKit/Loadable (= 1.0.0)
+    - SpecialFor/UIKit/MaterialTextInput (= 1.0.0)
+    - SpecialFor/UIKit/PartialCheckableButton (= 1.0.0)
+    - SpecialFor/UIKit/Renderable (= 1.0.0)
+    - SpecialFor/UIKit/Scrollable (= 1.0.0)
+    - SpecialFor/UIKit/SeparatorView (= 1.0.0)
+    - SpecialFor/UIKit/Setupable (= 1.0.0)
+    - SpecialFor/UIKit/TableViewManager (= 1.0.0)
+    - SpecialFor/UIKit/TextField (= 1.0.0)
+    - SpecialFor/UIKit/View (= 1.0.0)
+  - SpecialFor/UIKit/Accessories (1.0.0):
     - SpecialFor/UIKit/Gradient
     - SpecialFor/UIKit/SeparatorView
-  - SpecialFor/UIKit/AlignableLabel (0.4.0)
-  - SpecialFor/UIKit/Animation (0.4.0)
-  - SpecialFor/UIKit/Backable (0.4.0)
-  - SpecialFor/UIKit/BannerWindow (0.4.0):
-    - SnapKit (= 4.2.0)
-  - SpecialFor/UIKit/EmptyStateTableViewDS (0.4.0):
-    - SnapKit (= 4.2.0)
+  - SpecialFor/UIKit/AlignableLabel (1.0.0)
+  - SpecialFor/UIKit/Animation (1.0.0)
+  - SpecialFor/UIKit/Backable (1.0.0)
+  - SpecialFor/UIKit/BannerWindow (1.0.0):
+    - SnapKit (~> 5.0.0)
+  - SpecialFor/UIKit/EmptyStateTableViewDS (1.0.0):
+    - SnapKit (~> 5.0.0)
     - SpecialFor/UIKit/View
-  - SpecialFor/UIKit/FastScroll (0.4.0):
-    - SnapKit (= 4.2.0)
+  - SpecialFor/UIKit/FastScroll (1.0.0):
+    - SnapKit (~> 5.0.0)
     - SpecialFor/UIKit/View
-  - SpecialFor/UIKit/GifLoaderView (0.4.0):
-    - SnapKit (= 4.2.0)
+  - SpecialFor/UIKit/GifLoaderView (1.0.0):
+    - SnapKit (~> 5.0.0)
     - SpecialFor/UIKit/Renderable
     - SpecialFor/UIKit/View
-    - SwiftGifOrigin (= 1.7.0)
-  - SpecialFor/UIKit/Gradient (0.4.0)
-  - SpecialFor/UIKit/ImageAlertViewController (0.4.0):
-    - SnapKit (= 4.2.0)
+    - SwiftGifOrigin (~> 1.7)
+  - SpecialFor/UIKit/Gradient (1.0.0)
+  - SpecialFor/UIKit/ImageAlertViewController (1.0.0):
+    - SnapKit (~> 5.0.0)
     - SpecialFor/UIKit/Setupable
-  - SpecialFor/UIKit/ImagePlaceholderTextField (0.4.0):
-    - SnapKit (= 4.2.0)
+  - SpecialFor/UIKit/ImagePlaceholderTextField (1.0.0):
+    - SnapKit (~> 5.0.0)
     - SpecialFor/UIKit/TextField
     - SpecialFor/UIKit/View
-  - SpecialFor/UIKit/ImagesView (0.4.0):
-    - Kingfisher (= 5.3.1)
-    - SnapKit (= 4.2.0)
+  - SpecialFor/UIKit/ImagesView (1.0.0):
+    - Kingfisher (~> 5.6.0)
+    - SnapKit (~> 5.0.0)
     - SpecialFor/UIKit/View
-  - SpecialFor/UIKit/LinkTextField (0.4.0):
+  - SpecialFor/UIKit/LinkTextField (1.0.0):
     - SpecialFor/UIKit/MaterialTextInput
-  - SpecialFor/UIKit/Loadable (0.4.0):
-    - SnapKit (= 4.2.0)
+  - SpecialFor/UIKit/Loadable (1.0.0):
+    - SnapKit (~> 5.0.0)
     - SpecialFor/UIKit/Renderable
-  - SpecialFor/UIKit/MaterialTextInput (0.4.0):
-    - SnapKit (= 4.2.0)
+  - SpecialFor/UIKit/MaterialTextInput (1.0.0):
+    - SnapKit (~> 5.0.0)
     - SpecialFor/UIKit/TextField
     - SpecialFor/UIKit/View
-  - SpecialFor/UIKit/PartialCheckableButton (0.4.0):
-    - SnapKit (= 4.2.0)
+  - SpecialFor/UIKit/PartialCheckableButton (1.0.0):
+    - SnapKit (~> 5.0.0)
     - SpecialFor/UIKit/View
-  - SpecialFor/UIKit/Renderable (0.4.0)
-  - SpecialFor/UIKit/Scrollable (0.4.0)
-  - SpecialFor/UIKit/SeparatorView (0.4.0):
-    - SnapKit (= 4.2.0)
+  - SpecialFor/UIKit/Renderable (1.0.0)
+  - SpecialFor/UIKit/Scrollable (1.0.0)
+  - SpecialFor/UIKit/SeparatorView (1.0.0):
+    - SnapKit (~> 5.0.0)
     - SpecialFor/UIKit/View
-  - SpecialFor/UIKit/Setupable (0.4.0)
-  - SpecialFor/UIKit/TableViewManager (0.4.0):
-    - CellViewModel
-  - SpecialFor/UIKit/TextField (0.4.0):
+  - SpecialFor/UIKit/Setupable (1.0.0)
+  - SpecialFor/UIKit/TableViewManager (1.0.0):
+    - CellViewModel (~> 1.7)
+  - SpecialFor/UIKit/TextField (1.0.0):
     - SpecialFor/Core/Closure
-  - SpecialFor/UIKit/View (0.4.0):
+  - SpecialFor/UIKit/View (1.0.0):
     - SpecialFor/UIKit/Setupable
   - SwiftGifOrigin (1.7.0)
 
@@ -123,12 +120,12 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  CellViewModel: d8d750ed7402098acd6af857777a087fc5bcffa7
-  Kingfisher: d9e7e0b209b59b8f9873aa2f37654e81a7beea51
-  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
-  SpecialFor: aa3fd3bc4e0500dece7f26a6bbf956f2365e2543
+  CellViewModel: 94077ccd82bc2bc699c46ad8232d60b2540b0e5d
+  Kingfisher: 1a50df6880a60bae26f3e21a0df3d17b892f5e0b
+  SnapKit: fd22d10eb9aff484d79a8724eab922c1ddf89bcf
+  SpecialFor: e2fb89ccc23ee06fa2e67cfa34698f03a63c9f6a
   SwiftGifOrigin: fbd6cf37afcfcf97a5c3db996ddc0492e5c5c145
 
 PODFILE CHECKSUM: 766f7b70e5b1ac7c97824918187d1e9cb80c89b7
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.7.2

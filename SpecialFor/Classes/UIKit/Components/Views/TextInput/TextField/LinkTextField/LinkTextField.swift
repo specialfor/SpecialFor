@@ -76,7 +76,7 @@ public final class LinkTextField: MaterialTextField {
     
     // MARK: - UITextFieldDelegate
     
-    override func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+    override public func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         let isValid = linkValidator?.materialTextInput(self, shouldChangeTextIn: range, replacementText: text) ?? true
         return isValid && super.textField(textField, shouldChangeCharactersIn: range, replacementString: text)
     }

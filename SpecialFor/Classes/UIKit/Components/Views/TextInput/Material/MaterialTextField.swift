@@ -97,15 +97,15 @@ public class MaterialTextField: MaterialTextContainer, UITextFieldDelegate {
     
     // MARK: - UITextFieldDelegate
  
-    private func textFieldDidBeginEditing(_ textField: UITextField) {
+    public func textFieldDidBeginEditing(_ textField: UITextField) {
         beginEditingText()
     }
     
-    private func textFieldDidEndEditing(_ textField: UITextField) {
+    public func textFieldDidEndEditing(_ textField: UITextField) {
         endEditingText()
     }
     
-    internal func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+    public func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         return shouldTextChanged?(self, range, string) ?? true
     }
 }

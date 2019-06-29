@@ -40,6 +40,6 @@ public final class TableViewManager: NSObject, UITableViewDataSource {
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let model = models[indexPath.row]
-        return tableView.dequeueReusableCell(withModel: model, for: indexPath)
+        return tableView.dequeueReusableCell(with: model, for: indexPath)
     }
 }

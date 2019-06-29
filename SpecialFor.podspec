@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'SpecialFor'
-  s.version          = '0.5.0'
+  s.version          = '1.0.0'
   s.summary          = 'Useful codebase which I used among projects'
 
   s.homepage         = 'https://github.com/specialfor/SpecialFor'
@@ -10,13 +10,13 @@ Pod::Spec.new do |s|
   s.social_media_url = 'https://twitter.com/specialfor_ios'
 
   s.ios.deployment_target = '10.0'
-  s.swift_version = '4.2'
+  s.swift_version = '5.0'
   
   s.source_files = 'Specialfor/Classes/**/*'
   
   # Variables
   
-  snap_kit_version = '= 4.2.0'
+  snap_kit_version = '~> 5.0.0'
   
   
   # Subspecs
@@ -31,11 +31,6 @@ Pod::Spec.new do |s|
       core.subspec 'GCD' do |gcd|
           gcd.dependency 'SpecialFor/Core/Closure'
           gcd.source_files = '**/GCD.swift'
-      end
-      
-      core.subspec 'Result' do |result|
-          result.dependency 'SpecialFor/Core/Closure'
-          result.source_files = '**/Result/*'
       end
   end
   
@@ -143,7 +138,7 @@ Pod::Spec.new do |s|
       ui_kit.subspec 'ImagesView' do |images_view|
           images_view.dependency 'SpecialFor/UIKit/View'
           images_view.dependency 'SnapKit', snap_kit_version
-          images_view.dependency 'Kingfisher', '=5.3.1'
+          images_view.dependency 'Kingfisher', '~> 5.6.0'
           
           images_view.source_files = '**/ImagesView/**/*', '**/UIImageView+Corners.swift'
           images_view.resources = '**/ImagesView.xcassets'
@@ -156,7 +151,7 @@ Pod::Spec.new do |s|
       
       ui_kit.subspec 'GifLoaderView' do |gif_l_view|
           gif_l_view.dependency 'SnapKit', snap_kit_version
-          gif_l_view.dependency 'SwiftGifOrigin', '= 1.7.0'
+          gif_l_view.dependency 'SwiftGifOrigin', '~> 1.7'
           gif_l_view.dependency 'SpecialFor/UIKit/View'
           gif_l_view.dependency 'SpecialFor/UIKit/Renderable'
           
@@ -188,7 +183,7 @@ Pod::Spec.new do |s|
       end
       
       ui_kit.subspec 'TableViewManager' do |tv_manager|
-          tv_manager.dependency 'CellViewModel', '= 1.4.0'
+          tv_manager.dependency 'CellViewModel', '~> 1.7'
           
           tv_manager.source_files = '**/TableViewManager.swift'
       end

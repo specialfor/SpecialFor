@@ -173,16 +173,16 @@ public final class ImagePlaceholderTextField: View {
 // MARK: UITextFieldDelegate
 
 extension ImagePlaceholderTextField: UITextFieldDelegate {
-    private func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         returnHandler?()
         return true
     }
     
-    private func textFieldDidBeginEditing(_ textField: UITextField) {
+    public func textFieldDidBeginEditing(_ textField: UITextField) {
         updatePlaceholder(for: textField.text)
     }
     
-    private func textFieldDidEndEditing(_ textField: UITextField) {
+    public func textFieldDidEndEditing(_ textField: UITextField) {
         updatePlaceholder(for: textField.text)
     }
     
