@@ -4,7 +4,7 @@
 [![Platform](https://img.shields.io/cocoapods/p/SpecialFor.svg?style=flat)](https://cocoapods.org/pods/SpecialFor)
 
 ## Description
-The pod is a collection of useful reusable snippets which might be used almost in any project. The code was created by me or my colleges (e.g. [Anton Poltoratskyi](https://github.com/AntonPoltoratskyi and [Anton Makarov](https://github.com/motorbit))). 
+The pod is a collection of useful reusable snippets which might be used almost in any project. The code was created by me or my colleges (e.g. [Anton Poltoratskyi](https://github.com/AntonPoltoratskyi) and [Anton Makarov](https://github.com/motorbit))). 
 SpecialFor pod has a lot of subspecs:
 - Core
 - AppEnvironment
