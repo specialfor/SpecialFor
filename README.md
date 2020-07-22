@@ -1,15 +1,44 @@
 # SpecialFor
-
-[![CI Status](https://img.shields.io/travis/Volodymyr Hryhoriev/SpecialFor.svg?style=flat)](https://travis-ci.org/Volodymyr Hryhoriev/SpecialFor)
 [![Version](https://img.shields.io/cocoapods/v/SpecialFor.svg?style=flat)](https://cocoapods.org/pods/SpecialFor)
 [![License](https://img.shields.io/cocoapods/l/SpecialFor.svg?style=flat)](https://cocoapods.org/pods/SpecialFor)
 [![Platform](https://img.shields.io/cocoapods/p/SpecialFor.svg?style=flat)](https://cocoapods.org/pods/SpecialFor)
 
+## Description
+The pod is a collection of useful reusable snippets which might be used almost in any project. The code was created by me or my colleges (e.g. [Anton Poltoratskyi](https://github.com/AntonPoltoratskyi)). 
+SpecialFor pod has a lot of subspecs:
+- Core
+- AppEnvironment
+- Coordinator
+- DataDriven
+- UIKit
+  - View
+  - ImageAlertViewController
+  - AlignableLabel
+  - Accessories
+  - Gradient
+  - SeparatorView
+  - EmptyStateTableViewDS
+  - FastScroll
+  - TextField
+  - ImagePlaceholderTextField
+  - MaterialTextInput
+  - LinkTextField
+  - ImagesView
+  - BannerWindow
+  - GifLoaderView
+  - Renderable
+  - Setupable
+  - Loadable
+  - Backable
+  - Scrollable
+  - TableViewManager
+  - Animation
+- AVFoundation
+- Photos
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-## Requirements
 
 ## Installation
 
